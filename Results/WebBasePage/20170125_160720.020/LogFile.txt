@@ -1,0 +1,18 @@
+﻿2017-01-25 16:07:20.020 +0000	START		Running WebBasePage.script
+2017-01-25 16:07:20.020 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:22.022 +0000	imagefound	BrowserMaximize	found at (973, 40)	3	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:22.022 +0000	click	BrowserMaximize	at (973, 40)	4	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:23.023 +0000	typetext		[controlKey]l	6	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:25.025 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	7	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:26.026 +0000	typetext		[return]	8	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:26.026 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	11	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:26.026 +0000	click	ADVANCED	at (247, 506)	13	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:28.028 +0000	scrollwheeldown		moved 2	15	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:29.029 +0000	click	Proceed	at (228, 667)	16	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:31.031 +0000	waitfor	UserName	found at (79, 430)	19	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:31.031 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:32.032 +0000	typetext		spedarasi614	22	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:32.032 +0000	typetext		[tab]	24	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:34.034 +0000	typetext		!Praveensowji1	25	on_webbasepage	WebBasePage.script
+2017-01-25 16:07:34.034 +0000	EndTestCase		(Duration:"14.779", Errors:"1", Exceptions:"0", StartTime:"2017-01-25 16:07:20 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-25 16:07:34.034 +0000	ABORTED		Execution Time 0:00:14 WebBasePage.script

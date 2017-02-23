@@ -1,0 +1,74 @@
+﻿//Access Configuration Certificate Management Create Certificate
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "CertificateManagement"
+			set the shouldRepositionMouse to false
+			Click "CertificateManagement"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"CertificateManagementPage_Title") then
+				LogSuccess "Certificate Management page opened"
+				Wait 5
+				Drag ("997", "414")
+				Drop ("997", "706")
+				MoveTo "CreateCertificate"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "CreateCertificate"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"CreateCertificatePage_Title") then
+					LogSuccess "Create Certificate page opened"
+					Wait 5
+					Drag ("984", "409")
+					Drop ("984", "677")
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					Wait 5
+					Drag ("997", "706")
+					Drop ("997", "414")
+					if ImageFound(3,"CertificateManagementPage_Title") then
+						LogSuccess "Create Certificate cancelled"
+					else
+						LogWarning "Failed to cancel Create Certificate"
+					end if
+				else
+					LogWarning "Failed to open Create Certificate page"
+				end if
+				
+				else
+				LogWarning "Failed to open Certificate Management page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

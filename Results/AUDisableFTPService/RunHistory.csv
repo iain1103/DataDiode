@@ -1,0 +1,7 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-01-05 16:25:25.025 +0000,"Running",0:00:00,0,0,0,"20170105_162525.025/LogFile.txt","","",0
+2017-01-05 16:27:30.030 +0000,"Running",0:00:00,0,0,0,"20170105_162730.030/LogFile.txt","","",0
+2017-01-05 16:32:14.014 +0000,"Failure",0:00:57,1,0,1,"20170105_163214.014/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""Manchester""",0
+2017-01-05 16:34:53.053 +0000,"Failure",0:00:55,1,0,1,"20170105_163453.053/LogFile.txt","","File Not Found -- click Error - Could Not Open Image: ADPassword",0
+2017-01-05 16:37:48.048 +0000,"Success",0:01:12,0,1,0,"20170105_163748.048/LogFile.txt","","",1
+2017-01-06 08:50:38.038 +0000,"Success",0:01:04,0,0,0,"20170106_085038.038/LogFile.txt","","",1

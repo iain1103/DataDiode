@@ -1,0 +1,31 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Clearing transfers
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then	
+	Click "Console"
+	Wait 4
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound (5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "AUTransfers"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true		
+		Wait 2
+		Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
+		LogSuccess "Cleared "
+		
+	else
+		
+		LogWarning "Fail to login in to appliance downstream"
+	end if
+	
+	
+else	
+	LogWarning "Failed to open appliance downstream"
+end if
+TearDown

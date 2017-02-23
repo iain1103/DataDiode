@@ -1,0 +1,23 @@
+﻿2017-01-03 15:15:27.027 +0000	START		Running WebBasePage.script
+2017-01-03 15:15:28.028 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:32.032 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:34.034 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:35.035 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:36.036 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:37.037 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:39.039 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:41.041 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:41.041 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:42.042 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:42.042 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:44.044 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:44.044 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2017-01-03 15:15:59.059 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:04.004 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:04.004 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:07.007 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:09.009 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:11.011 +0000	moveto	image0003	at (380, 334)	35	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:11.011 +0000	scrollwheeldown		moved 7	36	on_webbasepage	WebBasePage.script
+2017-01-03 15:16:21.021 +0000	EndTestCase		(Duration:"53.447", Errors:"1", Exceptions:"0", StartTime:"2017-01-03 15:15:27 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-03 15:16:21.021 +0000	ABORTED		Execution Time 0:00:54 WebBasePage.script

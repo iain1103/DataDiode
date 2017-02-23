@@ -1,0 +1,33 @@
+﻿2016-12-12 12:28:23.023 +0000	START		Running ADExportLogs.script
+2016-12-12 12:28:24.024 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:29.029 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:31.031 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:32.032 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:32.032 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:33.033 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:36.036 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:37.037 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:37.037 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:38.038 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:39.039 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:40.040 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:40.040 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2016-12-12 12:28:56.056 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:03.003 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:03.003 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:05.005 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:07.007 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:10.010 +0000	doubleclick	Diode_Datastore	at (327, 498)	35	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:11.011 +0000	imagefound	RelatedObjects	found at (597, 155)	36	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:11.011 +0000	click	RelatedObjects	at (597, 155)	37	on_webbasepage	WebBasePage.script
+2016-12-12 12:29:14.014 +0000	imagefound	ApplianceDownstream	found at (346, 277)	5	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:14.014 +0000	click	Computer	at (333, 235)	6	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:20.020 +0000	click	ADUsernameET	at (481, 296)	8	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:21.021 +0000	typetext		admin	9	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:22.022 +0000	click	ADPasswordET	at (484, 352)	10	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:22.022 +0000	typetext		admin	11	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:23.023 +0000	doubleclick	ADLoginBtn	at (671, 398)	13	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:28.028 +0000	imagefound	ADLoggedIn	Unable to Find Image ADLoggedIn within 3.00 seconds	15	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:28.028 +0000	LogWarning		Unable to login	24	on_adexportlogs	ADExportLogs.script
+2016-12-12 12:29:28.028 +0000	EndTestCase		(Duration:"65.115", Errors:"0", Exceptions:"0", StartTime:"2016-12-12 12:28:23 +0000", Successes:"1", TestCase:"ADExportLogs.script", Warnings:"1")
+2016-12-12 12:29:29.029 +0000	SUCCESS		Execution Time 0:01:05 ADExportLogs.script

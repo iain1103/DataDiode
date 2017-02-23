@@ -1,0 +1,30 @@
+﻿2017-02-22 13:44:05.005 +0000	START		Running ADClearTransfersFilters.script
+2017-02-22 13:44:07.007 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:07.007 +0000	click	Console	at (333, 235)	7	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:11.011 +0000	click	ADUsernameET	at (481, 312)	9	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:12.012 +0000	typetext		admin	10	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:13.013 +0000	click	ADPasswordET	at (484, 352)	11	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:14.014 +0000	typetext		admin	12	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:15.015 +0000	typetext		[return]	14	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:15.015 +0000	imagefound	ADLoggedIn	found at (728, 171)	15	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:15.015 +0000	LogSuccess		Logged in into appliance downstream	16	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:15.015 +0000	moveto	AUTransfers	at (338, 408)	17	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:15.015 +0000	set		SHOULDREPOSITIONMOUSE = False	18	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:16.016 +0000	click	AUTransfers	at (338, 408)	19	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:16.016 +0000	set		SHOULDREPOSITIONMOUSE = True	20	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:18.018 +0000	moveto	EDITFILTERS	at (813, 234)	23	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:18.018 +0000	set		SHOULDREPOSITIONMOUSE = False	24	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:19.019 +0000	click	EDITFILTERS	at (813, 234)	25	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:19.019 +0000	set		SHOULDREPOSITIONMOUSE = True	26	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:21.021 +0000	click	Sequencestart	at (511, 281)	28	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:22.022 +0000	typetext		1	29	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:23.023 +0000	click	Sequenceend	at (508, 323)	30	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:23.023 +0000	typetext		5	31	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:24.024 +0000	typetext		[return]	32	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:28.028 +0000	imagefound	CLEARFILTERS	found at (915, 227)	34	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:28.028 +0000	moveto	CLEARFILTERS	at (915, 227)	35	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:28.028 +0000	click	CLEARFILTERS	at (915, 228)	37	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:41.041 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:"", ImageRectangle:"", Language:"English", Text:"Successfully updated filters.", TextPlatform:"Generic OCR")	Unable to Find Image (TEXT:"Successfully updated filters.") within 2.00 seconds	39	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:41.041 +0000	LogWarning		Failed to clear filters	42	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 13:44:41.041 +0000	EndTestCase		(Duration:"35.958", Errors:"0", Exceptions:"0", StartTime:"2017-02-22 13:44:05 +0000", Successes:"1", TestCase:"ADClearTransfersFilters.script", Warnings:"1")
+2017-02-22 13:44:44.044 +0000	SUCCESS		Execution Time 0:00:36 ADClearTransfersFilters.script

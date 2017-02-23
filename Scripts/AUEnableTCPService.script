@@ -1,0 +1,63 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Enabling TCP service
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		//DoubleClick "ADServices"
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page is opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			put ReadText(189,669) into resultValue
+			if resultValue contains "ENABLE" then
+				//Click (189,669)	
+				MoveTo (189,669)
+				set the shouldRepositionMouse to false
+				if ImageFound(5,"Pleaseconfigure" ) then
+					LogWarning "Please configure this service, before enabling it."
+					set the shouldRepositionMouse to true
+				else
+					
+					set the shouldRepositionMouse to true
+					Click (189,669)	
+					if ImageFound(5, (text:"Enable service")) then
+						Click (Text:"ENABLE",caseSensitive:"Yes")
+						put ReadText(189,669) into resultValue2
+						if resultValue2 is "X DISABLE" then
+							LogSuccess "TCP service is enabled"
+						else
+							LogWarning "Failed to enable TCP service"
+						end if
+					else
+						LogWarning "popup doesn't appear"
+						
+					end if
+				end if
+				
+			else
+				LogWarning "TCP service is already enabled"
+			end if
+		else
+			LogWarning "Failed to open service page"
+		end if
+	else
+		
+		LogWarning "Failed to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
+

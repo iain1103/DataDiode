@@ -1,0 +1,65 @@
+﻿2017-01-26 17:25:07.007 +0000	START		Running AUCreateUser.script
+2017-01-26 17:25:08.008 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:10.010 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:10.010 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:12.012 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:13.013 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:14.014 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:14.014 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:16.016 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:17.017 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:18.018 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:18.018 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:19.019 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:20.020 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:21.021 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:21.021 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:36.036 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:41.041 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:41.041 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:44.044 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:46.046 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:50.050 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore within 2.00 seconds	45	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:52.052 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(312,343), ImageRectangle:(283,339,341,348), Language:"English", Text:"D1-RHEL7", TextPlatform:"Generic OCR")	at (312, 343)	48	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:56.056 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	49	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:56.056 +0000	scrollwheeldown		moved 2	50	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:59.059 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	51	on_webbasepage	WebBasePage.script
+2017-01-26 17:25:59.059 +0000	scrollwheeldown		moved 2	50	on_webbasepage	WebBasePage.script
+2017-01-26 17:26:00.000 +0000	imagefound	Diode_Datastore	found at (327, 389)	51	on_webbasepage	WebBasePage.script
+2017-01-26 17:26:01.001 +0000	doubleclick	Diode_Datastore	at (327, 389)	54	on_webbasepage	WebBasePage.script
+2017-01-26 17:26:02.002 +0000	imagefound	RelatedObjects	found at (597, 155)	58	on_webbasepage	WebBasePage.script
+2017-01-26 17:26:02.002 +0000	click	RelatedObjects	at (597, 155)	59	on_webbasepage	WebBasePage.script
+2017-01-26 17:26:05.005 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:05.005 +0000	click	ApplianceUpstream	at (366, 320)	3	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:05.005 +0000	click	Console	at (333, 235)	4	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:11.011 +0000	click	ADUsernameET	at (481, 312)	6	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:11.011 +0000	typetext		admin	7	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:12.012 +0000	click	ADPasswordET	at (484, 352)	8	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:13.013 +0000	typetext		admin	9	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:14.014 +0000	typetext		[return]	10	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:14.014 +0000	imagefound	ADLoggedIn	found at (728, 171)	11	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:14.014 +0000	LogSuccess		Logged in into appliance upstream	12	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:14.014 +0000	moveto	Users_Dashboard	at (560, 329)	13	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:14.014 +0000	set		SHOULDREPOSITIONMOUSE = False	14	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:15.015 +0000	click	Users_Dashboard	at (560, 329)	15	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:15.015 +0000	set		SHOULDREPOSITIONMOUSE = True	16	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:16.016 +0000	imagefound	UserPageTitle	found at (92, 233)	17	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:16.016 +0000	LogSuccess		Preference page opened	18	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:18.018 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	19	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:18.018 +0000	set		SHOULDREPOSITIONMOUSE = False	20	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:21.021 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	21	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:21.021 +0000	set		SHOULDREPOSITIONMOUSE = True	22	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:22.022 +0000	click	Username_1	at (497, 279)	24	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:23.023 +0000	typetext		user1	25	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:24.024 +0000	click	Fullname	at (497, 320)	26	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:25.025 +0000	typetext		user1	27	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:25.025 +0000	click	Password_1	at (495, 363)	28	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:26.026 +0000	typetext		user	29	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:27.027 +0000	click	ConfirmPassword	at (498, 406)	30	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:28.028 +0000	typetext		user1	31	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:29.029 +0000	click	Role	at (583, 452)	32	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:29.029 +0000	click		at (476, 475)	37	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:30.030 +0000	click	CREATE	at (661, 489)	42	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:40.040 +0000	Exception	CREATE_1	No Image Found On Screen: "CREATE_1"	43	on_aucreateuser	AUCreateUser.script
+2017-01-26 17:26:40.040 +0000	EndTestCase		(Duration:"93.08", Errors:"1", Exceptions:"1", StartTime:"2017-01-26 17:25:07 +0000", Successes:"2", TestCase:"AUCreateUser.script", Warnings:"0")
+2017-01-26 17:26:40.040 +0000	ABORTED		Execution Time 0:01:33 AUCreateUser.script

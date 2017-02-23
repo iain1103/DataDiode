@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADTransfersFilter.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-22 15:19:32.032 +0000"
+ tests="1" successes="1" errors="0" time="40.306000">
+  <properties>
+   <property name="RunDate" value="2017-02-22 15:19:32.032 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADTransfersFilter.script" assertions="1" successes="1" errors="0" time="40.291">
+  </testcase>
+ </testsuite>
+</testsuites>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<runHistory script="AUAdminCanDisableApplianceUser">
+ <run>
+  <RunDate>2017-02-16 09:27:40.040 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.018000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170216_092740.040/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in auadmincandisableapplianceuser:
+Syntax Error at line 106: Syntax Error - can&#x27;t understand &quot;else&quot; at or near character 2622</ErrorMessage>
+ </run>
+< <run>
+  <RunDate>2017-02-16 09:30:28.028 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.018000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170216_093028.028/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in auadmincandisableapplianceuser:
+Syntax Error at line 109: Syntax Error - can&#x27;t understand &quot;else&quot; at or near character 2691</ErrorMessage>
+ </run>
+< <run>
+  <RunDate>2017-02-16 09:32:18.018 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.374000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>1</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170216_093218.018/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>File Not Found -- click Error - Could Not Open Image: AppplianceUpstream</ErrorMessage>
+ </run>
+< <run>
+  <RunDate>2017-02-16 09:32:51.051 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>1.749000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>1</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170216_093251.051/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>File Not Found -- click Error - Could Not Open Image: AppplianceUpstream</ErrorMessage>
+ </run>
+</runHistory>

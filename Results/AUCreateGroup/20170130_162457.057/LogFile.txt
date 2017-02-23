@@ -1,0 +1,51 @@
+﻿2017-01-30 16:24:57.057 +0000	START		Running AUAdminUserCreateGroup.script
+2017-01-30 16:24:57.057 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-30 16:24:59.059 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:00.000 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:01.001 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:02.002 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:02.002 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:02.002 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:04.004 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:05.005 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:07.007 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:07.007 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:08.008 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:08.008 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:09.009 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:10.010 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:25.025 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:30.030 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:30.030 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:33.033 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:35.035 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:39.039 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore within 2.00 seconds	45	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:42.042 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(312,343), ImageRectangle:(283,339,341,348), Language:"English", Text:"D1-RHEL7", TextPlatform:"Generic OCR")	at (312, 343)	48	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:45.045 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	49	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:45.045 +0000	scrollwheeldown		moved 2	50	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:49.049 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	51	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:49.049 +0000	scrollwheeldown		moved 2	50	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:50.050 +0000	imagefound	Diode_Datastore	found at (327, 389)	51	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:51.051 +0000	doubleclick	Diode_Datastore	at (327, 389)	54	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:51.051 +0000	imagefound	RelatedObjects	found at (597, 155)	58	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:51.051 +0000	click	RelatedObjects	at (597, 155)	59	on_webbasepage	WebBasePage.script
+2017-01-30 16:25:55.055 +0000	imagefound	ApplianceUpstream	found at (366, 320)	3	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:25:55.055 +0000	click	ApplianceUpstream	at (366, 320)	4	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:25:56.056 +0000	click	Console	at (333, 235)	5	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:01.001 +0000	click	ADUsernameET	at (481, 312)	7	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:02.002 +0000	typetext		admin	8	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:02.002 +0000	click	ADPasswordET	at (484, 352)	9	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:03.003 +0000	typetext		admin	10	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:04.004 +0000	typetext		[return]	11	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	imagefound	ADLoggedIn	found at (728, 171)	12	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	LogSuccess		Logged in into appliance upstream	13	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	moveto	Users_Dashboard	at (560, 329)	14	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	set		SHOULDREPOSITIONMOUSE = False	15	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	click	Users_Dashboard	at (560, 329)	16	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:05.005 +0000	set		SHOULDREPOSITIONMOUSE = True	17	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:06.006 +0000	imagefound	UserPageTitle	found at (92, 233)	18	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:06.006 +0000	LogSuccess		Users page opened	19	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:08.008 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(805,233), ImageRectangle:(761,229,850,237), Language:"English", Text:"MANAGE GROUPS", TextPlatform:"Generic OCR")	at (805, 233)	22	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:47.047 +0000	Exception	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:"", ImageRectangle:"", Language:"English", Text:"CREATE GROUP", TextPlatform:"Generic OCR")	No Image Found On Screen: "(TEXT:"CREATE GROUP")"	23	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:26:49.049 +0000	EndTestCase		(Duration:"112.154", Errors:"1", Exceptions:"1", StartTime:"2017-01-30 16:24:57 +0000", Successes:"2", TestCase:"AUAdminUserCreateGroup.script", Warnings:"0")
+2017-01-30 16:26:49.049 +0000	ABORTED		Execution Time 0:01:52 AUAdminUserCreateGroup.script

@@ -1,0 +1,427 @@
+﻿<?xml version="1.0"?>
+<statistics>
+ <script name="ADExportLogs">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>17</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2016-12-12 12:25:12 +0000</FirstRun>
+  <LastRun>2016-12-12 16:01:57 +0000</LastRun>
+  <TotalTimeOnSuccess>1094.703000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAdminCanEnableAnotherAdmin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-15 10:07:31 +0000</FirstRun>
+  <LastRun>2017-02-15 10:07:31 +0000</LastRun>
+  <TotalTimeOnSuccess>106.329000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCancelClearTransfers">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>3</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-01-04 14:15:00 +0000</FirstRun>
+  <LastRun>2017-01-04 14:34:52 +0000</LastRun>
+  <TotalTimeOnSuccess>70.575000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAccessGeneralSystemSettingsPage">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-02-16 11:06:03 +0000</FirstRun>
+  <LastRun>2017-02-16 11:06:38 +0000</LastRun>
+  <TotalTimeOnSuccess>0.000000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUEditConfigurationManagerPreference">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-10 14:52:46 +0000</FirstRun>
+  <LastRun>2017-02-10 14:52:46 +0000</LastRun>
+  <TotalTimeOnSuccess>114.251000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAccessConfigurationPageFromDashboard">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-02-22 15:39:41 +0000</FirstRun>
+  <LastRun>2017-02-22 16:10:11 +0000</LastRun>
+  <TotalTimeOnSuccess>99.825000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADConfigurationCertificateManagementCreateCertificate">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-22 14:07:36 +0000</FirstRun>
+  <LastRun>2017-02-22 14:07:36 +0000</LastRun>
+  <TotalTimeOnSuccess>40.123000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUDisableSMTPService">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>6</NumberOfRuns>
+  <NumberOfFails>4</NumberOfFails>
+  <FirstRun>2017-01-06 11:37:31 +0000</FirstRun>
+  <LastRun>2017-01-06 13:39:52 +0000</LastRun>
+  <TotalTimeOnSuccess>151.026000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCancelFTPServiceDisable">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-09 08:57:58 +0000</FirstRun>
+  <LastRun>2017-01-09 08:57:58 +0000</LastRun>
+  <TotalTimeOnSuccess>66.864000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCreateGroup">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-30 16:42:47 +0000</FirstRun>
+  <LastRun>2017-02-07 15:17:27 +0000</LastRun>
+  <TotalTimeOnSuccess>111.830000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAlerts">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-22 14:03:15 +0000</FirstRun>
+  <LastRun>2017-02-22 14:03:15 +0000</LastRun>
+  <TotalTimeOnSuccess>13.276000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADCancelFTPServiceConfigure">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-12 16:00:59 +0000</FirstRun>
+  <LastRun>2017-01-12 16:00:59 +0000</LastRun>
+  <TotalTimeOnSuccess>63.406000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUFTPConfigure">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 10:16:35 +0000</FirstRun>
+  <LastRun>2017-01-04 10:16:35 +0000</LastRun>
+  <TotalTimeOnSuccess>78.311000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUUDPServiceConfigure">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 10:03:57 +0000</FirstRun>
+  <LastRun>2017-01-04 10:06:51 +0000</LastRun>
+  <TotalTimeOnSuccess>135.527000</TotalTimeOnSuccess>
+ </script>
+ <script name="WebBasePage">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>54</NumberOfRuns>
+  <NumberOfFails>10</NumberOfFails>
+  <FirstRun>2016-12-08 16:44:25 +0000</FirstRun>
+  <LastRun>2017-02-13 12:20:33 +0000</LastRun>
+  <TotalTimeOnSuccess>1794.616000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAdminCanCancelEnablingAnotherAdmin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-15 12:04:31 +0000</FirstRun>
+  <LastRun>2017-02-15 12:04:31 +0000</LastRun>
+  <TotalTimeOnSuccess>86.990000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUPrefrenceIconOnTopRightCorner">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 14:53:00 +0000</FirstRun>
+  <LastRun>2017-01-04 14:56:05 +0000</LastRun>
+  <TotalTimeOnSuccess>151.950000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUDisableFTPService">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-01-05 16:32:14 +0000</FirstRun>
+  <LastRun>2017-01-06 08:50:38 +0000</LastRun>
+  <TotalTimeOnSuccess>136.850000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUTCPServiceConfigure">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>6</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-17 16:26:43 +0000</FirstRun>
+  <LastRun>2017-01-19 16:09:40 +0000</LastRun>
+  <TotalTimeOnSuccess>419.178000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUEnableFTPService">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>9</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-09 15:54:23 +0000</FirstRun>
+  <LastRun>2017-01-10 09:00:50 +0000</LastRun>
+  <TotalTimeOnSuccess>534.984000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUEditApplianceUserPreference">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-08 15:43:22 +0000</FirstRun>
+  <LastRun>2017-02-13 16:09:13 +0000</LastRun>
+  <TotalTimeOnSuccess>378.246000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUExportLogs">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>3</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-04 10:58:19 +0000</FirstRun>
+  <LastRun>2017-01-04 11:25:26 +0000</LastRun>
+  <TotalTimeOnSuccess>139.673000</TotalTimeOnSuccess>
+ </script>
+ <script name="Untitled">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>24</NumberOfRuns>
+  <NumberOfFails>3</NumberOfFails>
+  <FirstRun>2016-12-14 08:48:53 +0000</FirstRun>
+  <LastRun>2016-12-15 15:28:19 +0000</LastRun>
+  <TotalTimeOnSuccess>505.920000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADConfigurationCryptographicSettings">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-22 16:43:31 +0000</FirstRun>
+  <LastRun>2017-02-22 16:43:31 +0000</LastRun>
+  <TotalTimeOnSuccess>29.235000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCreateUser">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>30</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-01-25 17:01:14 +0000</FirstRun>
+  <LastRun>2017-02-07 15:08:22 +0000</LastRun>
+  <TotalTimeOnSuccess>1339.771000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUPreferencesPasswordChange">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-04 08:51:32 +0000</FirstRun>
+  <LastRun>2017-01-04 09:39:46 +0000</LastRun>
+  <TotalTimeOnSuccess>208.099000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADClearTransfersFilters">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>17</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-02-22 11:33:08 +0000</FirstRun>
+  <LastRun>2017-02-22 13:44:05 +0000</LastRun>
+  <TotalTimeOnSuccess>498.812000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADConfigManagerCanChangeHisPassword">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2017-02-22 09:47:01 +0000</FirstRun>
+  <LastRun>2017-02-22 09:48:06 +0000</LastRun>
+  <TotalTimeOnSuccess>0.000000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUEnableTCPService">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-16 16:23:22 +0000</FirstRun>
+  <LastRun>2017-01-16 16:49:52 +0000</LastRun>
+  <TotalTimeOnSuccess>148.263000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCancelPasswordChange">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 15:09:46 +0000</FirstRun>
+  <LastRun>2017-01-04 15:09:46 +0000</LastRun>
+  <TotalTimeOnSuccess>73.453000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAccessConfigurationThroughTopMenuBar">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-23 17:13:55 +0000</FirstRun>
+  <LastRun>2017-01-23 17:13:55 +0000</LastRun>
+  <TotalTimeOnSuccess>77.316000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAccessServicesThroughTopMenuBar">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>7</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-05 09:47:34 +0000</FirstRun>
+  <LastRun>2017-01-23 16:29:51 +0000</LastRun>
+  <TotalTimeOnSuccess>597.685000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADPreferencesPasswordChange">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>25</NumberOfRuns>
+  <NumberOfFails>2</NumberOfFails>
+  <FirstRun>2016-12-09 15:02:42 +0000</FirstRun>
+  <LastRun>2016-12-12 11:33:18 +0000</LastRun>
+  <TotalTimeOnSuccess>1538.978000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUClearTransfers">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 13:45:33 +0000</FirstRun>
+  <LastRun>2017-01-04 13:56:36 +0000</LastRun>
+  <TotalTimeOnSuccess>139.902000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAdminCanDisableAnotherAdmin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-14 16:41:27 +0000</FirstRun>
+  <LastRun>2017-02-14 16:54:38 +0000</LastRun>
+  <TotalTimeOnSuccess>372.772000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADTransfersFilter">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-22 15:19:32 +0000</FirstRun>
+  <LastRun>2017-02-22 15:19:32 +0000</LastRun>
+  <TotalTimeOnSuccess>40.306000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAdminCanEditHisOwnPublicKey">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-13 14:12:36 +0000</FirstRun>
+  <LastRun>2017-02-14 08:29:07 +0000</LastRun>
+  <TotalTimeOnSuccess>179.215000</TotalTimeOnSuccess>
+ </script>
+ <script name="LogoutVSphere">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-23 10:24:36 +0000</FirstRun>
+  <LastRun>2017-01-23 10:24:36 +0000</LastRun>
+  <TotalTimeOnSuccess>10.813000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAccessUsersThroughTopMenuBar">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-23 17:02:20 +0000</FirstRun>
+  <LastRun>2017-01-23 17:02:20 +0000</LastRun>
+  <TotalTimeOnSuccess>71.796000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAdminCanCancelDisablingApplianceUser">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>4</NumberOfRuns>
+  <NumberOfFails>4</NumberOfFails>
+  <FirstRun>2017-02-16 09:27:40 +0000</FirstRun>
+  <LastRun>2017-02-16 09:32:51 +0000</LastRun>
+  <TotalTimeOnSuccess>0.000000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUEditTransferFilter">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 15:24:10 +0000</FirstRun>
+  <LastRun>2017-01-04 15:28:46 +0000</LastRun>
+  <TotalTimeOnSuccess>140.736000</TotalTimeOnSuccess>
+ </script>
+ <script name="SmbUSFileTransfer">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>25</NumberOfRuns>
+  <NumberOfFails>3</NumberOfFails>
+  <FirstRun>2016-12-13 14:46:49 +0000</FirstRun>
+  <LastRun>2016-12-16 10:00:44 +0000</LastRun>
+  <TotalTimeOnSuccess>2811.461000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUFTPFileTransfer">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>5</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-04 15:56:22 +0000</FirstRun>
+  <LastRun>2017-01-04 16:31:17 +0000</LastRun>
+  <TotalTimeOnSuccess>382.927000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAddGroupToAdmin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-15 15:01:09 +0000</FirstRun>
+  <LastRun>2017-02-15 15:01:09 +0000</LastRun>
+  <TotalTimeOnSuccess>81.616000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCancelEditingConfigManagerUserPreferences">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-13 09:51:40 +0000</FirstRun>
+  <LastRun>2017-02-13 09:51:40 +0000</LastRun>
+  <TotalTimeOnSuccess>83.787000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUDisableSMBService">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>3</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-06 09:04:11 +0000</FirstRun>
+  <LastRun>2017-01-06 09:08:53 +0000</LastRun>
+  <TotalTimeOnSuccess>131.804000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCreateConfigurationManager">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>3</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-07 14:54:15 +0000</FirstRun>
+  <LastRun>2017-02-07 15:05:32 +0000</LastRun>
+  <TotalTimeOnSuccess>145.695000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAdminCanEditConfigManager'sPublicKey">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-14 10:44:17 +0000</FirstRun>
+  <LastRun>2017-02-14 10:46:05 +0000</LastRun>
+  <TotalTimeOnSuccess>168.111000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAccessStatusThroughTopMenuBar">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-01-23 16:43:56 +0000</FirstRun>
+  <LastRun>2017-01-23 16:43:56 +0000</LastRun>
+  <TotalTimeOnSuccess>69.407000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAdminCanDisableConfigManager">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>2</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-14 15:59:35 +0000</FirstRun>
+  <LastRun>2017-02-14 16:02:06 +0000</LastRun>
+  <TotalTimeOnSuccess>234.907000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUCreateAdmin">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>8</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-07 16:18:23 +0000</FirstRun>
+  <LastRun>2017-02-07 16:51:20 +0000</LastRun>
+  <TotalTimeOnSuccess>315.201000</TotalTimeOnSuccess>
+ </script>
+ <script name="ADAccessNetworkConfigurationPage">
+  <LastStatus>Success</LastStatus>
+  <NumberOfRuns>1</NumberOfRuns>
+  <NumberOfFails>0</NumberOfFails>
+  <FirstRun>2017-02-16 11:18:14 +0000</FirstRun>
+  <LastRun>2017-02-16 11:18:14 +0000</LastRun>
+  <TotalTimeOnSuccess>90.521000</TotalTimeOnSuccess>
+ </script>
+ <script name="AUAccessingTransfersThroughTopMenuBar">
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>13</NumberOfRuns>
+  <NumberOfFails>1</NumberOfFails>
+  <FirstRun>2017-01-05 11:13:52 +0000</FirstRun>
+  <LastRun>2017-02-23 10:24:26 +0000</LastRun>
+  <TotalTimeOnSuccess>805.257000</TotalTimeOnSuccess>
+ </script>
+</statistics>

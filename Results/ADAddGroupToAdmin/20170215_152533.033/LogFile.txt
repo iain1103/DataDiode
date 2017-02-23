@@ -1,0 +1,39 @@
+﻿2017-02-15 15:25:33.033 +0000	START		Running ADAddGroupToAdmin.script
+2017-02-15 15:25:33.033 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:33.033 +0000	click	Console	at (333, 235)	7	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:38.038 +0000	click	ADUsernameET	at (481, 312)	9	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:39.039 +0000	typetext		admin	10	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:40.040 +0000	click	ADPasswordET	at (484, 352)	11	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:41.041 +0000	typetext		admin	12	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:42.042 +0000	typetext		[return]	13	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:42.042 +0000	imagefound	ADLoggedIn	found at (728, 171)	14	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:42.042 +0000	LogSuccess		Logged in into appliance downstream	15	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:42.042 +0000	moveto	Users_Dashboard	at (329, 329)	16	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:42.042 +0000	set		SHOULDREPOSITIONMOUSE = False	17	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:43.043 +0000	click	Users_Dashboard	at (329, 329)	18	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:43.043 +0000	set		SHOULDREPOSITIONMOUSE = True	19	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:44.044 +0000	imagefound	UserPageTitle	found at (92, 233)	20	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:44.044 +0000	LogSuccess		Users page opened	21	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:48.048 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	22	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:48.048 +0000	set		SHOULDREPOSITIONMOUSE = False	23	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:51.051 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	24	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:51.051 +0000	set		SHOULDREPOSITIONMOUSE = True	25	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:52.052 +0000	click	Username_1	at (497, 279)	27	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:53.053 +0000	typetext		TestAdmin	28	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:54.054 +0000	click	Fullname	at (497, 320)	29	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:55.055 +0000	typetext		TestAdmin	30	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:56.056 +0000	click	Password_1	at (495, 363)	31	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:57.057 +0000	typetext		TestAdmin	32	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:58.058 +0000	click	ConfirmPassword	at (498, 406)	33	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:58.058 +0000	typetext		TestAdmin	34	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:25:59.059 +0000	click	ADConfigManagerDropDown	at (589, 450)	35	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:00.000 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	37	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:00.000 +0000	click	Administrator	at (500, 489)	38	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:00.000 +0000	set		SEARCHRECTANGLE = fullscreen	39	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:02.002 +0000	click	CREATE	at (663, 490)	41	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:08.008 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(498,278), ImageRectangle:(468,273,529,283), Language:"English", text:"TestAdmin", TextPlatform:"Generic OCR")	found at (498, 278)	43	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:09.009 +0000	LogSuccess		Admin created	45	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:11.011 +0000	imagefound	TestAdmin	Unable to Find Image TestAdmin	46	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:18.018 +0000	Exception	ENABLED	No Image Found On Screen: "ENABLED"	47	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:26:18.018 +0000	EndTestCase		(Duration:"45.317", Errors:"1", Exceptions:"1", StartTime:"2017-02-15 15:25:33 +0000", Successes:"3", TestCase:"ADAddGroupToAdmin.script", Warnings:"0")
+2017-02-15 15:26:18.018 +0000	ABORTED		Execution Time 0:00:45 ADAddGroupToAdmin.script

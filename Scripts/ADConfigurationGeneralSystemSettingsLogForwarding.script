@@ -1,0 +1,72 @@
+﻿//Access Configuration General System Settings Log Forwarding
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "GeneralSystemSettings"
+			set the shouldRepositionMouse to false
+			Click "GeneralSystemSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"GeneralSystemSettingsPage_Title") then
+				LogSuccess "General Systems Settings page opened"
+				Wait 5
+				//ScrollWheelDown 4
+				Drag (997,236)
+				Drop (997,657)
+				MoveTo "EditLogForwarding"
+				set the shouldRepositionMouse to false
+				Wait 5
+				Click "EditLogForwarding"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"LogForwardingPage_Title") then
+					LogSuccess "Log Forwarding page opened"
+					MoveTo "Enabled_Checkbox_Unchecked"
+					set the shouldRepositionMouse to false
+					Click "Enabled_Checkbox_Unchecked"
+					set the shouldRepositionMouse to true
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"No") then
+						LogSuccess "Log Forwarding cancelled"
+					else
+						LogWarning "Failed to cancel Log Forwarding"
+					end if
+				else
+					LogWarning "Failed to open Log Forwarding page"
+				end if
+				
+				else
+				LogWarning "Failed to open General System Settings page"
+			end if
+			
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

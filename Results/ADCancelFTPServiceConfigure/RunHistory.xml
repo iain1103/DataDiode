@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="AUCancelFTPConfigure">
+ <run>
+  <RunDate>2017-01-12 16:00:59.059 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>63.406000</Duration>
+  <Errors>0</Errors>
+  <Warnings>1</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170112_160059.059/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

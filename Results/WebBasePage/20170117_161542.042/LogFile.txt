@@ -1,0 +1,32 @@
+﻿2017-01-17 16:15:42.042 +0000	START		Running WebBasePage.script
+2017-01-17 16:15:43.043 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:47.047 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:49.049 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:50.050 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:51.051 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:51.051 +0000	click	ADVANCED	at (247, 506)	10	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:53.053 +0000	scrollwheeldown		moved 2	12	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:54.054 +0000	click	Proceed	at (228, 667)	13	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:55.055 +0000	waitfor	UserName	found at (79, 430)	16	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:55.055 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:56.056 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:57.057 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:58.058 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-17 16:15:58.058 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:13.013 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:18.018 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:18.018 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:20.020 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:22.022 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:26.026 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore within 2.00 seconds	44	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:29.029 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(312,343), ImageRectangle:(283,339,341,348), Language:"English", Text:"D1-RHEL7", TextPlatform:"Generic OCR")	at (312, 343)	47	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:32.032 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	48	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:32.032 +0000	scrollwheeldown		moved 2	49	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:36.036 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	50	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:36.036 +0000	scrollwheeldown		moved 2	49	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:36.036 +0000	imagefound	Diode_Datastore	found at (327, 389)	50	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:38.038 +0000	doubleclick	Diode_Datastore	at (327, 389)	53	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:38.038 +0000	imagefound	RelatedObjects	found at (597, 155)	57	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:38.038 +0000	click	RelatedObjects	at (597, 155)	58	on_webbasepage	WebBasePage.script
+2017-01-17 16:16:38.038 +0000	EndTestCase		(Duration:"56.237", Errors:"0", Exceptions:"0", StartTime:"2017-01-17 16:15:42 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-17 16:16:39.039 +0000	SUCCESS		Execution Time 0:00:56 WebBasePage.script

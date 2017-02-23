@@ -1,0 +1,48 @@
+﻿2017-02-22 16:45:35.035 +0000	START		Running ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:37.037 +0000	imagefound	ApplianceDownstream	found at (346, 277)	5	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:38.038 +0000	click	Console	at (333, 235)	6	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:43.043 +0000	click	ADUsernameET	at (481, 312)	8	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:44.044 +0000	typetext		admin	9	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:44.044 +0000	click	ADPasswordET	at (484, 352)	10	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:45.045 +0000	typetext		admin	11	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:46.046 +0000	typetext		[return]	12	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	imagefound	ADLoggedIn	found at (728, 171)	13	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	LogSuccess		Logged in into appliance downstream	14	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	moveto	Configuration	at (617, 320)	15	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	set		SHOULDREPOSITIONMOUSE = False	16	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	click	Configuration	at (617, 320)	17	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:47.047 +0000	set		SHOULDREPOSITIONMOUSE = True	18	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:49.049 +0000	imagefound	ConfigurationPage_Title	found at (121, 233)	19	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:49.049 +0000	LogSuccess		Configuration page opened	20	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:49.049 +0000	moveto	CertificateManagement	at (625, 318)	21	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:49.049 +0000	set		SHOULDREPOSITIONMOUSE = False	22	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:50.050 +0000	click	CertificateManagement	at (625, 318)	23	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:50.050 +0000	set		SHOULDREPOSITIONMOUSE = True	24	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:51.051 +0000	imagefound	CertificateManagementPage_Title	found at (111, 245)	25	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:51.051 +0000	LogSuccess		Certificate Management page opened	26	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:56.056 +0000	drag		at (997, 414)	28	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:57.057 +0000	drop		at (997, 706)	29	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:58.058 +0000	moveto	CreateCertificate	at (634, 685)	30	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:45:58.058 +0000	set		SHOULDREPOSITIONMOUSE = False	31	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:00.000 +0000	click	CreateCertificate	at (634, 685)	33	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:00.000 +0000	set		SHOULDREPOSITIONMOUSE = True	34	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:01.001 +0000	imagefound	CreateCertificatePage_Title	found at (347, 223)	35	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:01.001 +0000	LogSuccess		Create Certificate page opened	36	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:06.006 +0000	drag		at (984, 409)	38	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:07.007 +0000	drop		at (984, 677)	39	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:08.008 +0000	moveto	Cancel	at (592, 683)	40	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:08.008 +0000	set		SHOULDREPOSITIONMOUSE = False	41	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:09.009 +0000	click	Cancel	at (592, 683)	42	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:09.009 +0000	set		SHOULDREPOSITIONMOUSE = True	43	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:14.014 +0000	drag		at (997, 706)	45	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:16.016 +0000	drop		at (997, 414)	46	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:16.016 +0000	imagefound	CertificateManagementPage_Title	found at (111, 245)	47	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:16.016 +0000	LogSuccess		Create Certificate cancelled	48	on_adconfigurationcertificatemanagementcreatecertificate	ADConfigurationCertificateManagementCreateCertificate.script
+2017-02-22 16:46:20.020 +0000	click		at (950, 155)	2	on_teardown	TearDown.script
+2017-02-22 16:46:21.021 +0000	imagefound	ADUsernameET	found at (481, 312)	4	on_teardown	TearDown.script
+2017-02-22 16:46:21.021 +0000	LogSuccess		Logged out successfully	5	on_teardown	TearDown.script
+2017-02-22 16:46:22.022 +0000	clickany	0vSphereWebClient	at (107, 11)	1	on_logoutvsphere	LogoutVSphere.script
+2017-02-22 16:46:23.023 +0000	click	SignOutMenu	at (683, 88)	2	on_logoutvsphere	LogoutVSphere.script
+2017-02-22 16:46:24.024 +0000	Exception		Searching For Image: OCR Error: Operation was aborted	3	on_logoutvsphere	LogoutVSphere.script
+2017-02-22 16:46:25.025 +0000	EndTestCase		(Duration:"50.091", Errors:"1", Exceptions:"1", StartTime:"2017-02-22 16:45:35 +0000", Successes:"6", TestCase:"ADConfigurationCertificateManagementCreateCertificate.script", Warnings:"0")
+2017-02-22 16:46:25.025 +0000	ABORTED		Execution Time 0:00:50 ADConfigurationCertificateManagementCreateCertificate.script

@@ -1,0 +1,30 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Applying filters on transfers
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound (3,"ADLoggedIn") then
+		LogSuccess "Logged in to appliance upstream"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true
+		//Click "AUTransfers"	
+		//	Click "AUTransfersSelected"	
+		Wait 2
+		Click "EDITFILTERS"
+		LogSuccess "Transfers filters edited"
+	else
+		LogWarning "Fail to login into appliance upstream"
+	end if	
+	
+else	
+	LogWarning "Failed to open appliance downstream"
+end if
+TearDown

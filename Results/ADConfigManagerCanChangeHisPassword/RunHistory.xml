@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<runHistory script="ADConfigManagerCanChangeHisPassword">
+ <run>
+  <RunDate>2017-02-22 09:47:01.001 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.000000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170222_094701.001/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in adconfigmanagercanchangehispassword:
+Syntax Error at line 206: Syntax Error - can&#x27;t understand &quot;else&quot; at or near character 4620</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-02-22 09:48:06.006 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>0.000000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170222_094806.006/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>SenseTalk Compiler Exception -- in adconfigmanagercanchangehispassword:
+Syntax Error at line 206: Syntax Error - can&#x27;t understand &quot;else&quot; at or near character 4628</ErrorMessage>
+ </run>
+</runHistory>

@@ -1,0 +1,46 @@
+﻿2016-12-14 14:00:28.028 +0000	START		Running SmbUSFileTransfer.script
+2016-12-14 14:00:29.029 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:33.033 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:36.036 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:36.036 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:37.037 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:38.038 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:40.040 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:42.042 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:42.042 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:43.043 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:44.044 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:45.045 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2016-12-14 14:00:46.046 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:01.001 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:10.010 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:10.010 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:11.011 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:13.013 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:16.016 +0000	doubleclick	Diode_Datastore	at (327, 520)	35	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:18.018 +0000	imagefound	RelatedObjects	found at (597, 155)	36	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:18.018 +0000	click	RelatedObjects	at (597, 155)	37	on_webbasepage	WebBasePage.script
+2016-12-14 14:01:20.020 +0000	imagefound	U1W10	found at (299, 520)	5	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:20.020 +0000	click	U1W10	at (299, 520)	6	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:22.022 +0000	rightclick	U1W10Selected	at (299, 520)	8	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:24.024 +0000	click	OpenConsole	at (369, 163)	10	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:28.028 +0000	clickany	TestFileSelected	at (271, 333)	12	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:29.029 +0000	typetext		[controlKey]c	13	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:30.030 +0000	click	FileExplorer	at (495, 708)	16	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:31.031 +0000	click	mbShare	at (360, 373)	17	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:32.032 +0000	typetext		[controlKey]v	18	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:34.034 +0000	click	SmbSharefolderClosebtn	at (869, 170)	23	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:35.035 +0000	click	0vSphereWebClient	at (107, 11)	24	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:35.035 +0000	imagefound	ApplianceUpstream	found at (365, 298)	26	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:36.036 +0000	click	ApplianceUpstream	at (365, 298)	27	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:37.037 +0000	click	Console	at (333, 235)	28	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:42.042 +0000	click	DSUsername	at (506, 310)	30	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:43.043 +0000	typetext		sowjanyap	31	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:43.043 +0000	click	DSPassword	at (514, 356)	32	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:44.044 +0000	typetext		sowjanyap	33	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:45.045 +0000	typetext		[return]	34	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:01:47.047 +0000	click	DSTransfers	at (571, 411)	39	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:02:01.001 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:"", ImageRectangle:"", Language:"English", text:"Dec 14, 2016 02:01:32 PM", TextPlatform:"Generic OCR")	Unable to Find Image (TEXT:"Dec 14, 2016 02:01:32 PM") within 10.00 seconds	41	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:02:01.001 +0000	LogWarning		Time is different	46	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-14 14:02:01.001 +0000	EndTestCase		(Duration:"93.297", Errors:"0", Exceptions:"0", StartTime:"2016-12-14 14:00:28 +0000", Successes:"1", TestCase:"SmbUSFileTransfer.script", Warnings:"1")
+2016-12-14 14:02:02.002 +0000	SUCCESS		Execution Time 0:01:33 SmbUSFileTransfer.script

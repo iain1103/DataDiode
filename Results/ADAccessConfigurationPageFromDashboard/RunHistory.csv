@@ -1,0 +1,3 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-02-22 15:39:41.041 +0000,"Success",0:01:39,0,3,0,"20170222_153941.041/LogFile.txt","","",1
+2017-02-22 16:10:11.011 +0000,"Failure",0:00:53,1,0,1,"20170222_161011.011/LogFile.txt","","File Not Found -- imagefound Error - Could Not Open Image: AppliancmaeDownstream",0

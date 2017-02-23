@@ -1,0 +1,43 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel  UDP Service configuration
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then		
+		LogSuccess "Logged in into appliance upstream"
+		//DoubleClick "ADServices"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2			
+			put EveryImageLocation((Text:"CONFIGURE", CaseSensitive:"Yes") ) into ConfigurationList
+			MoveTo item 5 of ConfigurationList
+			set the shouldRepositionMouse to false			
+			Click item 5 of ConfigurationList
+			set the shouldRepositionMouse to true
+			Click (Text:"CANCEL",caseSensitive:"yes")	
+			LogSuccess "UDP service configuration cancelled"
+			else
+			
+			LogWarning "Failed to open service page"
+		end if
+		else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+	
+else
+	
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

@@ -1,0 +1,9 @@
+﻿2016-12-08 16:59:03.003 +0000	START		Running WebBasePage.script
+2016-12-08 16:59:04.004 +0000	doubleclickany	FireFox/FireFoxSelected	at (39, 236)	1	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:08.008 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:10.010 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:11.011 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:12.012 +0000	imagefound	ConnectionError/FireFoxConnectionError	found at (64, 303)	6	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:12.012 +0000	LogSuccess		Error found	7	on_webbasepage	WebBasePage.script
+2016-12-08 16:59:12.012 +0000	EndTestCase		(Duration:"8.441", Errors:"0", Exceptions:"0", StartTime:"2016-12-08 16:59:03 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-08 16:59:13.013 +0000	SUCCESS		Execution Time 0:00:09 WebBasePage.script

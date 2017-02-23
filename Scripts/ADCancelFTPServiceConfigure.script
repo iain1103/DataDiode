@@ -1,0 +1,51 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel  FTP service configure
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	//MoveTo
+	Click "ADLoginBtn"
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"		
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(2, "ADServicesPage") then			
+			LogSuccess "Appliance downstream services page opened"
+			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList
+			MoveTo item 1 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 1 of ConfigurationList
+			set the shouldRepositionMouse to true
+			Wait 1
+			MoveTo (Text:"ALLOWED GROUPS",CaseSensitive:"yes")
+			
+			ScrollWheelDown 3
+			Repeat until ImageLocation(Text:"CANCEL")
+				ScrollWheelDown 2
+			End Repeat
+			
+			Click (Text:"CANCEL",CaseSensitive:"yes")
+			LogSuccess "FTP Service configuration Cancelled"
+			
+		else
+			
+			LogWarning "Failed to open Appliance downstream page"
+		end if
+		
+	else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "ApplianceDownstream not found"
+end if
+TearDown
+

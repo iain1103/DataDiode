@@ -1,0 +1,69 @@
+﻿//Access Configuration General System Settings Install License
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "GeneralSystemSettings"
+			set the shouldRepositionMouse to false
+			Click "GeneralSystemSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"GeneralSystemSettingsPage_Title") then
+				LogSuccess "General Systems Settings page opened"
+				Wait 5
+				//ScrollWheelDown 4
+				Drag (997,236)
+				Drop (997,657)
+				MoveTo "InstallLicense"
+				set the shouldRepositionMouse to false
+				Wait 5
+				Click "InstallLicense"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"InstallLicensePage_Title") then
+					LogSuccess "Install License page opened"
+					Wait 5
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Unlimited") then
+						LogSuccess "Install License cancelled"
+					else
+						LogWarning "Failed to cancel Install License"
+					end if
+				else
+					LogWarning "Failed to open Install License page"
+				end if
+				
+				else
+				LogWarning "Failed to open General System Settings page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

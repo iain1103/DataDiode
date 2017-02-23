@@ -1,0 +1,4 @@
+﻿2016-12-09 15:16:15.015 +0000	START		Running ADPreferences.script
+2016-12-09 15:16:28.028 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2016-12-09 15:16:29.029 +0000	EndTestCase		(Duration:"13.829", Errors:"1", Exceptions:"1", StartTime:"2016-12-09 15:16:15 +0000", Successes:"0", TestCase:"ADPreferences.script", Warnings:"0")
+2016-12-09 15:16:29.029 +0000	ABORTED		Execution Time 0:00:14 ADPreferences.script

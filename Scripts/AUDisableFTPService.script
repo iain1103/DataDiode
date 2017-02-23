@@ -1,0 +1,48 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Disabling FTP service
+WebBasePage
+if ImageFound(3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		//DoubleClick "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3, "ADServicesPage") then
+			LogSuccess "Appliance upstream service page is opened"
+			put ReadText(189,522) into resultValue
+			
+			if resultValue is "X DISABLE" then
+				Click(189,522)
+				Wait 1
+				Click (Text:"DISABLE",CaseSensitive:"Yes")
+				if ImageFound((text:"Successfully disabled service: ftp-upstream")) then
+					LogSuccess "FTP service is disabled"
+				else
+					LogWarning "Failed to disable FTP service"
+				end if	
+			else
+				LogWarning "FTP service is already disabled"			
+				
+			end if			
+		else			
+			LogWarning "Failed to open Services Page"			
+			
+		end if
+	else
+		LogWarning "Failed to login"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+
+TearDown

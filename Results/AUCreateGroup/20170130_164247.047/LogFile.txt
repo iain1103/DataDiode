@@ -1,0 +1,5 @@
+﻿2017-01-30 16:42:47.047 +0000	START		Running AUAdminUserCreateGroup.script
+2017-01-30 16:42:52.052 +0000	imagefound	ApplianceUpstream	Unable to Find Image ApplianceUpstream within 3.00 seconds	3	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:42:52.052 +0000	LogWarning		Appliance upstream not found	41	on_auadminusercreategroup	AUAdminUserCreateGroup.script
+2017-01-30 16:42:52.052 +0000	EndTestCase		(Duration:"4.713", Errors:"0", Exceptions:"0", StartTime:"2017-01-30 16:42:47 +0000", Successes:"1", TestCase:"AUAdminUserCreateGroup.script", Warnings:"1")
+2017-01-30 16:42:52.052 +0000	SUCCESS		Execution Time 0:00:05 AUAdminUserCreateGroup.script

@@ -1,0 +1,22 @@
+﻿2016-12-13 17:31:04.004 +0000	START		Running SmbUSFileTransfer.script
+2016-12-13 17:31:05.005 +0000	imagefound	U1W10	found at (299, 498)	5	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:05.005 +0000	click	U1W10	at (299, 498)	6	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:07.007 +0000	rightclick	U1W10Selected	at (299, 498)	8	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:08.008 +0000	click	OpenConsole	at (369, 163)	10	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:12.012 +0000	clickany	TestFileSelected	at (266, 310)	12	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:13.013 +0000	typetext		[controlKey]c	13	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:14.014 +0000	click	FileExplorer	at (495, 708)	16	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:15.015 +0000	click	mbShare	at (361, 373)	17	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:16.016 +0000	typetext		[controlKey]v	18	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:18.018 +0000	click	SmbSharefolderClosebtn	at (869, 170)	23	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:19.019 +0000	click	0vSphereWebClient	at (107, 11)	24	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:19.019 +0000	imagefound	ApplianceUpstream	found at (365, 298)	26	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:20.020 +0000	click	ApplianceUpstream	at (365, 298)	27	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:21.021 +0000	click	Console	at (333, 235)	28	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:25.025 +0000	click	DSUsername	at (506, 310)	30	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:26.026 +0000	typetext		admin	31	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:27.027 +0000	click	DSPassword	at (514, 356)	32	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:27.027 +0000	typetext		admin	33	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:28.028 +0000	click	DSLogin	at (666, 398)	34	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-13 17:31:34.034 +0000	EndTestCase		(Duration:"29.239", Errors:"1", Exceptions:"0", StartTime:"2016-12-13 17:31:04 +0000", Successes:"0", TestCase:"SmbUSFileTransfer.script", Warnings:"0")
+2016-12-13 17:31:34.034 +0000	ABORTED		Execution Time 0:00:30 SmbUSFileTransfer.script

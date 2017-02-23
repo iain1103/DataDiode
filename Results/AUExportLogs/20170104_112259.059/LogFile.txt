@@ -1,0 +1,17 @@
+﻿2017-01-04 11:22:59.059 +0000	START		Running AUExportLogs.script
+2017-01-04 11:23:01.001 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:05.005 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:08.008 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:09.009 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:12.012 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:12.012 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:12.012 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:13.013 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:14.014 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:15.015 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:16.016 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:31.031 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:35.035 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2017-01-04 11:23:35.035 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2017-01-04 11:24:13.013 +0000	EndTestCase		(Duration:"74.296", Errors:"1", Exceptions:"0", StartTime:"2017-01-04 11:22:59 +0000", Successes:"0", TestCase:"AUExportLogs.script", Warnings:"0")
+2017-01-04 11:24:13.013 +0000	ABORTED		Execution Time 0:01:14 AUExportLogs.script

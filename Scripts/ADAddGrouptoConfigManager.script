@@ -1,0 +1,158 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 15/02/2017  
+ ***************************************)
+//Creating a group and adding it to the configuration manager
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "testconfigmanager"
+			Click "Fullname"
+			TypeText "testconfigmanager"
+			Click "Password_1"
+			TypeText "testconfigmanager"
+			Click "ConfirmPassword"
+			TypeText "testconfigmanager"
+			MoveTo "CREATE"
+			set the shouldRepositionMouse to false
+			Click "CREATE"
+			set the shouldRepositionMouse to true
+			Wait 3
+			if ImageFound(1, (text:"testconfigmanager")) then
+				Wait 1
+				LogSuccess "Configuration manager created"
+				repeat until imageFound("testconfigmanager" ) 
+					MoveTo "ENABLED"
+					//Wait 3
+					ScrollWheelDown 4.0
+				end repeat
+				//Group creation
+				MoveTo "MANAGEGROUPS"			
+				set the shouldRepositionMouse to false
+				Click "MANAGEGROUPS"
+				set the shouldRepositionMouse to true
+				Wait 2
+				MoveTo "CREATEGROUP"
+				set the shouldRepositionMouse to false
+				Click "CREATEGROUP"
+				set the shouldRepositionMouse to true
+				Wait 2
+				Click "Name_1"
+				TypeText "ApplianceTestGroup"
+				MoveTo "CREATE"
+				set the shouldRepositionMouse to false
+				Click "CREATE"
+				set the shouldRepositionMouse to true
+				if ImageFound(10,(Text:"ApplianceTestGroup")) then
+					LogSuccess "Group created"
+					Click "CLOSE"
+					Wait 1
+					set the searchRectangle to ("TLDeltestconfigmanager","BRdeltestconfigmanager")
+					
+					Click "AddGroupIcon"	
+					set the searchRectangle to fullscreen					
+					if ImageFound(3, Text:"Edit groups") then
+						LogSuccess "Edit groups popup appeared"
+						Click (Text:"ApplianceTestGroup")
+						MoveTo "SAVE"
+						set the shouldRepositionMouse to true
+						Click "SAVE"
+						set the shouldRepositionMouse to false
+						Wait 2
+						set the searchRectangle to ("TLtestconfigmanager","BRtestconfigmanager")
+						if ImageFound(3,Text:"ApplianceTestGroup") then
+							LogSuccess "Group added to admin"
+						else
+							LogWarning "Failed to add the group"
+						end if
+						
+					else
+						LogWarning "Popup doesn't appear"
+					end if
+					//Delete group
+					MoveTo "MANAGEGROUPS"			
+					set the shouldRepositionMouse to false
+					Click "MANAGEGROUPS"
+					set the shouldRepositionMouse to true
+					Wait 2
+					set the searchRectangle to("TLAppllanceTestGroup","BRAppllanceTestGroup")
+					Click "Deleteicon"
+					set the searchRectangle to fullscreen
+					Wait 2
+					MoveTo "Deletebtn"
+					//set the shouldRepositionMouse to false
+					Click "Deletebtn"
+					
+					WaitFor 5, "Manage"
+					if Not ImageFound(3,(Text:"ApplianceTestGroup",caseSensitive:"yes")) then
+						LogSuccess "Group deleted"
+						
+					else
+						
+						LogWarning "Failed to delete group"
+					end if
+					MoveTo "CLOSE"
+					Click "CLOSE"	
+					
+				else
+					LogWarning "Failed to created group"
+				end if
+				//Delete user
+				Wait 2
+				//Deleting user as a part of teardown
+				set the searchRectangle to ("TLAppllanceTestGroup","TLAppllanceTestGroup")
+				
+				Click "Deleteicon"	
+				set the searchRectangle to fullscreen
+				Wait 2
+				MoveTo "Deletebtn"
+				set the shouldRepositionMouse to false
+				Click "Deletebtn"
+				set the shouldRepositionMouse to true
+				Wait 1
+				if not ImageFound(1, "testconfigmanager") then
+					LogSuccess "Configuration manager deleted"
+				else
+					LogWarning "Failed to delete configuration manager"
+				end if 				
+				
+			else
+				
+				LogWarning "Failed to create configuration manager"
+			end if			
+			
+		else
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+		
+	else
+		
+		LogWarning "Fail to login into appliance downstream"
+	end if
+	
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

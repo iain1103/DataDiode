@@ -1,0 +1,21 @@
+﻿2017-01-25 16:00:49.049 +0000	START		Running WebBasePage.script
+2017-01-25 16:00:49.049 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:51.051 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:52.052 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:53.053 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:54.054 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (259, 263)	8	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:54.054 +0000	click	ADVANCED	at (267, 555)	10	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:56.056 +0000	scrollwheeldown		moved 2	12	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:57.057 +0000	click	Proceed	at (248, 669)	13	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:58.058 +0000	waitfor	UserName	found at (117, 479)	16	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:58.058 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-25 16:00:59.059 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:00.000 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:01.001 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:01.001 +0000	click	VMSphereLogin	at (400, 568)	23	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:17.017 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:24.024 +0000	imagefound	Home	found at (71, 232)	24	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:24.024 +0000	click	HostsAndClusters	at (68, 284)	25	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:26.026 +0000	clickany	Manchester	at (97, 272)	26	on_webbasepage	WebBasePage.script
+2017-01-25 16:01:27.027 +0000	EndTestCase		(Duration:"38.65", Errors:"1", Exceptions:"0", StartTime:"2017-01-25 16:00:49 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-25 16:01:27.027 +0000	ABORTED		Execution Time 0:00:38 WebBasePage.script

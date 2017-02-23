@@ -1,0 +1,12 @@
+﻿2016-12-09 12:03:11.011 +0000	START		Running FileCopyDelete.script
+2016-12-09 12:03:11.011 +0000	click	TestFileSelected	at (347, 234)	8	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:12.012 +0000	typetext		[controlKey]c	9	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:12.012 +0000	click	FE	at (203, 741)	10	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:13.013 +0000	doubleclick	LocalDiskC	at (693, 426)	11	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:14.014 +0000	doubleclick	Test	at (344, 333)	13	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:15.015 +0000	typetext		[controlKey]v	14	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:16.016 +0000	click	Test_0002	at (439, 146)	15	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:16.016 +0000	typetext		[deleteKey]	16	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:17.017 +0000	click	image0002	at (899, 81)	17	on_filecopydelete	FileCopyDelete.script
+2016-12-09 12:03:17.017 +0000	EndTestCase		(Duration:"6.74", Errors:"0", Exceptions:"0", StartTime:"2016-12-09 12:03:11 +0000", Successes:"1", TestCase:"FileCopyDelete.script", Warnings:"0")
+2016-12-09 12:03:29.029 +0000	SUCCESS		Execution Time 0:00:06 FileCopyDelete.script

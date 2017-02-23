@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="AUAccessingUsersThroughNavigationBar">
+ <run>
+  <RunDate>2017-01-23 17:02:20.020 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>71.796000</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20170123_170220.020/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

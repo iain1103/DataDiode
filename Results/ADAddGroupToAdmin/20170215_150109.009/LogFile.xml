@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADAddGroupToAdmin.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-15 15:01:09.009 +0000"
+ tests="1" successes="5" errors="0" time="81.616000">
+  <properties>
+   <property name="RunDate" value="2017-02-15 15:01:09.009 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADAddGroupToAdmin.script" assertions="5" successes="5" errors="0" time="81.584">
+  </testcase>
+ </testsuite>
+</testsuites>

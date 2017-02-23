@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADAdminCanCancelEnbalingConfigManagerr.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-15 12:23:54.054 +0000"
+ tests="1" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2017-02-15 12:23:54.054 +0000"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="ADAdminCanCancelEnbalingConfigManagerr.script" assertions="4" successes="3" errors="1" time="47.615">
+  </testcase>
+ </testsuite>
+</testsuites>

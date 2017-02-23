@@ -1,0 +1,47 @@
+﻿(***Created By :Sowjanya Pedarasi***)
+//Cancel disabling SMB service
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			put ReadText(491,522) into resultValue
+			if resultValue is "X DISABLE" then
+				Click(491,522)
+				Wait 1
+				Click (Text:"CANCEL",caseSensitive:"yes")
+				Wait 1
+				put ReadText(491,522) into resultValue2
+				if resultValue2 is "X DISABLE" then
+					LogSuccess "Cancelled disabling SMB service"
+				else
+					LogWarning	"Failed to cancel disabling SMB Service "
+					
+				end if
+			else
+				LogWarning "SMB Service is already disabled"
+			end if
+		else
+			
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

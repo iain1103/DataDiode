@@ -1,0 +1,47 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel  SMTP Service configuration
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	//MoveTo
+	Click "ADLoginBtn"
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		//DoubleClick "ADServices"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(2, "ADServicesPage") then			
+			LogSuccess "Appliance upstream services page opened"
+			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList	
+			MoveTo item 1 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 1 of ConfigurationList
+			set the shouldRepositionMouse to true
+			Wait 1
+			
+			Click (Text:"CANCEL",CaseSensitive:"yes")
+			LogSuccess "SMTP service configuration cancelled"
+			
+			else
+			
+			LogWarning "Failed to open Appliance upstream page"
+		end if
+		
+		else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "Appliance upstream not found"
+end if
+
+TearDown

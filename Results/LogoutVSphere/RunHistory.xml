@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="LogoutVSphere">
+ <run>
+  <RunDate>2017-01-23 10:24:36.036 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>10.813000</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170123_102436.036/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

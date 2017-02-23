@@ -1,0 +1,9 @@
+﻿2017-02-14 15:55:39.039 +0000	START		Running ADAdminCanDisableConfigManager.script
+2017-02-14 15:55:45.045 +0000	imagefound	ApplianceDownstream	Unable to Find Image ApplianceDownstream within 3.00 seconds	6	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 15:55:45.045 +0000	LogWarning		Appliance downstream not found	124	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 15:55:45.045 +0000	click		at (954, 164)	1	on_teardown	TearDown.script
+2017-02-14 15:55:48.048 +0000	imagefound	ADUsernameET	Unable to Find Image ADUsernameET within 3.00 seconds	2	on_teardown	TearDown.script
+2017-02-14 15:55:48.048 +0000	LogWarning		Failed to logout	5	on_teardown	TearDown.script
+2017-02-14 15:55:54.054 +0000	Exception	0vSphereWebClient	No Image Found On Screen: "0vSphereWebClient,VsphereWebClient"	1	on_logoutvsphere	LogoutVSphere.script
+2017-02-14 15:55:55.055 +0000	EndTestCase		(Duration:"15.776", Errors:"1", Exceptions:"1", StartTime:"2017-02-14 15:55:39 +0000", Successes:"0", TestCase:"ADAdminCanDisableConfigManager.script", Warnings:"2")
+2017-02-14 15:55:55.055 +0000	ABORTED		Execution Time 0:00:16 ADAdminCanDisableConfigManager.script

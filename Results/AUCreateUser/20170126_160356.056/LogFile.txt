@@ -1,0 +1,4 @@
+﻿2017-01-26 16:03:56.056 +0000	START		Running AUCreateUser.script
+2017-01-26 16:04:05.005 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2017-01-26 16:04:06.006 +0000	EndTestCase		(Duration:"10.824", Errors:"1", Exceptions:"1", StartTime:"2017-01-26 16:03:56 +0000", Successes:"0", TestCase:"AUCreateUser.script", Warnings:"0")
+2017-01-26 16:04:06.006 +0000	ABORTED		Execution Time 0:00:10 AUCreateUser.script

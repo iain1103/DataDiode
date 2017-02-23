@@ -1,0 +1,14 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Logging out from VMWare
+ClickAny "0vSphereWebClient", "VsphereWebClient"
+Click "SignOutMenu"
+MoveTo (Text:"Logout")
+set the shouldRepositionMouse to false
+Click (Text:"Logout")
+set the shouldRepositionMouse to true
+if ImageFound(3,"VMWare") then
+	LogSuccess "Logged out from VSphere web client"
+else
+	LogWarning "Failed to logout"
+end if
+

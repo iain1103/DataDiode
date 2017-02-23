@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUEditConfigurationManager.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-10 14:52:46.046 +0000"
+ tests="1" successes="5" errors="0" time="114.251000">
+  <properties>
+   <property name="RunDate" value="2017-02-10 14:52:46.046 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="AUEditConfigurationManager.script" assertions="5" successes="5" errors="0" time="114.219">
+  </testcase>
+ </testsuite>
+</testsuites>

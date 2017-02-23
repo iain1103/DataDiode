@@ -1,0 +1,71 @@
+﻿//Access Configuration General System Settings Rate Limit
+//Date Created 20/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "GeneralSystemSettings"
+			set the shouldRepositionMouse to false
+			Click "GeneralSystemSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"GeneralSystemSettingsPage_Title") then
+				LogSuccess "General Systems Settings page opened"
+				Wait 5
+				//ScrollWheelDown 4
+				Drag (997,236)
+				Drop (997,390)
+				MoveTo "SetRateLimit"
+				set the shouldRepositionMouse to false
+				Click "SetRateLimit"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"SetRateLimitPage_Title") then
+					LogSuccess "Set Rate Limit page opened"
+					MoveTo "Enabled_Checkbox"
+					set the shouldRepositionMouse to false
+					Click "Enabled_Checkbox"
+					set the shouldRepositionMouse to true
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Enabled_1") then
+						LogSuccess "Change Rate Limit cancelled"
+					else
+						LogWarning "Failed to cancel Rate Limit"
+					end if
+				else
+					LogWarning "Failed to open Set Rate Limit page"
+				end if
+				
+				else
+				LogWarning "Failed to open General System Settings page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

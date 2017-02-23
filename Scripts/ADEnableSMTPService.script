@@ -1,0 +1,60 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//Enable SMTP Service
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "ApplianceDownstream"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSucess "Logged in into appliance downstream"	
+		MoveTo "ADServices"
+		set the shouldRepositioMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			put ReadText(802,522) into resultValue
+			if resultValue contains "ENABLE" then
+				MoveTo (802,522)	
+				set the shouldRepositionMouse to false
+				if ImageFound(5, "Pleaseconfigure") then
+					LogWarning "Please configure this service, before enabling it."
+					set the shouldRepositionMouse to true
+				else
+					set the shouldRepositionMouse to true
+					Click(802,522)
+					
+					if ImageFound(5, (text:"Enable service")) then
+						Click (Text:"ENABLE",caseSensitive:"Yes")
+						put ReadText(802,522) into resultValue2
+						if resultValue2 is "X DISMISS" then
+							LogSuccess "SMTP service is enabled"
+						else
+							LogWarning "Failed to enable SMTP service"						
+							
+						end if
+					else
+						LogWarning "popup doesn't appear"
+					end if
+				end if
+				
+			else
+				Logwarning "SMTP service is already enabled"
+			end if
+		else
+			LogWarning "Failed to open service page"
+		end if
+	else
+		
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream  not found"
+	
+	
+end if
+TearDown

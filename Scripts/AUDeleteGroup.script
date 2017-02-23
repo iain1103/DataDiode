@@ -1,0 +1,71 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Delete a group if it exists. 
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			
+			MoveTo "MANAGEGROUPS"			
+			set the shouldRepositionMouse to false
+			Click "MANAGEGROUPS"
+			set the shouldRepositionMouse to true
+			Wait 2
+			if Not ImageFound(1,(Text:"TestGroup",caseSensitive:"yes")) then
+				Log "Creating group..."
+				MoveTo "CREATEGROUP"
+				set the shouldRepositionMouse to false
+				Click "CREATEGROUP"
+				set the shouldRepositionMouse to true
+				Click "Name_1"
+				TypeText "TestGroup"
+				MoveTo "CREATE"
+				set the shouldRepositionMouse to false
+				Click "CREATE"
+				set the shouldRepositionMouse to true
+			end if
+			Log "Deleting group.."
+			Wait 2
+			set the searchRectangle to ("TestGroup","TestGroup_1")
+			Click "Deleteicon"
+			set the searchRectangle to fullscreen
+			MoveTo "Deletebtn"
+			//set the shouldRepositionMouse to false
+			Click "Deletebtn"
+			
+			WaitFor 5, "Manage"
+			if Not ImageFound(3,(Text:"TestGroup",caseSensitive:"yes")) then
+				LogSuccess "Group deleted"
+				
+			else
+				
+				LogWarning "Failed to delete group"
+			end if
+			MoveTo "CLOSE"
+			Click "CLOSE"
+			
+		else
+			LogWarning "Fail to open users page"
+		end if
+	else		
+		
+		LogWarning "Failed to login into appliance upstream"
+	end if
+else	
+	LogWarning "Applianceupstream not found"
+	
+end if
+TearDown

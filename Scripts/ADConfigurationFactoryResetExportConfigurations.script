@@ -1,0 +1,56 @@
+﻿//Access Configuration Factory Reset Export Configuration
+//Date Created 22/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			Wait 5
+			MoveTo "FactoryReset"
+			set the shouldRepositionMouse to false
+			Click "FactoryReset"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"FactoryResetPage_Title") then
+				LogSuccess "Factory Reset page opened"
+				Wait 5
+				MoveTo "ExportConfiguration"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "ExportConfiguration"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ImportExportConfigurationPage_Title") then
+					LogSuccess "Import Export Configuration page opened"
+				else
+					LogWarning "Failed to open Import Export Configuration page"
+				end if
+			else
+				LogWarning "Failed to open Factory Reset page"
+			end if
+			
+			else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

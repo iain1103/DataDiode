@@ -1,0 +1,10 @@
+﻿2016-12-08 17:09:14.014 +0000	START		Running WebBasePage.script
+2016-12-08 17:09:15.015 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:19.019 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:21.021 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:22.022 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:23.023 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	6	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:23.023 +0000	LogSuccess		Error found	7	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:23.023 +0000	Exception	ADVANCED	Could Not Open Image: ADVANCED	8	on_webbasepage	WebBasePage.script
+2016-12-08 17:09:23.023 +0000	EndTestCase		(Duration:"8.412", Errors:"1", Exceptions:"1", StartTime:"2016-12-08 17:09:14 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-08 17:09:25.025 +0000	FAILURE	Screen_Error.png	File Not Found click Error - Could Not Open Image: ADVANCED -- Execution Time 0:00:09 WebBasePage.script

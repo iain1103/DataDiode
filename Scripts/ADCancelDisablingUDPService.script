@@ -1,0 +1,51 @@
+﻿(***Created By :Sowjanya Pedarasi***)
+//Cancel disabling UDP service
+WebBasePage
+if ImageFound(3,"ApplianceDownstream")
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "LoggedIn into appliance upstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Services page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			
+			put ReadText(491,669) into resultValue
+			if resultValue is "X DISMISS" then
+				Click(491,669)
+				Wait 1
+				Click (Text:"CANCEL",caseSensitive:"Yes")
+				Wait 1 
+				put ReadText(491,669) into resultValue2
+				if resultValue2 is "X DISMISS" then
+					Logsuccess "Cancelled disabling UDP Service"
+				else
+					LogWarning "Failed to cancel UDP Service disabling"
+					
+				end if
+			else
+				LogWarning "UDP Service is already disabled"
+			end if
+		else
+			
+			LogWarning "Failed to open Services page"
+		end if
+	else
+		
+		LogWarning "Failed to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliane downstream not found"
+end if
+TearDown
+

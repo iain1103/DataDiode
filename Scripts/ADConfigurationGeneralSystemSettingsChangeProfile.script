@@ -1,0 +1,67 @@
+﻿//Access Configuration General System Settings Change Profile
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		Wait 5
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "GeneralSystemSettings"
+			set the shouldRepositionMouse to false
+			Click "GeneralSystemSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"GeneralSystemSettingsPage_Title") then
+				LogSuccess "General Systems Settings page opened"
+				MoveTo "ChangeProfile"
+				set the shouldRepositionMouse to false
+				Click "ChangeProfile"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ChangeProfilePage_Title") then
+					LogSuccess "Change Profile page opened"
+					MoveTo "Upstream"
+					set the shouldRepositionMouse to false
+					Click "Upstream"
+					set the shouldRepositionMouse to true
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Downstream_Selected") then
+						LogSuccess "Change Profile cancelled"
+					else
+						LogWarning "Failed to cancel Change Profile"
+					end if
+				else
+					LogWarning "Failed to open Change Profile page"
+				end if
+				
+				else
+				LogWarning "Failed to open General System Settings page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

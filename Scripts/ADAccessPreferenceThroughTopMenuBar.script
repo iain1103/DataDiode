@@ -1,0 +1,35 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+// Access preference through menu and change password 
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		Click "Preferencesbtn"
+		Wait 2
+		if ImageFound(4, "ADPreferenceImage") then
+			
+			LogSuccess "Prefernces page opened"
+			else
+			
+			LogWarning "Failed to open Preferences"
+		end if		
+		else
+		
+		
+		LogWarning "Failed to Logininto appliance downstream"
+		
+	end if	
+	else
+	
+	LogWarning "Appliance Downstream not found"
+end if
+
+TearDown

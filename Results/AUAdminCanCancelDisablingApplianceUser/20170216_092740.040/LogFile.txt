@@ -1,0 +1,3 @@
+﻿2017-02-16 09:27:40.040 +0000	START		Running AUAdminCanDisableApplianceUser.script
+2017-02-16 09:27:40.040 +0000	EndTestCase		(Duration:"0.003", Errors:"1", Exceptions:"0", StartTime:"2017-02-16 09:27:40 +0000", Successes:"0", TestCase:"AUAdminCanDisableApplianceUser.script", Warnings:"0")
+2017-02-16 09:27:41.041 +0000	FAILURE	Screen_Error.png	SenseTalk Compiler Exception in auadmincandisableapplianceuser:\nSyntax Error at line 106: Syntax Error - can't understand "else" at or near character 2622 -- Execution Time 0:00:00 AUAdminCanDisableApplianceUser.script

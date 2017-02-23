@@ -1,0 +1,9 @@
+﻿2017-01-23 10:24:36.036 +0000	START		Running LogoutVSphere.script
+2017-01-23 10:24:39.039 +0000	clickany	0vSphereWebClient	at (107, 12)	1	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:39.039 +0000	click	SignOutMenu	at (683, 88)	2	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:43.043 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(531,203), ImageRectangle:(513,198,550,209), Language:"English", Text:"Logout", TextPlatform:"Generic OCR")	at (531, 203)	3	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:43.043 +0000	set		SHOULDREPOSITIONMOUSE = False	4	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:47.047 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(532,204), ImageRectangle:(514,199,551,210), Language:"English", Text:"Logout", TextPlatform:"Generic OCR")	at (532, 204)	5	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:47.047 +0000	set		SHOULDREPOSITIONMOUSE = True	6	on_logoutvsphere	LogoutVSphere.script
+2017-01-23 10:24:47.047 +0000	EndTestCase		(Duration:"10.813", Errors:"0", Exceptions:"0", StartTime:"2017-01-23 10:24:36 +0000", Successes:"1", TestCase:"LogoutVSphere.script", Warnings:"0")
+2017-01-23 10:24:48.048 +0000	SUCCESS		Execution Time 0:00:11 LogoutVSphere.script

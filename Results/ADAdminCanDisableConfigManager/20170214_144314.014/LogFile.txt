@@ -1,0 +1,10 @@
+﻿2017-02-14 14:43:14.014 +0000	START		Running ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:14.014 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:14.014 +0000	click	Console	at (333, 235)	7	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:19.019 +0000	click	ADUsernameET	at (481, 286)	9	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:20.020 +0000	typetext		admin	10	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:21.021 +0000	click	ADPasswordET	at (484, 352)	11	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:22.022 +0000	typetext		admin	12	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:23.023 +0000	typetext		[return]	13	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:43:27.027 +0000	EndTestCase		(Duration:"12.623", Errors:"1", Exceptions:"0", StartTime:"2017-02-14 14:43:14 +0000", Successes:"0", TestCase:"ADAdminCanDisableConfigManager.script", Warnings:"0")
+2017-02-14 14:43:27.027 +0000	ABORTED		Execution Time 0:00:13 ADAdminCanDisableConfigManager.script

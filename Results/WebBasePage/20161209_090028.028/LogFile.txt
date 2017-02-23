@@ -1,0 +1,13 @@
+﻿2016-12-09 09:00:28.028 +0000	START		Running WebBasePage.script
+2016-12-09 09:00:29.029 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:33.033 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:35.035 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:36.036 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:39.039 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:40.040 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(78,429), ImageRectangle:(46,425,111,434), Language:"English", Text:"User name:", TextPlatform:"Generic OCR")	at (78, 429)	15	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:41.041 +0000	typetext		spedarasi614	16	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:43.043 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(75,461), ImageRectangle:(46,457,105,466), Language:"English", Text:"Password:", TextPlatform:"Generic OCR")	at (75, 461)	17	on_webbasepage	WebBasePage.script
+2016-12-09 09:00:44.044 +0000	typetext		!Praveensowji1	18	on_webbasepage	WebBasePage.script
+2016-12-09 09:01:26.026 +0000	Exception	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:"", ImageRectangle:"", Language:"English", Text:"Login", TextPlatform:"Generic OCR")	No Image Found On Screen: "(TEXT:"Login")"	19	on_webbasepage	WebBasePage.script
+2016-12-09 09:01:26.026 +0000	EndTestCase		(Duration:"57.759", Errors:"1", Exceptions:"1", StartTime:"2016-12-09 09:00:28 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-09 09:01:27.027 +0000	FAILURE	Screen_Error.png	Image Not Found click Error - No Image Found On Screen: "(TEXT:"Login")" -- Execution Time 0:00:58 WebBasePage.script

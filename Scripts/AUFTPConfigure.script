@@ -1,0 +1,45 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+// FTP service Configure
+WebBasePage
+if ImageFound(3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"		
+		//Click "ADServices"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(2, "ADServicesPage") then
+			LogSuccess "Appliance upstream services page opened"
+			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList	
+			MoveTo item 1 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 1 of ConfigurationList		
+			set the shouldRepositionMouse to true
+			MoveTo "URF"	
+			set the shouldRepositionMouse to false
+			Repeat until ImageFound ("Cancel")
+				ScrollWheelDown 2
+			End Repeat
+			set the shouldRepositionMouse to true
+			LogSuccess "FTP Configured"
+		else
+			LogWarning "Failed to open Appliance upstream page"
+		end if		
+	else
+		LogWarning "Failed to Login"		
+	end if	
+else	
+	LogWarning "ApplianceUpstream  not found"	
+	
+end if
+TearDown

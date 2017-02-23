@@ -1,0 +1,48 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//Disabling SMTP Service
+WebBasePage
+if imageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	Wait 5
+	if ImageFound(3, "ADLoggedIn") then		
+		Logsuccess "Appliance downstream page is opened"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Services page is opened"
+			put ReadText(802,522) into resultValue	
+			if resultValue is "X DISABLE" then
+				Click(802,522)
+				Wait 2
+				Click (Text:"DISABLE",CaseSensitive:"Yes")
+				if ImageFound((text:"Successfully disabled service: smtp-downstream")) then
+					LogSuccess "SMTP service is disabled"
+				else
+					LogWarning "Failed to disable SMTP service"
+				end if	
+			else
+				
+				LogWarning "SMTP service is already disabled"				
+				
+			end if
+		else
+			LogWarning "Failed to open services page"
+		end if
+	else
+		
+		LogWarning "Failed to open appliance downstream"
+	end if
+else
+	
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

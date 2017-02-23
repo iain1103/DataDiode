@@ -1,0 +1,50 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Disabling SMB service
+WebBasePage
+if ImageFound(3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText  Return
+	Wait 5
+	if ImageFound (3, "ADLoggedIn") then
+		LogSuccess "Appliance upstream page is opened"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		//DoubleClick "ADServices"
+		if ImageFound(3, "ADServicesPage") then
+			LogSuccess "Services page is opened"
+			put ReadText(491,522) into resultValue
+			if resultValue is "X DISABLE" then
+				Click(491,522)
+				Wait 1
+				Click (Text:"DISABLE",CaseSensitive:"yes")
+				if ImageFound((text:"Successfully disabled service: samba-upstream")) then
+					LogSuccess "SMB service is disabled"
+				else
+					LogWarning "Failed to disable SMB service"
+				end if				
+				
+			else
+				LogWarning "SMB service is already disabled"				
+				
+			end if			
+			
+		else	
+			
+			LogWarning "Failed to open services page"
+		end if
+	else
+		LogWarning "Failed to login"
+	end if
+	
+else
+	LogWarning "Appliance upstream not found"
+	
+end if
+TearDown

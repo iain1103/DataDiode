@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="ADAlerts">
+ <run>
+  <RunDate>2017-02-22 14:03:15.015 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>13.276000</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>2</Successes>
+  <LogFile>20170222_140315.015/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

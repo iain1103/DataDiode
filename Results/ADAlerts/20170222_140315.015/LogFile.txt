@@ -1,0 +1,18 @@
+﻿2017-02-22 14:03:15.015 +0000	START		Running ADAlerts.script
+2017-02-22 14:03:17.017 +0000	imagefound	ApplianceDownstream	found at (346, 277)	5	on_adalerts	ADAlerts.script
+2017-02-22 14:03:17.017 +0000	click	Console	at (333, 235)	6	on_adalerts	ADAlerts.script
+2017-02-22 14:03:22.022 +0000	click	ADUsernameET	at (481, 312)	8	on_adalerts	ADAlerts.script
+2017-02-22 14:03:23.023 +0000	typetext		admin	9	on_adalerts	ADAlerts.script
+2017-02-22 14:03:24.024 +0000	click	ADPasswordET	at (484, 352)	10	on_adalerts	ADAlerts.script
+2017-02-22 14:03:24.024 +0000	typetext		admin	11	on_adalerts	ADAlerts.script
+2017-02-22 14:03:25.025 +0000	typetext		[return]	12	on_adalerts	ADAlerts.script
+2017-02-22 14:03:26.026 +0000	imagefound	ADLoggedIn	found at (728, 171)	13	on_adalerts	ADAlerts.script
+2017-02-22 14:03:26.026 +0000	LogSuccess		Logged in into appliance downstream	14	on_adalerts	ADAlerts.script
+2017-02-22 14:03:26.026 +0000	moveto	Alerts	at (909, 168)	15	on_adalerts	ADAlerts.script
+2017-02-22 14:03:26.026 +0000	set		SHOULDREPOSITIONMOUSE = False	16	on_adalerts	ADAlerts.script
+2017-02-22 14:03:27.027 +0000	click	Alerts	at (909, 168)	17	on_adalerts	ADAlerts.script
+2017-02-22 14:03:27.027 +0000	set		SHOULDREPOSITIONMOUSE = True	18	on_adalerts	ADAlerts.script
+2017-02-22 14:03:28.028 +0000	imagefound	AlertPresent	found at (943, 208)	19	on_adalerts	ADAlerts.script
+2017-02-22 14:03:28.028 +0000	LogSuccess		Alerts pop-up page opened	20	on_adalerts	ADAlerts.script
+2017-02-22 14:03:28.028 +0000	EndTestCase		(Duration:"13.26", Errors:"0", Exceptions:"0", StartTime:"2017-02-22 14:03:15 +0000", Successes:"2", TestCase:"ADAlerts.script", Warnings:"0")
+2017-02-22 14:03:28.028 +0000	SUCCESS		Execution Time 0:00:13 ADAlerts.script

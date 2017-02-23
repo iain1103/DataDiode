@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="USFTPFileTransfer.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-04 16:31:17.017 +0000"
+ tests="1" successes="1" errors="0" time="145.288000">
+  <properties>
+   <property name="RunDate" value="2017-01-04 16:31:17.017 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="USFTPFileTransfer.script" assertions="1" successes="1" errors="0" time="145.272">
+  </testcase>
+ </testsuite>
+</testsuites>

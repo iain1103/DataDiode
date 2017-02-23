@@ -1,0 +1,8 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-01-04 14:02:16.016 +0000,"Running",0:00:00,0,0,0,"20170104_140216.016/LogFile.txt","","",0
+2017-01-04 14:07:07.007 +0000,"Running",0:00:00,0,0,0,"20170104_140707.007/LogFile.txt","","",0
+2017-01-04 14:09:22.022 +0000,"Running",0:00:00,0,0,0,"20170104_140922.022/LogFile.txt","","",0
+2017-01-04 14:11:25.025 +0000,"Running",0:00:00,0,0,0,"20170104_141125.025/LogFile.txt","","",0
+2017-01-04 14:15:00.000 +0000,"Failure",0:01:12,1,0,1,"20170104_141500.000/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""AUTransfersSelected""",0
+2017-01-04 14:17:52.052 +0000,"Failure",0:01:14,1,0,1,"20170104_141752.052/LogFile.txt","","Image Not Found -- doubleclick Error - No Image Found On Screen: ""Diode_Datastore""",0
+2017-01-04 14:34:52.052 +0000,"Success",0:01:10,0,0,0,"20170104_143452.052/LogFile.txt","","",1

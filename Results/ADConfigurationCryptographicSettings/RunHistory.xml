@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="ADConfigurationCryptographicSettings">
+ <run>
+  <RunDate>2017-02-22 16:43:31.031 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>29.235000</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>4</Successes>
+  <LogFile>20170222_164331.031/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

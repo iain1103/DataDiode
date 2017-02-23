@@ -1,0 +1,13 @@
+﻿2016-12-09 09:07:34.034 +0000	START		Running WebBasePage.script
+2016-12-09 09:07:35.035 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:39.039 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:42.042 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:42.042 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:45.045 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:45.045 +0000	click	UserName	at (59, 430)	15	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:47.047 +0000	typetext		spedarasi614	17	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:47.047 +0000	click	Password	at (74, 462)	18	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:48.048 +0000	typetext		!Praveensowji1	20	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:49.049 +0000	click	Login	at (361, 518)	21	on_webbasepage	WebBasePage.script
+2016-12-09 09:07:49.049 +0000	EndTestCase		(Duration:"15.294", Errors:"0", Exceptions:"0", StartTime:"2016-12-09 09:07:34 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-09 09:07:50.050 +0000	SUCCESS		Execution Time 0:00:15 WebBasePage.script

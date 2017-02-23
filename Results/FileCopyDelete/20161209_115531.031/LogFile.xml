@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="FileCopyDelete.script" package="FoxITDataDiodeAppliance.suite" timestamp="2016-12-09 11:55:31.031 +0000"
+ tests="1" successes="1" errors="0" time="7.719000">
+  <properties>
+   <property name="RunDate" value="2016-12-09 11:55:31.031 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="FileCopyDelete.script" assertions="1" successes="1" errors="0" time="7.703">
+  </testcase>
+ </testsuite>
+</testsuites>

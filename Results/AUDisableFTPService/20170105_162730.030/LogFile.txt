@@ -1,0 +1,21 @@
+﻿2017-01-05 16:27:30.030 +0000	START		Running AUDisableFTPService.script
+2017-01-05 16:27:31.031 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:35.035 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:38.038 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:38.038 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:39.039 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:40.040 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:42.042 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:44.044 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:44.044 +0000	typetext		[tab]	16	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:45.045 +0000	typetext		spedarasi614	17	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:45.045 +0000	typetext		[tab]	19	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:47.047 +0000	typetext		!Praveensowji1	20	on_webbasepage	WebBasePage.script
+2017-01-05 16:27:47.047 +0000	click	VMSphereLogin	at (362, 519)	21	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:03.003 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	22	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:07.007 +0000	imagefound	Home	found at (33, 183)	22	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:07.007 +0000	click	HostsAndClusters	at (30, 235)	23	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:10.010 +0000	click	Manchester	at (59, 223)	24	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:12.012 +0000	click	RelatedObjects	at (597, 155)	28	on_webbasepage	WebBasePage.script
+2017-01-05 16:28:29.029 +0000	EndTestCase		(Duration:"59.421", Errors:"1", Exceptions:"0", StartTime:"2017-01-05 16:27:30 +0000", Successes:"0", TestCase:"AUDisableFTPService.script", Warnings:"0")
+2017-01-05 16:28:29.029 +0000	ABORTED		Execution Time 0:00:59 AUDisableFTPService.script

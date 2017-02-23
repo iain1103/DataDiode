@@ -1,0 +1,46 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel  TCP service configure
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText Return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true	
+		if ImageFound(2, "ADServicesPage") then
+			LogSuccess "Appliance downstream services page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			
+			put EveryImageLocation((Text:"CONFIGURE", CaseSensitive:"Yes") ) into ConfigurationList
+			MoveTo item 4 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 4 of ConfigurationList
+			set the shouldRepositionMouse to true
+			Click (Text:"CANCEL")	
+			LogSuccess "TCP service configuration cancelled"
+			
+		else
+			
+			LogWarning "Failed to open Appliance downstream services page"
+		end if
+		
+	else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown

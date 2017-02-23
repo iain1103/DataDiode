@@ -1,0 +1,25 @@
+﻿2016-12-09 14:32:11.011 +0000	START		Running WebBasePage.script
+2016-12-09 14:32:12.012 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:16.016 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:19.019 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:19.019 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:20.020 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:22.022 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:24.024 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:25.025 +0000	typetext		[tab]	17	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:26.026 +0000	typetext		spedarasi614	18	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:27.027 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:28.028 +0000	typetext		!Praveensowji1	21	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:29.029 +0000	click	Login	at (360, 518)	22	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:44.044 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	23	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:56.056 +0000	imagefound	Home	found at (33, 183)	23	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:56.056 +0000	click	HostsAndClusters	at (30, 235)	24	on_webbasepage	WebBasePage.script
+2016-12-09 14:32:58.058 +0000	click	Manchester	at (59, 223)	25	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:00.000 +0000	click	RelatedObjects	at (597, 155)	29	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:03.003 +0000	doubleclick	Diode_Datastore	at (327, 498)	34	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:04.004 +0000	imagefound	RelatedObjects	found at (597, 155)	35	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:04.004 +0000	click	RelatedObjects	at (597, 155)	36	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:07.007 +0000	imagefound	ApplianceDownstream	found at (346, 277)	41	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:07.007 +0000	click	Computer	at (333, 235)	42	on_webbasepage	WebBasePage.script
+2016-12-09 14:33:08.008 +0000	EndTestCase		(Duration:"56.318", Errors:"0", Exceptions:"0", StartTime:"2016-12-09 14:32:11 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-09 14:33:15.015 +0000	SUCCESS		Execution Time 0:00:57 WebBasePage.script

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADConfigurationCertificateManagementCreateCertificate.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-22 14:07:36.036 +0000"
+ tests="1" successes="5" errors="0" time="40.123000">
+  <properties>
+   <property name="RunDate" value="2017-02-22 14:07:36.036 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADConfigurationCertificateManagementCreateCertificate.script" assertions="5" successes="5" errors="0" time="40.107">
+  </testcase>
+ </testsuite>
+</testsuites>

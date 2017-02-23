@@ -1,0 +1,47 @@
+﻿2017-02-14 16:59:10.010 +0000	START		Running ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:12.012 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:12.012 +0000	click	Console	at (333, 235)	7	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:19.019 +0000	click	ADUsernameET	at (481, 312)	9	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:19.019 +0000	typetext		admin	10	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:20.020 +0000	click	ADPasswordET	at (484, 352)	11	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:21.021 +0000	typetext		admin	12	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:22.022 +0000	typetext		[return]	13	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:23.023 +0000	imagefound	ADLoggedIn	found at (728, 171)	14	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:23.023 +0000	LogSuccess		Logged in into appliance downstream	15	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:23.023 +0000	moveto	Users_Dashboard	at (329, 329)	16	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:23.023 +0000	set		SHOULDREPOSITIONMOUSE = False	17	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:24.024 +0000	click	Users_Dashboard	at (329, 329)	18	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:24.024 +0000	set		SHOULDREPOSITIONMOUSE = True	19	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:24.024 +0000	imagefound	UserPageTitle	found at (92, 233)	20	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:24.024 +0000	LogSuccess		Users page opened	21	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:28.028 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	22	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:28.028 +0000	set		SHOULDREPOSITIONMOUSE = False	23	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:30.030 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	24	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:30.030 +0000	set		SHOULDREPOSITIONMOUSE = True	25	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:31.031 +0000	click	Username_1	at (497, 279)	27	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:32.032 +0000	typetext		TestAdmin	28	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:33.033 +0000	click	Fullname	at (497, 320)	29	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:34.034 +0000	typetext		TestAdmin	30	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:35.035 +0000	click	Password_1	at (495, 363)	31	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:36.036 +0000	typetext		TestAdmin	32	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:37.037 +0000	click	ConfirmPassword	at (498, 406)	33	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:38.038 +0000	typetext		TestAdmin	34	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:39.039 +0000	click	ADConfigManagerDropDown	at (589, 450)	35	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:39.039 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	37	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:39.039 +0000	click	Administrator	at (500, 489)	38	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:39.039 +0000	set		SEARCHRECTANGLE = fullscreen	39	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:42.042 +0000	click	CREATE	at (663, 490)	41	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:46.046 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(73,403), ImageRectangle:(46,399,100,408), Language:"English", text:"TestAdmin", TextPlatform:"Generic OCR")	found at (73, 403)	43	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:47.047 +0000	LogSuccess		Admincreated	45	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:47.047 +0000	imagefound	TestAdmin	found at (74, 404)	46	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:48.048 +0000	set		SEARCHRECTANGLE = (TLTestAdmin,BRTestAdmin)	51	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:50.050 +0000	click	DisableUserIcon	at (897, 399)	53	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:50.050 +0000	set		SEARCHRECTANGLE = fullscreen	54	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:51.051 +0000	moveto	DISABLE	at (659, 350)	56	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:51.051 +0000	set		SHOULDREPOSITIONMOUSE = False	57	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:52.052 +0000	click	DISABLE	at (659, 350)	58	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:52.052 +0000	set		SHOULDREPOSITIONMOUSE = True	59	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 16:59:55.055 +0000	click		at (950, 155)	61	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 17:00:02.002 +0000	Exception	ADUsernameET	Unable To Find Any Image On Screen "ADUsernameET" within 3.00 seconds	63	on_adadmindisableanotheradmin	ADAdminDisableAnotherAdmin.script
+2017-02-14 17:00:02.002 +0000	EndTestCase		(Duration:"51.474", Errors:"1", Exceptions:"1", StartTime:"2017-02-14 16:59:10 +0000", Successes:"3", TestCase:"ADAdminDisableAnotherAdmin.script", Warnings:"0")
+2017-02-14 17:00:02.002 +0000	ABORTED		Execution Time 0:00:52 ADAdminDisableAnotherAdmin.script

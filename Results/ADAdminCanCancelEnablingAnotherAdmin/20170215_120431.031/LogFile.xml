@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADAdminCanCancelEnablingAnotherAdmin.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-15 12:04:31.031 +0000"
+ tests="1" successes="7" errors="0" time="86.990000">
+  <properties>
+   <property name="RunDate" value="2017-02-15 12:04:31.031 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADAdminCanCancelEnablingAnotherAdmin.script" assertions="7" successes="7" errors="0" time="86.975">
+  </testcase>
+ </testsuite>
+</testsuites>

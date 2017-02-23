@@ -1,0 +1,48 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel enabling FTP service
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPassword"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page is opened"			
+			put ReadText(189,522) into resultValue
+			if resultValue contains "ENABLE" then
+				Click (189,522)	
+				if ImageFound(5, (text:"Enable service")) then
+					Click (Text:"CANCEL",caseSensitive:"Yes")
+					put ReadText(189,522) into resultValue2
+					if resultValue2 contains "ENABLE" then
+						LogSuccess "FTP service enable has been cancelled"
+					else
+						LogWarning "Failed to cancel enabling FTP service"
+					end if
+				else
+					LogWarning "popup doesn't appear"
+				end if
+			else
+				LogWarning "FTP service is already enabled"
+				
+			end if
+		else
+			LogWarning "Failed to open service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown

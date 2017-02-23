@@ -1,0 +1,4 @@
+﻿2017-01-06 13:34:30.030 +0000	START		Running AUDisableSMTPService.script
+2017-01-06 13:34:36.036 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2017-01-06 13:34:38.038 +0000	EndTestCase		(Duration:"7.754", Errors:"1", Exceptions:"1", StartTime:"2017-01-06 13:34:30 +0000", Successes:"0", TestCase:"AUDisableSMTPService.script", Warnings:"0")
+2017-01-06 13:34:38.038 +0000	ABORTED		Execution Time 0:00:08 AUDisableSMTPService.script

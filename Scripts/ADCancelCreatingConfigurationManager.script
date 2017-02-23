@@ -1,0 +1,55 @@
+﻿(***Created By :Sowjanya Pedarasi***) 	  	
+//Admin can cancel creating configuration manager
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "testconfigmanager"
+			Click "Fullname"
+			TypeText "testconfigmanager"
+			Click "Password_1"
+			TypeText "testconfigmanager"
+			Click "ConfirmPassword"
+			TypeText "testconfigmanager"
+			
+			Click "CANCEL"
+			
+			
+			if  Not ImageFound(10, (text:"testconfigmanager")) then
+				LogSuccess "Cancelled creating Configuration manager "
+			else
+				LogWarning "Failed to cancel"
+			end if
+			
+		else
+			
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		LogWarning "Fail to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

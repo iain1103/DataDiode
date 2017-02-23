@@ -1,0 +1,18 @@
+﻿2016-12-12 16:03:59.059 +0000	START		Running ADExportLogs.script
+2016-12-12 16:03:59.059 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:03.003 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:06.006 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:07.007 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:10.010 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:10.010 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:10.010 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:11.011 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:11.011 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:13.013 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:13.013 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:28.028 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:35.035 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:35.035 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:44.044 +0000	Exception	Manchester	No Image Found On Screen: "Manchester"	26	on_webbasepage	WebBasePage.script
+2016-12-12 16:04:45.045 +0000	EndTestCase		(Duration:"46.424", Errors:"1", Exceptions:"1", StartTime:"2016-12-12 16:03:59 +0000", Successes:"0", TestCase:"ADExportLogs.script", Warnings:"0")
+2016-12-12 16:04:45.045 +0000	ABORTED		Execution Time 0:00:46 ADExportLogs.script

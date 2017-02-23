@@ -1,0 +1,33 @@
+﻿(* created By : Sowjanya Pedarasi *)
+//Access status page from dashboard
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Status_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Status_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StatusPageTitle") then
+			LogSuccess "Status page opened"
+		else
+			LogWarning "Failed to open status"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into applianc eupstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUFTPConfigure.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-03 14:14:25.025 +0000"
+ tests="1" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2017-01-03 14:14:25.025 +0000"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="AUFTPConfigure.script" assertions="1" successes="0" errors="1" time="53.029">
+  </testcase>
+ </testsuite>
+</testsuites>

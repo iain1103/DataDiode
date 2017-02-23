@@ -1,0 +1,8 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-01-04 08:51:32.032 +0000,"Success",0:01:04,0,1,0,"20170104_085132.032/LogFile.txt","","",1
+2017-01-04 09:01:48.048 +0000,"Running",0:00:00,0,0,0,"20170104_090148.048/LogFile.txt","","",0
+2017-01-04 09:06:37.037 +0000,"Failure",0:00:47,1,0,1,"20170104_090637.037/LogFile.txt","","File Not Found -- moveto Error - Could Not Open Image: D1-RHEL7",0
+2017-01-04 09:09:50.050 +0000,"Running",0:00:00,0,0,0,"20170104_090950.050/LogFile.txt","","",0
+2017-01-04 09:24:16.016 +0000,"Running",0:00:00,0,0,0,"20170104_092416.016/LogFile.txt","","",0
+2017-01-04 09:33:44.044 +0000,"Success",0:01:11,0,1,0,"20170104_093344.044/LogFile.txt","","",1
+2017-01-04 09:39:46.046 +0000,"Success",0:01:11,0,1,0,"20170104_093946.046/LogFile.txt","","",1

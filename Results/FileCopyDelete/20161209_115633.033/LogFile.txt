@@ -1,0 +1,11 @@
+﻿2016-12-09 11:56:33.033 +0000	START		Running FileCopyDelete.script
+2016-12-09 11:56:33.033 +0000	click	TestFileSelected	at (347, 234)	8	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:34.034 +0000	typetext		[controlKey]c	9	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:35.035 +0000	click	FE	at (203, 741)	10	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:36.036 +0000	doubleclick	LocalDiskC	at (693, 426)	11	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:37.037 +0000	doubleclick	Test	at (344, 333)	13	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:38.038 +0000	typetext		[controlKey]v	14	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:38.038 +0000	typetext		[deleteKey]	15	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:59.059 +0000	Exception	image0002	No Image Found On Screen: "image0002"	16	on_filecopydelete	FileCopyDelete.script
+2016-12-09 11:56:59.059 +0000	EndTestCase		(Duration:"25.917", Errors:"1", Exceptions:"1", StartTime:"2016-12-09 11:56:33 +0000", Successes:"0", TestCase:"FileCopyDelete.script", Warnings:"0")
+2016-12-09 11:56:59.059 +0000	ABORTED		Execution Time 0:00:26 FileCopyDelete.script

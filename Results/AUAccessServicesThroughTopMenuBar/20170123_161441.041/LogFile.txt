@@ -1,0 +1,53 @@
+﻿2017-01-23 16:14:41.041 +0000	START		Running AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:14:43.043 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:45.045 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:47.047 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:48.048 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:49.049 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:49.049 +0000	click	ADVANCED	at (247, 506)	10	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:51.051 +0000	scrollwheeldown		moved 2	12	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:52.052 +0000	click	Proceed	at (228, 667)	13	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:53.053 +0000	waitfor	UserName	found at (79, 430)	16	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:53.053 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:54.054 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:55.055 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:56.056 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-23 16:14:57.057 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:12.012 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:17.017 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:17.017 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:19.019 +0000	clickany	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:21.021 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:25.025 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore within 2.00 seconds	44	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:28.028 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(312,343), ImageRectangle:(283,339,341,348), Language:"English", Text:"D1-RHEL7", TextPlatform:"Generic OCR")	at (312, 343)	47	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:31.031 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	48	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:31.031 +0000	scrollwheeldown		moved 2	49	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:35.035 +0000	imagefound	Diode_Datastore	Unable to Find Image Diode_Datastore	50	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:35.035 +0000	scrollwheeldown		moved 2	49	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:36.036 +0000	imagefound	Diode_Datastore	found at (327, 389)	50	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:37.037 +0000	doubleclick	Diode_Datastore	at (327, 389)	53	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:38.038 +0000	imagefound	RelatedObjects	found at (597, 155)	57	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:38.038 +0000	click	RelatedObjects	at (597, 155)	58	on_webbasepage	WebBasePage.script
+2017-01-23 16:15:41.041 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:41.041 +0000	click	ApplianceUpstream	at (366, 320)	3	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:42.042 +0000	click	Console	at (333, 235)	4	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:49.049 +0000	click	ADUsernameET	at (481, 312)	6	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:50.050 +0000	typetext		admin	7	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:51.051 +0000	click	ADPasswordET	at (484, 352)	8	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:51.051 +0000	typetext		admin	9	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:52.052 +0000	typetext		[return]	10	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:53.053 +0000	imagefound	ADLoggedIn	found at (728, 171)	12	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:53.053 +0000	LogSuccess		Logged in into appliance upstream	13	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:53.053 +0000	click	RightArrow	at (680, 165)	14	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:56.056 +0000	imagefound	Services_NavigationBar	Unable to Find Image Services_NavigationBar	15	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:56.056 +0000	click	RightArrowSelected	at (680, 165)	16	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:59.059 +0000	imagefound	Services_NavigationBar	Unable to Find Image Services_NavigationBar	18	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:15:59.059 +0000	click	RightArrowSelected	at (680, 165)	16	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:02.002 +0000	imagefound	Services_NavigationBar	Unable to Find Image Services_NavigationBar	18	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:02.002 +0000	click	RightArrowSelected	at (680, 165)	16	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:03.003 +0000	imagefound	Services_NavigationBar	found at (479, 162)	18	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:03.003 +0000	click	Services_NavigationBar	at (479, 162)	19	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:04.004 +0000	imagefound	ServicesTitle	found at (488, 162)	20	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:04.004 +0000	LogSuccess		Services page opened	21	on_auaccessingservicesthroughnavigationbar	AUAccessingServicesThroughNavigationBar.script
+2017-01-23 16:16:04.004 +0000	EndTestCase		(Duration:"82.889", Errors:"0", Exceptions:"0", StartTime:"2017-01-23 16:14:41 +0000", Successes:"2", TestCase:"AUAccessingServicesThroughNavigationBar.script", Warnings:"0")
+2017-01-23 16:16:05.005 +0000	SUCCESS		Execution Time 0:01:23 AUAccessingServicesThroughNavigationBar.script

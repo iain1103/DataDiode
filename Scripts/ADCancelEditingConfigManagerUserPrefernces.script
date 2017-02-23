@@ -1,0 +1,116 @@
+﻿
+(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 13/02/2017  
+ ***************************************)
+ //Admin can cancel editing configuartion manager user's details
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance dowstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "testconfigmanager"
+			Click "Fullname"
+			TypeText "testconfigmanager"
+			Click "Password_1"
+			TypeText "testconfigmanager"
+			Click "ConfirmPassword"
+			TypeText "testconfigmanager"
+			Wait 1
+			Click "CREATE"
+			
+			Wait 3
+			
+			if ImageFound(1, (text:"testconfigmanager")) then
+				LogSuccess "Configuration manager  created"
+				repeat until imageFound("testconfigmanager" ) 
+					MoveTo "ENABLED"
+					//Wait 3
+					ScrollWheelDown 4.0
+				end repeat
+				//Edit the user's full name and role
+				set the searchRectangle to ("TLtestconfigmanager","BRtestconfigmanager")		
+				Click "PencilIcon"			
+				set the searchRectangle to fullscreen
+				Wait 3
+				Click (467,321)
+				typeText controlKey, "a" // select all 
+				
+				typeText deleteKey // delete the text
+				TypeText "newtestconfigmanager"
+				Wait 1
+				Click "ChangepasswordRadio_ConfigManager"
+				WaitFor 4, "Confirmpassword_1"
+				
+				TypeText tabKey
+				TypeText "testconfigmanagers"
+				TypeText tabKey
+				TypeText "testconfigmanagers"
+				Click "ADConfigManagerDropDown"
+				set the searchRectangle to ("Roletxt","BRSAVE")
+				Click "User"
+				set the searchRectangle to fullscreen			
+				Click "Cancel"
+				Wait 2
+				set the searchRectangle to ("TLtestconfigmanager","BRtestconfigmanager")
+				if not ImageFound("newtestconfigmanager",Text:"User") then
+					LogSuccess "Configuration manager's user details not updated"
+					
+				else
+					LogWarning "Configuration manager's user details  updated"
+				end if
+				set the searchRectangle to fullscreen
+				
+				
+				//Delete the user as a part of teardown
+				set the searchRectangle to ("TLtestuser","BRtestuser")	
+				Wait 2
+				Click "Deleteicon"			
+				set the searchRectangle to fullscreen
+				MoveTo "Deletebtn"
+				set the shouldRepositionMouse to false
+				Click "Deletebtn"
+				set the shouldRepositionMouse to true
+				
+				Wait 3
+				if not ImageFound(1, "testuser") then
+					LogSuccess "User deleted"
+				else
+					LogWarning "Failed to delete user"
+				end if 
+				
+			else
+				LogWarning "Failed to create user"
+			end if
+			
+		else
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		LogWarning "Fail to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown

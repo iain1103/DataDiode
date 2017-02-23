@@ -1,0 +1,24 @@
+﻿2017-02-22 10:44:05.005 +0000	START		Running ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:07.007 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:07.007 +0000	click	Console	at (333, 235)	7	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:11.011 +0000	click	DSUsername	at (506, 310)	9	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:12.012 +0000	typetext		admin	10	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:13.013 +0000	click	DSPassword	at (514, 356)	11	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:14.014 +0000	typetext		admin	12	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:14.014 +0000	typetext		[return]	13	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:15.015 +0000	imagefound	ADLoggedIn	found at (728, 171)	14	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:15.015 +0000	LogSuccess		Logged in into appliance downstream	15	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:15.015 +0000	moveto	AUTransfers	at (338, 408)	16	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:15.015 +0000	set		SHOULDREPOSITIONMOUSE = False	17	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:16.016 +0000	click	AUTransfers	at (338, 408)	18	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:16.016 +0000	set		SHOULDREPOSITIONMOUSE = True	19	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:19.019 +0000	imagefound	CLEARFILTERS	Unable to Find Image CLEARFILTERS within 3.00 seconds	21	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:21.021 +0000	click	EDITFILTERS	at (813, 234)	29	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:23.023 +0000	click	Sequencestart	at (511, 281)	31	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:24.024 +0000	typetext		1	32	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:25.025 +0000	click	Sequenceend	at (508, 323)	33	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:26.026 +0000	typetext		5	34	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:26.026 +0000	typetext		[return]	35	on_adedittransferfilterbysequencenumber	ADEditTransferFilterBySequenceNumber.script
+2017-02-22 10:44:30.030 +0000	click		at (950, 155)	2	on_teardown	TearDown.script
+2017-02-22 10:44:35.035 +0000	EndTestCase		(Duration:"29.671", Errors:"1", Exceptions:"0", StartTime:"2017-02-22 10:44:05 +0000", Successes:"1", TestCase:"ADEditTransferFilterBySequenceNumber.script", Warnings:"0")
+2017-02-22 10:44:35.035 +0000	ABORTED		Execution Time 0:00:30 ADEditTransferFilterBySequenceNumber.script

@@ -1,0 +1,52 @@
+﻿2017-02-14 08:31:44.044 +0000	START		Running AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:31:46.046 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:49.049 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:50.050 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:53.053 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:53.053 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:54.054 +0000	imagefound	ConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:55.055 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:57.057 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:57.057 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:59.059 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-02-14 08:31:59.059 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:00.000 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:01.001 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:02.002 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:03.003 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:18.018 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:25.025 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:25.025 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:27.027 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:29.029 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:32.032 +0000	set		SEARCHRECTANGLE = (TLName,BRName)	35	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:33.033 +0000	imagefound	Diode_Datastore	found at (327, 410)	38	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:33.033 +0000	doubleclick	Diode_Datastore	at (327, 410)	39	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:33.033 +0000	set		SEARCHRECTANGLE = fullscreen	49	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:34.034 +0000	imagefound	RelatedObjects	found at (597, 155)	51	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:34.034 +0000	click	RelatedObjects	at (597, 155)	52	on_webbasepage	WebBasePage.script
+2017-02-14 08:32:38.038 +0000	imagefound	ApplianceUpstream	found at (366, 320)	7	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:38.038 +0000	click	ApplianceUpstream	at (366, 320)	8	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:39.039 +0000	click	Console	at (333, 235)	9	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:45.045 +0000	click	ADUsernameET	at (481, 312)	11	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:46.046 +0000	typetext		admin	12	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:47.047 +0000	click	ADPasswordET	at (484, 352)	13	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:48.048 +0000	typetext		admin	14	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:49.049 +0000	typetext		[return]	15	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:49.049 +0000	imagefound	ADLoggedIn	found at (728, 171)	16	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:49.049 +0000	LogSuccess		Logged in into appliance upstream	17	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:49.049 +0000	moveto	Users_Dashboard	at (560, 329)	18	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:49.049 +0000	set		SHOULDREPOSITIONMOUSE = False	19	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:50.050 +0000	click	Users_Dashboard	at (560, 329)	20	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:50.050 +0000	set		SHOULDREPOSITIONMOUSE = True	21	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:51.051 +0000	imagefound	UserPageTitle	found at (92, 233)	22	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:51.051 +0000	LogSuccess		Users page opened	23	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:51.051 +0000	set		SEARCHRECTANGLE = (TLCurrentUser,BRCurrentUser)	24	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:52.052 +0000	click	AdminPencilIcon	at (878, 342)	25	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:52.052 +0000	set		SEARCHRECTANGLE = fullscreen	26	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:55.055 +0000	click		at (467, 321)	30	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:55.055 +0000	typetext		[controlKey]a	31	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:56.056 +0000	typetext		[deleteKey]	33	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:32:57.057 +0000	typetext		TestAdministrator	34	on_auadmincanedithisownpreference	AUAdminCanEditHisOwnPreference.script
+2017-02-14 08:33:07.007 +0000	EndTestCase		(Duration:"82.329", Errors:"1", Exceptions:"0", StartTime:"2017-02-14 08:31:44 +0000", Successes:"2", TestCase:"AUAdminCanEditHisOwnPreference.script", Warnings:"0")
+2017-02-14 08:33:07.007 +0000	ABORTED		Execution Time 0:01:23 AUAdminCanEditHisOwnPreference.script

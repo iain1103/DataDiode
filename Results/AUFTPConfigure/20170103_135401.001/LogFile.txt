@@ -1,0 +1,21 @@
+﻿2017-01-03 13:54:01.001 +0000	START		Running AUFTPConfigure.script
+2017-01-03 13:54:03.003 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:07.007 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:09.009 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:10.010 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:12.012 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:13.013 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:15.015 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:16.016 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:17.017 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:18.018 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:18.018 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:19.019 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:20.020 +0000	click	VMSphereLogin	at (362, 519)	23	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:35.035 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:41.041 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:41.041 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:43.043 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2017-01-03 13:54:45.045 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2017-01-03 13:55:02.002 +0000	EndTestCase		(Duration:"60.409", Errors:"1", Exceptions:"0", StartTime:"2017-01-03 13:54:01 +0000", Successes:"0", TestCase:"AUFTPConfigure.script", Warnings:"0")
+2017-01-03 13:55:02.002 +0000	ABORTED		Execution Time 0:01:01 AUFTPConfigure.script

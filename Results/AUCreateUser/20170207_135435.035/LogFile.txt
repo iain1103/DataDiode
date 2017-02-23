@@ -1,0 +1,47 @@
+﻿2017-02-07 13:54:35.035 +0000	START		Running AUCreateUser.script
+2017-02-07 13:54:38.038 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:38.038 +0000	click	ApplianceUpstream	at (366, 320)	3	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:39.039 +0000	click	Console	at (333, 235)	4	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:44.044 +0000	click	ADUsernameET	at (481, 312)	6	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:45.045 +0000	typetext		admin	7	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:46.046 +0000	click	ADPasswordET	at (484, 352)	8	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:47.047 +0000	typetext		admin	9	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:48.048 +0000	typetext		[return]	10	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:48.048 +0000	imagefound	ADLoggedIn	found at (728, 171)	11	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:48.048 +0000	LogSuccess		Logged in into appliance upstream	12	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:48.048 +0000	moveto	Users_Dashboard	at (560, 329)	13	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:48.048 +0000	set		SHOULDREPOSITIONMOUSE = False	14	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:49.049 +0000	click	Users_Dashboard	at (560, 329)	15	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:49.049 +0000	set		SHOULDREPOSITIONMOUSE = True	16	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:50.050 +0000	imagefound	UserPageTitle	found at (92, 233)	17	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:50.050 +0000	LogSuccess		Users page opened	18	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:56.056 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	19	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:56.056 +0000	set		SHOULDREPOSITIONMOUSE = False	20	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:58.058 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	21	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:58.058 +0000	set		SHOULDREPOSITIONMOUSE = True	22	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:54:59.059 +0000	click	Username_1	at (497, 279)	24	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:00.000 +0000	typetext		testuser	25	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:01.001 +0000	click	Fullname	at (497, 320)	26	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:02.002 +0000	typetext		testuser	27	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:03.003 +0000	click	Password_1	at (495, 363)	28	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:04.004 +0000	typetext		testuser	29	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:05.005 +0000	click	ConfirmPassword	at (498, 406)	30	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:06.006 +0000	typetext		testuser	31	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:07.007 +0000	click	Role	at (583, 452)	32	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:08.008 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	33	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:08.008 +0000	click	User	at (485, 476)	34	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:08.008 +0000	set		SEARCHRECTANGLE = fullscreen	35	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:08.008 +0000	set		SHOULDREPOSITIONMOUSE = False	36	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:09.009 +0000	click	CREATE	at (663, 490)	37	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:09.009 +0000	set		SHOULDREPOSITIONMOUSE = True	38	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(938,215), ImageRectangle:(917,211,959,219), Language:"English", text:"testuser", TextPlatform:"Generic OCR")	found at (938, 215)	41	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	LogSuccess		User created	42	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	imagefound	testuser	found at (67, 655)	43	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	set		SEARCHRECTANGLE = (TLtestuser,BRtestuser)	50	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	click	Deleteicon	at (953, 656)	51	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:14.014 +0000	set		SEARCHRECTANGLE = fullscreen	52	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:15.015 +0000	click	Deletebtn	at (662, 350)	54	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:26.026 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(483,310), ImageRectangle:(462,306,504,314), Language:"English", text:"testuser", TextPlatform:"Generic OCR")	found at (483, 310)	57	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:26.026 +0000	LogWarning		Failed to delete user	60	on_aucreateuser	AUCreateUser.script
+2017-02-07 13:55:26.026 +0000	EndTestCase		(Duration:"51.004", Errors:"0", Exceptions:"0", StartTime:"2017-02-07 13:54:35 +0000", Successes:"3", TestCase:"AUCreateUser.script", Warnings:"1")
+2017-02-07 13:55:27.027 +0000	SUCCESS		Execution Time 0:00:51 AUCreateUser.script

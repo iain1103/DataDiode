@@ -1,0 +1,35 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Accessing transfers page from top menu bar
+WebBasePage
+if ImageFound(3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	Wait 1
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"		
+		MoveTo "Transfers"
+		set the shouldRepositionMouse to false
+		Click "Transfers"
+		set the shouldRepositionMouse to true
+		if ImageFound("TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			
+		else
+			
+			LogWarning "Failed to open Transfers page"
+		end if
+	else
+		
+		LogWarning "Failed to logininto appliance downstream"
+	end if
+else
+	
+	LogWarning "Appliance downtream not found "	
+	
+end if
+TearDown

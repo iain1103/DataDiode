@@ -1,0 +1,34 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel clearing transfers
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound (5,"ADLoggedIn") then
+		LogSuccess "Logged in int oappliance upstream"	
+		MoveTo "AUTransfers"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true
+		//Click "AUTransfers"	 
+		//Click "AUTransfersSelected"	
+		Wait 2
+		Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
+		Wait 1
+		Click (Text:"CANCEL",caseSensitive:"Yes")
+		LogSuccess "Cancelled clearing transfers"
+		
+		else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+	else	
+	
+	LogWarning "Failed to open appliance upstream"
+end if
+TearDown

@@ -1,0 +1,29 @@
+﻿2017-01-24 17:02:46.046 +0000	START		Running AULogout.script
+2017-01-24 17:02:47.047 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:49.049 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:51.051 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:52.052 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:53.053 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (259, 263)	8	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:53.053 +0000	click	ADVANCED	at (267, 555)	10	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:55.055 +0000	scrollwheeldown		moved 2	12	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:56.056 +0000	click	Proceed	at (248, 669)	13	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:57.057 +0000	waitfor	UserName	found at (117, 479)	16	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:57.057 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:58.058 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:58.058 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2017-01-24 17:02:59.059 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:00.000 +0000	click	VMSphereLogin	at (400, 568)	23	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:15.015 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:22.022 +0000	imagefound	Home	found at (71, 232)	24	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:22.022 +0000	click	HostsAndClusters	at (68, 284)	25	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:24.024 +0000	clickany	Manchester	at (97, 272)	26	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:26.026 +0000	click	RelatedObjects	at (635, 204)	30	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:28.028 +0000	imagefound	Diode_Datastore	found at (365, 569)	44	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:28.028 +0000	doubleclick	Diode_Datastore	at (365, 569)	45	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:29.029 +0000	imagefound	RelatedObjects	found at (635, 204)	57	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:29.029 +0000	click	RelatedObjects	at (635, 204)	58	on_webbasepage	WebBasePage.script
+2017-01-24 17:03:32.032 +0000	imagefound	ApplianceUpstream	found at (404, 369)	2	on_aulogout	AULogout.script
+2017-01-24 17:03:32.032 +0000	click	ApplianceUpstream	at (404, 369)	3	on_aulogout	AULogout.script
+2017-01-24 17:03:33.033 +0000	click	Console	at (371, 284)	4	on_aulogout	AULogout.script
+2017-01-24 17:04:08.008 +0000	EndTestCase		(Duration:"82.563", Errors:"1", Exceptions:"0", StartTime:"2017-01-24 17:02:46 +0000", Successes:"0", TestCase:"AULogout.script", Warnings:"0")
+2017-01-24 17:04:08.008 +0000	ABORTED		Execution Time 0:01:23 AULogout.script

@@ -1,0 +1,4 @@
+﻿2017-02-23 10:24:26.026 +0000	START		Running AUAccessingTransfersThroughTopMenuBar.script
+2017-02-23 10:24:26.026 +0000	Exception		Remote Connection Unavailable	1	on_webbasepage	WebBasePage.script
+2017-02-23 10:24:26.026 +0000	EndTestCase		(Duration:"0.172", Errors:"1", Exceptions:"1", StartTime:"2017-02-23 10:24:26 +0000", Successes:"0", TestCase:"AUAccessingTransfersThroughTopMenuBar.script", Warnings:"0")
+2017-02-23 10:24:26.026 +0000	FAILURE		No Remote Connection doubleclickany Error - Remote Connection Unavailable -- Execution Time 0:00:00 AUAccessingTransfersThroughTopMenuBar.script

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<runHistory script="ADAccessConfigurationPageFromDashboard">
+ <run>
+  <RunDate>2017-02-22 15:39:41.041 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>99.000000</Duration>
+  <Errors>0</Errors>
+  <Warnings>3</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>1</Successes>
+  <LogFile>20170222_153941.041/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-02-22 16:10:11.011 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>53.000000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>1</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170222_161011.011/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>File Not Found -- imagefound Error - Could Not Open Image: AppliancmaeDownstream</ErrorMessage>
+ </run>
+</runHistory>

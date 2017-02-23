@@ -1,0 +1,66 @@
+﻿//Access Configuration Update Choose file cancel
+//Date Created 22/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "Update"
+			set the shouldRepositionMouse to false
+			Click "Update"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"UpdatePage_Title") then
+				LogSuccess "Update page opened"
+				Wait 5
+				MoveTo "ChooseFile"
+				set the shouldRepositionMouse to false
+				Wait 2
+				DoubleClick "ChooseFile"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"RecentlyUsed") then
+					LogSuccess "Choose File page opened"
+					MoveTo "CancelButton"
+					set the shouldRepositionMouse to false
+					Wait 2
+					Click "CancelButton"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"ImportExportConfigurationPage_Title") then
+						LogSuccess "Choose File page closed"
+					else
+						LogWarning "Failed to close Choose File page"
+					end if
+				else
+					LogWarning "Failed to open Choose File page"
+				end if
+				
+				else
+				LogWarning "Failed to open Update page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

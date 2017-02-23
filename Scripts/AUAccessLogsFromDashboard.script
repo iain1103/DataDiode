@@ -1,0 +1,33 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Access Logs page from dashboard
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "ADLogs"
+		set the shouldRepositionMouse to false
+		Click "ADLogs"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"LogsTitle") then
+			LogSuccess "Logs page opened"
+		else
+			LogWarning "Failed to open Logs"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

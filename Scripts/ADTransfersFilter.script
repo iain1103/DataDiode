@@ -1,0 +1,67 @@
+﻿(****************************************
+  Created BY          : Sowjanya Pedarasi
+  Created On          : 22/02/2017  
+
+ ***************************************)
+ //Applying filters on transfers
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then	
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "AUTransfers"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true
+		
+		(*if ImageFound(3,"CLEARFILTERS") then
+			MoveTo "CLEARFILTERS"
+			set shouldRepositionMouse to false
+			Click "CLEARFILTERS"
+			set shouldRepositionMouse to true			
+		end if
+		*)
+		Wait 2
+		MoveTo "EDITFILTERS"
+		set the shouldRepositionMouse to false
+		Click "EDITFILTERS"
+		set the shouldRepositionMouse to true
+		wait 2
+		Click "Sequencestart"
+		TypeText "1"
+		Click "Sequenceend"
+		TypeText "5"
+		Click "Startdate"
+		TypeText "26/08/2016"
+		Drag(984,414)
+		Drop(984,680)
+		Click "Enddate"
+		TypeText "26/08/2016"
+		MoveTo "APPLY"
+		set the shouldRepositionMouse to false
+		Click "APPLY"
+		set the shouldRepositinMouse to true
+		if ImageFound(3,Text: "There are currently no known transfers") then
+			LogSuccess "There are currently no known transfers"
+		else
+			
+			
+		end if
+		
+	else
+		
+		
+		LogWarning "Failed to login into appliance downstream"
+	end if
+	
+else	
+	LogWarning "Failed to open appliance downstream"
+end if
+TearDown

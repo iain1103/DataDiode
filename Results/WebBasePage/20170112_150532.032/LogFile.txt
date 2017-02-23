@@ -1,0 +1,9 @@
+﻿2017-01-12 15:05:32.032 +0000	START		Running WebBasePage.script
+2017-01-12 15:05:32.032 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-12 15:05:36.036 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-12 15:05:39.039 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-12 15:05:39.039 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-12 15:05:40.040 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (257, 241)	8	on_webbasepage	WebBasePage.script
+2017-01-12 15:06:30.030 +0000	Exception		Searching For Image: OCR Error: Operation was aborted	9	on_webbasepage	WebBasePage.script
+2017-01-12 15:06:30.030 +0000	EndTestCase		(Duration:"58.493", Errors:"1", Exceptions:"1", StartTime:"2017-01-12 15:05:32 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-12 15:06:30.030 +0000	ABORTED		Execution Time 0:00:58 WebBasePage.script

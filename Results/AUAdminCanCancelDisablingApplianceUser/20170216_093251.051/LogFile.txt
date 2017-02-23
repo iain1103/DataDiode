@@ -1,0 +1,5 @@
+﻿2017-02-16 09:32:51.051 +0000	START		Running AUAdminCanDisableApplianceUser.script
+2017-02-16 09:32:53.053 +0000	imagefound	ApplianceUpstream	found at (366, 320)	6	on_auadmincandisableapplianceuser	AUAdminCanDisableApplianceUser.script
+2017-02-16 09:32:53.053 +0000	Exception	AppplianceUpstream	Could Not Open Image: AppplianceUpstream	7	on_auadmincandisableapplianceuser	AUAdminCanDisableApplianceUser.script
+2017-02-16 09:32:53.053 +0000	EndTestCase		(Duration:"1.718", Errors:"1", Exceptions:"1", StartTime:"2017-02-16 09:32:51 +0000", Successes:"0", TestCase:"AUAdminCanDisableApplianceUser.script", Warnings:"0")
+2017-02-16 09:32:54.054 +0000	FAILURE	Screen_Error.png	File Not Found click Error - Could Not Open Image: AppplianceUpstream -- Execution Time 0:00:02 AUAdminCanDisableApplianceUser.script

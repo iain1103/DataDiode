@@ -1,0 +1,5 @@
+﻿2017-02-22 12:02:43.043 +0000	START		Running ADClearTransfersFilters.script
+2017-02-22 12:02:46.046 +0000	imagefound	ApplianceDownstream	Unable to Find Image ApplianceDownstream within 3.00 seconds	6	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 12:02:46.046 +0000	LogWarning		Failed to open appliance downstream	58	on_adcleartransfersfilters	ADClearTransfersFilters.script
+2017-02-22 12:02:46.046 +0000	EndTestCase		(Duration:"3.291", Errors:"0", Exceptions:"0", StartTime:"2017-02-22 12:02:43 +0000", Successes:"1", TestCase:"ADClearTransfersFilters.script", Warnings:"1")
+2017-02-22 12:02:46.046 +0000	SUCCESS		Execution Time 0:00:03 ADClearTransfersFilters.script

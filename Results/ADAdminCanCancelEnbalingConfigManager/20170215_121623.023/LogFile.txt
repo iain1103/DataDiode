@@ -1,0 +1,87 @@
+﻿2017-02-15 12:16:23.023 +0000	START		Running ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:16:25.025 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:28.028 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:29.029 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:32.032 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:32.032 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:33.033 +0000	imagefound	ConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:33.033 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:35.035 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:36.036 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:38.038 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:38.038 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:39.039 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:39.039 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:41.041 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:41.041 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-02-15 12:16:56.056 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:05.005 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:05.005 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:07.007 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:09.009 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:12.012 +0000	set		SEARCHRECTANGLE = (TLName,BRName)	35	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:12.012 +0000	imagefound	Diode_Datastore	found at (327, 410)	38	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:12.012 +0000	doubleclick	Diode_Datastore	at (327, 410)	39	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:12.012 +0000	set		SEARCHRECTANGLE = fullscreen	49	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:13.013 +0000	imagefound	RelatedObjects	found at (597, 155)	51	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:13.013 +0000	click	RelatedObjects	at (597, 155)	52	on_webbasepage	WebBasePage.script
+2017-02-15 12:17:16.016 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:17.017 +0000	click	Console	at (333, 235)	7	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:22.022 +0000	click	ADUsernameET	at (481, 312)	9	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:23.023 +0000	typetext		admin	10	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:23.023 +0000	click	ADPasswordET	at (484, 352)	11	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:24.024 +0000	typetext		admin	12	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:25.025 +0000	typetext		[return]	13	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:26.026 +0000	imagefound	ADLoggedIn	found at (728, 171)	14	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:26.026 +0000	LogSuccess		Logged in into appliance downstream	15	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:26.026 +0000	moveto	Users_Dashboard	at (329, 329)	16	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:26.026 +0000	set		SHOULDREPOSITIONMOUSE = False	17	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:27.027 +0000	click	Users_Dashboard	at (329, 329)	18	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:27.027 +0000	set		SHOULDREPOSITIONMOUSE = True	19	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:28.028 +0000	imagefound	UserPageTitle	found at (92, 233)	20	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:28.028 +0000	LogSuccess		Users page opened	21	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:32.032 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	22	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:32.032 +0000	set		SHOULDREPOSITIONMOUSE = False	23	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:35.035 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	24	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:35.035 +0000	set		SHOULDREPOSITIONMOUSE = True	25	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:36.036 +0000	click	Username_1	at (497, 279)	27	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:37.037 +0000	typetext		testconfigmanager	28	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:38.038 +0000	click	Fullname	at (497, 320)	29	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:39.039 +0000	typetext		testconfigmanager	30	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:40.040 +0000	click	Password_1	at (495, 363)	31	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:41.041 +0000	typetext		testconfigmanager	32	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:42.042 +0000	click	ConfirmPassword	at (498, 406)	33	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:43.043 +0000	typetext		testconfigmanager	34	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:44.044 +0000	moveto	CREATE	at (663, 490)	35	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:44.044 +0000	set		SHOULDREPOSITIONMOUSE = False	36	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:45.045 +0000	click	CREATE	at (663, 490)	37	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:45.045 +0000	set		SHOULDREPOSITIONMOUSE = True	38	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:50.050 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(259,405), ImageRectangle:(211,399,307,411), Language:"English", text:"testconfigmanager", TextPlatform:"Generic OCR")	found at (259, 405)	41	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:51.051 +0000	LogSuccess		Configuration manager created	43	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:51.051 +0000	imagefound	testconfigmanager	found at (90, 402)	44	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:51.051 +0000	set		SEARCHRECTANGLE = (TLtestconfigmanager,BRtestconfigmanager)	49	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:53.053 +0000	click	DisableUserIcon	at (897, 399)	51	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:53.053 +0000	set		SEARCHRECTANGLE = fullscreen	52	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:54.054 +0000	moveto	DISABLE	at (659, 350)	54	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:54.054 +0000	set		SHOULDREPOSITIONMOUSE = False	55	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:55.055 +0000	click	DISABLE	at (659, 350)	56	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:55.055 +0000	set		SHOULDREPOSITIONMOUSE = True	57	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:56.056 +0000	set		SEARCHRECTANGLE = (TLtestconfigmanager,BRtestconfigmanager)	59	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:56.056 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(766,403), ImageRectangle:(746,399,787,408), Language:"English", Text:"DISABLED", TextPlatform:"Generic OCR")	found at (766, 403)	60	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:56.056 +0000	LogSuccess		Disabled	61	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:56.056 +0000	set		SEARCHRECTANGLE = (TLtestconfigmanager,BRtestconfigmanager)	63	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:58.058 +0000	click	DisableUserIcon	at (897, 399)	65	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:17:58.058 +0000	set		SEARCHRECTANGLE = fullscreen	66	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:00.000 +0000	moveto	Cancel	at (593, 351)	68	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:00.000 +0000	set		SHOULDREPOSITIONMOUSE = False	69	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:01.001 +0000	click	Cancel	at (593, 351)	70	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:01.001 +0000	set		SHOULDREPOSITIONMOUSE = True	72	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:02.002 +0000	set		SEARCHRECTANGLE = fullscreen	74	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:04.004 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(766,403), ImageRectangle:(746,399,787,408), Language:"English", Text:"DISABLED", TextPlatform:"Generic OCR")	found at (766, 403)	75	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:04.004 +0000	LogSuccess		Cancelled to enable	76	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:07.007 +0000	set		SEARCHRECTANGLE = (TLDeltestconfigmanager,BRdeltestconfigmanager)	83	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:07.007 +0000	click	Deleteicon	at (946, 400)	85	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:07.007 +0000	set		SEARCHRECTANGLE = fullscreen	86	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:18.018 +0000	Exception	Deletebtn	No Image Found On Screen: "Deletebtn"	88	on_adadmincancancelenbalingconfigmanagerr	ADAdminCanCancelEnbalingConfigManagerr.script
+2017-02-15 12:18:18.018 +0000	EndTestCase		(Duration:"114.816", Errors:"1", Exceptions:"1", StartTime:"2017-02-15 12:16:23 +0000", Successes:"5", TestCase:"ADAdminCanCancelEnbalingConfigManagerr.script", Warnings:"0")
+2017-02-15 12:18:18.018 +0000	ABORTED		Execution Time 0:01:55 ADAdminCanCancelEnbalingConfigManagerr.script

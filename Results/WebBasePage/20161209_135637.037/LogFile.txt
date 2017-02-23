@@ -1,0 +1,17 @@
+﻿2016-12-09 13:56:37.037 +0000	START		Running WebBasePage.script
+2016-12-09 13:56:37.037 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:42.042 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:44.044 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:45.045 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:48.048 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:49.049 +0000	typetext		[tab]	17	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:50.050 +0000	typetext		spedarasi614	18	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:51.051 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:52.052 +0000	typetext		!Praveensowji1	21	on_webbasepage	WebBasePage.script
+2016-12-09 13:56:53.053 +0000	click	Login	at (360, 518)	22	on_webbasepage	WebBasePage.script
+2016-12-09 13:57:08.008 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	23	on_webbasepage	WebBasePage.script
+2016-12-09 13:57:14.014 +0000	imagefound	Home	found at (33, 183)	23	on_webbasepage	WebBasePage.script
+2016-12-09 13:57:14.014 +0000	click	HostsAndClusters	at (30, 235)	24	on_webbasepage	WebBasePage.script
+2016-12-09 13:58:11.011 +0000	Exception	Manchester	No Image Found On Screen: "Manchester"	25	on_webbasepage	WebBasePage.script
+2016-12-09 13:58:11.011 +0000	EndTestCase		(Duration:"94.188", Errors:"1", Exceptions:"1", StartTime:"2016-12-09 13:56:37 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-09 13:58:11.011 +0000	ABORTED		Execution Time 0:01:34 WebBasePage.script

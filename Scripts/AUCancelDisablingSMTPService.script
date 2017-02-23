@@ -1,0 +1,48 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel disabling SMTP service 
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText  Return
+	if ImageFound(3,"ADLoggedIn") then		
+		LogSuccess "Logged in into Appliance upstream"
+		MoveTo "ADServices"
+		set the ShouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			put ReadText(802,522) into resultValue
+			if resultValue is "X DISABLE" then
+				Click (802,522)
+				Wait 1
+				Click (Text:"CANCEL",caseSensitive:"yes")
+				Wait 1
+				put ReadText(802,522) into resutValue2
+				if resultValue2 is "X DISABLE" then
+					LogSuccess "Cancelled disabling SMTP Service"
+				else
+					LogWarning "Failed to cancel disabling SMTP Service"
+					
+				end if
+			else
+				LogWarning "SMTP service is already disabled"
+			end if
+		else
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to log in into Appliance upstream "
+	end if
+else
+	
+	
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

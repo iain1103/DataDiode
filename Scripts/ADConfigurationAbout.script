@@ -1,0 +1,57 @@
+﻿//Access Configuration About
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		Wait 5
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			Wait 5
+			MoveTo "About"
+			set the shouldRepositionMouse to false
+			Click "About"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"AboutPage_Title") then
+				LogSuccess "About page opened"
+				Wait 5
+				MoveTo "CloseButton"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "CloseButton"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ConfigurationPage_Title") then
+					LogSuccess "About Page closed"
+				else
+					LogWarning "Failed to close About page"
+				end if
+			else
+				LogWarning "Failed to open About page"
+			end if
+			
+			else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

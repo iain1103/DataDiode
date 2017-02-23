@@ -1,0 +1,4 @@
+﻿2017-02-14 14:42:31.031 +0000	START		Running ADAdminCanDisableConfigManager.script
+2017-02-14 14:42:33.033 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adadmincandisableconfigmanager	ADAdminCanDisableConfigManager.script
+2017-02-14 14:42:41.041 +0000	EndTestCase		(Duration:"10.135", Errors:"1", Exceptions:"0", StartTime:"2017-02-14 14:42:31 +0000", Successes:"0", TestCase:"ADAdminCanDisableConfigManager.script", Warnings:"0")
+2017-02-14 14:42:41.041 +0000	ABORTED		Execution Time 0:00:10 ADAdminCanDisableConfigManager.script

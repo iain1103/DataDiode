@@ -1,0 +1,47 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//NTP service configuration
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	//MoveTo
+	TypeText Return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		//Click "ADServices"
+		if ImageFound(2, "ADServicesPage") then
+			LogSuccess "Appliance downstream services page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			
+			put EveryImageLocation((Text:"CONFIGURE", CaseSensitive:"Yes") ) into ConfigurationList
+			MoveTo item 6 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 6 of ConfigurationList
+			set the shouldRepositionMouse to true
+			Click "Sourcetimeserver"
+			TypeText ""			
+			Click(Text:"SAVE",caseSensitive:"yes")			
+			
+		else
+			LogWarning "Failed to open Appliance downstream services page"
+		end if
+		
+	else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "ApplianceDownstream not found"
+end if
+
+TearDown

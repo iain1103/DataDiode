@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUEnableTCPService.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-16 16:09:21.021 +0000"
+ tests="1" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2017-01-16 16:09:21.021 +0000"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="AUEnableTCPService.script" assertions="1" successes="0" errors="1" time="58.794">
+  </testcase>
+ </testsuite>
+</testsuites>

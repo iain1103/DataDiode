@@ -1,0 +1,14 @@
+﻿ (* Created By: Sowjanya Pedarasi *)
+//Logging out from appliance, clearing browser history and closing the browser
+Wait 4		
+Click (950,155)
+
+if ImageFound(5, "ADUsernameET") then
+	LogSuccess "Logged out successfully"
+else
+	LogWarning "Failed to logout"
+end if
+LogoutVSphere
+TypeText  controlkey, shiftKey, deleteKey
+Click "Clearbrowsingdata"
+TypeText altKey, F4

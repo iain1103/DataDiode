@@ -1,0 +1,48 @@
+﻿2017-02-07 15:05:32.032 +0000	START		Running AUCreateConfigurationManager.script
+2017-02-07 15:05:34.034 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:34.034 +0000	click	ApplianceUpstream	at (366, 320)	3	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:35.035 +0000	click	Console	at (333, 235)	4	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:40.040 +0000	click	ADUsernameET	at (481, 312)	6	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:41.041 +0000	typetext		admin	7	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:42.042 +0000	click	ADPasswordET	at (484, 352)	8	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:42.042 +0000	typetext		admin	9	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:43.043 +0000	typetext		[return]	10	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:44.044 +0000	imagefound	ADLoggedIn	found at (728, 171)	11	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:44.044 +0000	LogSuccess		Logged in into appliance upstream	12	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:44.044 +0000	moveto	Users_Dashboard	at (560, 329)	13	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:44.044 +0000	set		SHOULDREPOSITIONMOUSE = False	14	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:45.045 +0000	click	Users_Dashboard	at (560, 329)	15	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:45.045 +0000	set		SHOULDREPOSITIONMOUSE = True	16	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:46.046 +0000	imagefound	UserPageTitle	found at (92, 233)	17	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:46.046 +0000	LogSuccess		Users page opened	18	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:51.051 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	19	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:51.051 +0000	set		SHOULDREPOSITIONMOUSE = False	20	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:54.054 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	21	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:54.054 +0000	set		SHOULDREPOSITIONMOUSE = True	22	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:55.055 +0000	click	Username_1	at (497, 279)	24	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:56.056 +0000	typetext		testconfigmanager	25	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:57.057 +0000	click	Fullname	at (497, 320)	26	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:58.058 +0000	typetext		testconfigmanager	27	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:05:59.059 +0000	click	Password_1	at (495, 363)	28	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:00.000 +0000	typetext		testconfigmanager	29	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:02.002 +0000	click	ConfirmPassword	at (498, 406)	30	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:03.003 +0000	typetext		testconfigmanager	31	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:04.004 +0000	click	Role	at (583, 452)	32	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:05.005 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	34	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:05.005 +0000	click	ConfigurationManager	at (501, 487)	35	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:05.005 +0000	set		SEARCHRECTANGLE = fullscreen	36	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:06.006 +0000	click	CREATE	at (663, 490)	38	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(911,216), ImageRectangle:(863,210,959,223), Language:"English", text:"testconfigmanager", TextPlatform:"Generic OCR")	found at (911, 216)	41	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	LogSuccess		Configuration manager created	42	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	imagefound	testconfigmanager	found at (90, 653)	43	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	set		SEARCHRECTANGLE = (TLtestconfigmanager,BRtestconfigmanager)	50	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	click	Deleteicon	at (953, 656)	51	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:11.011 +0000	set		SEARCHRECTANGLE = fullscreen	52	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:13.013 +0000	moveto	Deletebtn	at (662, 350)	53	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:13.013 +0000	set		SHOULDREPOSITIONMOUSE = False	54	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:13.013 +0000	click	Deletebtn	at (662, 350)	55	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:13.013 +0000	set		SHOULDREPOSITIONMOUSE = True	56	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:19.019 +0000	imagefound	testconfigmanager	Unable to Find Image testconfigmanager within 1.00 seconds	58	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:19.019 +0000	LogSuccess		User deleted	59	on_aucreateconfigurationmanager	AUCreateConfigurationManager.script
+2017-02-07 15:06:19.019 +0000	EndTestCase		(Duration:"46.731", Errors:"0", Exceptions:"0", StartTime:"2017-02-07 15:05:32 +0000", Successes:"4", TestCase:"AUCreateConfigurationManager.script", Warnings:"0")
+2017-02-07 15:06:19.019 +0000	SUCCESS		Execution Time 0:00:47 AUCreateConfigurationManager.script

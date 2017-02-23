@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADAdminCanDisableConfigManager.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-14 13:42:10.010 +0000"
+ tests="1" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2017-02-14 13:42:10.010 +0000"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="ADAdminCanDisableConfigManager.script" assertions="4" successes="3" errors="1" time="116.886">
+  </testcase>
+ </testsuite>
+</testsuites>

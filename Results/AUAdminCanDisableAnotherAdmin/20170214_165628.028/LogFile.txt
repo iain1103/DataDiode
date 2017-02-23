@@ -1,0 +1,6 @@
+﻿2017-02-14 16:56:29.029 +0000	START		Running AUAdminCanDisableAnotherAdmin.script
+2017-02-14 16:56:29.029 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-02-14 16:56:32.032 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-02-14 16:56:33.033 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-02-14 16:56:33.033 +0000	EndTestCase		(Duration:"4.646", Errors:"1", Exceptions:"0", StartTime:"2017-02-14 16:56:29 +0000", Successes:"0", TestCase:"AUAdminCanDisableAnotherAdmin.script", Warnings:"0")
+2017-02-14 16:56:33.033 +0000	ABORTED		Execution Time 0:00:05 AUAdminCanDisableAnotherAdmin.script

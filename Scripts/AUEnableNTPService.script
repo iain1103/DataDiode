@@ -1,0 +1,59 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Enabling NTP service
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		//DoubleClick "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			put ReadText(809,669) into resultValue
+			if resultValue contains "ENABLE" then
+				MoveTo (809,669)	
+				set the shouldRepositionMouse to false
+				if ImageFound(5,"Pleaseconfigure") then
+					LogWarning "Please configure this sevice, before enabling it."
+					set the shouldRepositionMouse to true
+				else
+					set the shouldRepositionMouse to true
+					Click (809,669)		
+					
+					if ImageFound(5, (text:"Enable service")) then
+						Click (Text:"ENABLE",caseSensitive:"Yes")
+						put ReadText(809,669) into resultValue2
+						if resultValue2 is "X DISABLE" then
+							LogSuccess "NTP service is disabled"
+						else
+							LogWarning "Failed to disable NTP service"
+						end if
+					else
+						LogWarning "popup didn't appear"
+					end if
+				end if
+			else
+				LogWarning "NTP service is already enabled"
+			end if
+		else
+			LogWarning "Fail to open service page"
+		end if
+	else
+		LogWarning "Fail to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
+

@@ -1,0 +1,58 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//Disabling NTP Service
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return	
+	if ImageFound(5,"ADLoggedIn") then
+		Logsuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		
+		if ImageFound(3,"ADServicesPage") then
+			MoveTo "ADServicesPage"
+			
+			ScrollWheelDown 2
+			put ReadText(802,669) into resultValue
+			if resultValue is "X DISABLE" then
+				Click (802,669)				
+				Wait 1
+				Click (Text:"DISABLE",CaseSensitive:"yes")
+				if ImageFound((text:"Successfully disabled service: ntp-downstream")) then
+					LogSuccess "NTP service is disabled"
+				else
+					LogWarning "Failed to disable NTP service"//TearDown
+					Click (954,164)		
+					if ImageFound(3, "ADUsernameET") then
+						LogSuccess "Logged out successfully"
+					else
+						LogWarning "Failed to logout"
+					end if
+					
+				end if
+			else
+				LogWarning "NTP Service is already disabled"
+			end if		
+			
+		else
+			
+			LogWarning "Failed to open service page"
+			
+		end if
+		
+	else
+		LogWarning "Failed to logininto appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown
+
+

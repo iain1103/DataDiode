@@ -1,0 +1,6 @@
+﻿2016-12-15 16:06:45.045 +0000	START		Running SmbUSFileTransfer.script
+2016-12-15 16:06:48.048 +0000	scrollwheeldown		moved 1	5	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-15 16:06:51.051 +0000	imagefound	U1W10	Unable to Find Image U1W10 within 3.00 seconds	7	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-15 16:06:51.051 +0000	LogWarning		U1W10 not found	105	on_smbusfiletransfer	SmbUSFileTransfer.script
+2016-12-15 16:06:51.051 +0000	EndTestCase		(Duration:"5.256", Errors:"0", Exceptions:"0", StartTime:"2016-12-15 16:06:45 +0000", Successes:"1", TestCase:"SmbUSFileTransfer.script", Warnings:"1")
+2016-12-15 16:06:51.051 +0000	SUCCESS		Execution Time 0:00:06 SmbUSFileTransfer.script

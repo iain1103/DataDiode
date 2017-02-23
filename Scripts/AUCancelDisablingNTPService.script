@@ -1,0 +1,49 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel disabling NTP service 
+WebBasePage
+if ImageFound(3, "ApplianceUpstream")
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into Appliance upstream"		
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			put ReadText(802,669) into resultValue
+			if resultValue is "X DISABLE" then				
+				Click (802,669)
+				Wait 1
+				Click (Text:"CANCEL",CaseSensitive:"Yes")
+				Wait 1
+				put ReadText(802,669) into resultValue2
+				
+				if resultValue2 is "X DISABLE" then
+					LogSuccess "Cancelled disabling NTP service"
+				else
+					LogWarning "Failed to cancel disabling NTP service"
+				end if
+			else
+				LogWarning "NTP Service is already disabled"
+			end if
+		else
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+else
+	Logwarning "Appliance upstream not found"	
+	
+end if
+TearDown

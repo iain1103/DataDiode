@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADPreferences.script" package="FoxITDataDiodeAppliance.suite" timestamp="2016-12-09 15:11:11.011 +0000"
+ tests="1" successes="1" errors="0" time="57.343000">
+  <properties>
+   <property name="RunDate" value="2016-12-09 15:11:11.011 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADPreferences.script" assertions="1" successes="1" errors="0" time="57.327">
+  </testcase>
+ </testsuite>
+</testsuites>

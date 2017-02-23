@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUAdminCanEditHisOwnPublicKey.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-14 08:29:07.007 +0000"
+ tests="1" successes="5" errors="0" time="97.889000">
+  <properties>
+   <property name="RunDate" value="2017-02-14 08:29:07.007 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="AUAdminCanEditHisOwnPublicKey.script" assertions="5" successes="5" errors="0" time="97.874">
+  </testcase>
+ </testsuite>
+</testsuites>

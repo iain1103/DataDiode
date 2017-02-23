@@ -1,0 +1,45 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel  SMTP service configure
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	Click "ADLoginBtn"
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(2, "ADServicesPage") then			
+			LogSuccess "Appliance downstream services page opened"
+			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList
+			MoveTo item 3 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 3 of ConfigurationList
+			set the shouldRepositionMous to true
+			Wait 1
+			
+			Click (Text:"CANCEL",CaseSensitive:"yes")
+			LogSuccess "SMTP serivice configuration cancancelled"
+			
+		else
+			
+			
+			LogWarning "Failed to open Appliance downstream page"
+		end if
+		
+	else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown

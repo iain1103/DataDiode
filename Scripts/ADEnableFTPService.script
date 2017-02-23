@@ -1,0 +1,57 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//Enable FTP Service
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "ApplianceDownstream"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "LoggedIn into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Services page opened"
+			put ReadText(189,522) into resultVlaue
+			if resultValue contains "ENABLE" then
+				MoveTo (189,522)
+				set the shouldRepositionMouse to false
+				if ImageFound(5,"Pleaseconfigure") then
+					LogWarning "Please configure this service, before enabling it."
+					set the shouldRepostinMouse to true
+				else
+					set the shouldRepositionMouse to true
+					Click(189,522)
+					if ImageFound(3, (text:"Enable service")) then
+						Click (Text:"ENABLE",CaseSensitive:"yes")
+						put ReadText(189,522) into resultvalue2
+						if resultValue2 is "X DISABLE" then
+							LogSuccess "FTP Service is enabled"
+						else
+							LogWarning "Failed to enable FTP Service"
+							
+						end if
+					else
+						LogWarning "FTP enable popup doesn't appear"
+					end if
+				end if
+				
+			else
+				LogWarning "FTP Service is already enabled"				
+				
+			end if
+		else
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

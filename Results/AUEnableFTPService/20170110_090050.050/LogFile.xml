@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUEnableFTPService.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-10 09:00:50.050 +0000"
+ tests="1" successes="2" errors="0" time="73.113000">
+  <properties>
+   <property name="RunDate" value="2017-01-10 09:00:50.050 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="AUEnableFTPService.script" assertions="2" successes="2" errors="0" time="73.097">
+  </testcase>
+ </testsuite>
+</testsuites>

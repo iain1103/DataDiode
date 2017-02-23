@@ -1,0 +1,119 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 10/02/2017  
+ ***************************************)
+ //Admin can edit another admin's preferences
+
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "TestAdmin"
+			Click "Fullname"
+			TypeText "TestAdmin"
+			Click "Password_1"
+			TypeText "TestAdmin"
+			Click "ConfirmPassword"
+			TypeText "TestAdmin"
+			Click "Role"
+			
+			set the searchRectangle to ("Roletxt","CREATE_1")
+			Click "Administrator"
+			set the searchRectangle to fullscreen	
+			Wait 2
+			Click "CREATE"
+			Wait 3
+			if ImageFound(1, (text:"TestAdmin")) then
+				LogSuccess "Admin created"
+				repeat until imageFound("TestAdmin" ) 
+					
+					MoveTo "ENABLED"				
+					ScrollWheelDown 4.0
+				end repeat				
+				//Edit the user's full name and role
+				set the searchRectangle to ("TLTestAdmin","BRTestAdmin")			
+				Click "PencilIcon"			
+				set the searchRectangle to fullscreen
+				Wait 3
+				Click (467,321)
+				typeText controlKey, "a" // select all 
+				
+				typeText deleteKey // delete the text
+				TypeText "TestAdministrator"
+				Click "ChangePasswordRadio"
+				WaitFor 4, "Confirmpassword_1"
+				
+				TypeText tabKey
+				TypeText "TestAdministrator"
+				TypeText tabKey
+				TypeText "TestAdministrator"
+				Click "ConfigManagerDropDown"
+				set the searchRectangle to ("Roletxt","BRSAVE")
+				Click "ConfigurationManager"
+				set the searchRectangle to fullscreen
+				Wait 2
+				Click "SAVE"
+				Wait 2
+				set the searchRectangle to ("TLTestAdmin","BRTestAdmin")
+				if ImageFound("TestAdministrator",Text:"Configuration man") then
+					LogSuccess "User details updated"
+					
+				else
+					
+					LogWarning "Failed to update user details"
+				end if
+				set the searchRectangle to fullscreen
+				
+				set the searchRectangle to ("TLTestAdmin","BRTestAdmin")			
+				Click "Deleteicon"			
+				set the searchRectangle to fullscreen
+				MoveTo "Deletebtn"
+				set the shouldRepositionMouse to false
+				Click "Deletebtn"
+				set the shouldRepositionMouse to true
+				Wait 4
+				if not ImageFound(1, "testconfigmanager") then
+					LogSuccess "Admin User deleted"
+				else
+					LogWarning "Failed to delete admin"
+				end if  
+				
+				
+			else
+				LogWarning "Failed to create admin"
+			end if
+			
+			
+		else		
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		
+		LogWarning "Fail to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

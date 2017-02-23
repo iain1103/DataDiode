@@ -1,0 +1,3 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-02-22 09:47:01.001 +0000,"Failure",0:00:00,1,0,0,"20170222_094701.001/LogFile.txt","","SenseTalk Compiler Exception -- in adconfigmanagercanchangehispassword:\nSyntax Error at line 206: Syntax Error - can't understand ""else"" at or near character 4620",0
+2017-02-22 09:48:06.006 +0000,"Failure",0:00:00,1,0,0,"20170222_094806.006/LogFile.txt","","SenseTalk Compiler Exception -- in adconfigmanagercanchangehispassword:\nSyntax Error at line 206: Syntax Error - can't understand ""else"" at or near character 4628",0

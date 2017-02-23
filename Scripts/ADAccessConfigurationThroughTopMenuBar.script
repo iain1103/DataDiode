@@ -1,0 +1,38 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Access configuration page through top menu bar
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText return
+	Wait 1
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		Click "RightArrow"
+		Repeat Until ImageFound("Configuration_NavigationBar")
+			Click "RightArrowSelected"		
+			
+		End Repeat
+		MoveTo "Configuration_NavigationBar"
+		set the shouldRepositionMouse to false
+		Click "Configuration_NavigationBar"
+		set the shouldRepositionMouse to true
+		if ImageFound("ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+		else
+			LogWarning "Failed to open Configuration page"
+		end if
+		
+	else		
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	
+	LogWarning "Appliance Downstream not found"
+end if
+TearDown

@@ -1,0 +1,60 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Opening browser session, logging into VMWare
+DoubleClickAny "Chrome/ChromeSelected", "Chrome/ChromeUnSelected"
+Wait 3
+//Maximize browser window
+TypeText altKey, space, "x"
+TypeText controlkey , "l"
+TypeText "https://man1srvvc01p.nccgroup.local./vsphere-client/?csp"
+TypeText Return
+
+//Ceritificate error handling, Proceeding to unsafe mode
+if ImageFound(3, "ConnectionError") then
+	//Click (Text:"ADVANCED")
+	Click "ADVANCED"
+	Wait 2
+	ScrollWheelDown 2
+	Click "Proceed"	
+	
+end if
+WaitFor 3, "UserName"
+
+TypeText tabKey
+TypeText ""
+
+TypeText tabKey
+Typetext ""
+Click "VMSphereLogin"
+Wait until ImageFound(15, "Home")
+Click "HostsAndClusters"
+ClickAny "Manchester","ManchesterSelected"
+Wait 2
+
+Click "RelatedObjects"
+
+Wait 3
+
+set the searchRectangle to ("TLName","BRName")
+
+
+if ImageFound(2, "Diode_Datastore") then
+	DoubleClick  "Diode_Datastore"
+else
+	MoveTo (Text:"D1-RHEL7")
+	Repeat until ImageFound("Diode_Datastore") 
+		ScrollWheelDown 2
+	End Repeat
+	//ScrollWheelDown 7
+	Wait 1
+	DoubleClick "Diode_Datastore"
+end if
+set the searchRectangle to fullscreen
+
+if ImageFound(3,"RelatedObjects") then
+	Click "RelatedObjects"
+else 
+	LogWarning "Related Objects not found"
+end if
+
+
+

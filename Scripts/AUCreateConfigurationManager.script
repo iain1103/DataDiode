@@ -1,0 +1,81 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Admin can create configuration manager
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "testconfigmanager"
+			Click "Fullname"
+			TypeText "testconfigmanager"
+			Click "Password_1"
+			TypeText "testconfigmanager"
+			Click "ConfirmPassword"
+			TypeText "testconfigmanager"
+			Click "Role"
+			
+			set the searchRectangle to ("Roletxt","CREATE_1")
+			Click "ConfigurationManager"
+			set the searchRectangle to fullscreen
+			Wait 2
+			Click "CREATE"
+			
+			Wait 3
+			if ImageFound(1, (text:"testconfigmanager")) then
+				LogSuccess "Configuration manager created"
+				repeat until imageFound("testconfigmanager" ) 
+					MoveTo "ENABLED"
+					//Wait 3
+					ScrollWheelDown 4.0
+				end repeat
+				
+				//Deleting user as a part of teardown
+				set the searchRectangle to ("TLtestconfigmanager","BRtestconfigmanager")			
+				Click "Deleteicon"			
+				set the searchRectangle to fullscreen
+				MoveTo "Deletebtn"
+				set the shouldRepositionMouse to false
+				Click "Deletebtn"
+				set the shouldRepositionMouse to true
+				Wait 4
+				if not ImageFound(1, "testconfigmanager") then
+					LogSuccess "User deleted"
+				else
+					LogWarning "Failed to delete user"
+				end if 
+				
+			else
+				LogWarning "Failed to create configuration manager"
+			end if
+			
+		else
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		LogWarning "Fail to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

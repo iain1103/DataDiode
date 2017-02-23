@@ -1,0 +1,5 @@
+﻿2017-01-26 16:54:15.015 +0000	START		Running AUCreateUser.script
+2017-01-26 16:54:19.019 +0000	imagefound	ApplianceUpstream	Unable to Find Image ApplianceUpstream within 3.00 seconds	2	on_aucreateuser	AUCreateUser.script
+2017-01-26 16:54:19.019 +0000	LogWarning		Appliance upstream not found	61	on_aucreateuser	AUCreateUser.script
+2017-01-26 16:54:19.019 +0000	EndTestCase		(Duration:"3.313", Errors:"0", Exceptions:"0", StartTime:"2017-01-26 16:54:15 +0000", Successes:"1", TestCase:"AUCreateUser.script", Warnings:"1")
+2017-01-26 16:54:20.020 +0000	SUCCESS		Execution Time 0:00:04 AUCreateUser.script

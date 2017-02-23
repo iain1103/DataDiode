@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<runHistory script="ADAccessNetworkConfigurationPage">
+ <run>
+  <RunDate>2017-02-16 11:18:14.014 +0000</RunDate>
+  <Status>Success</Status>
+  <Duration>90.521000</Duration>
+  <Errors>0</Errors>
+  <Warnings>1</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>3</Successes>
+  <LogFile>20170216_111814.014/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+</runHistory>

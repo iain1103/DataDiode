@@ -1,0 +1,51 @@
+﻿//Access stored emails Edit Filters pop up from Stored Transfers page
+//Date Created 16/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "StoredTransfers_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "StoredTransfers_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StoredTransferTitlePage") then
+			LogSuccess "Stored transfers page opened"
+		else
+			LogWarning "Failed to open stored transfers page"
+		end if
+		MoveTo "StoredEmails"
+		set the shouldRepositionMouse to false
+		Click "StoredEmails"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StoredEmailsTitlePage") then
+			LogSuccess "Stored emails page opened"
+		else
+			LogWarning "Failed to open stored emails page"
+		end if	
+		MoveTo "EditFilters"
+		set the shouldRepositionMouse to false
+		Click "EditFilters"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"EditFiltersPopUp") then
+			LogSuccess "Edit Filters Pop Up opened"
+		else
+			LogWarning "Failed to open Edit Filters PopUp"
+		end if
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

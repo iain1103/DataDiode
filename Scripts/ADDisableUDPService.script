@@ -1,0 +1,47 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//Disabling UDP Service
+WebBasePage
+if ImageFound(3, "ApplianceDownstream") then
+	Click "ApplianceDownstream"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true		
+		if ImageFound (3,"ADServicesPage") then
+			LogSuccess "Services page is opened"
+			MoveTo "ADServicesPage"
+			
+			ScrollWheelDown 2
+			put ReadText(491,669) into resultValue
+			if resultValue is "X DISABLE" then
+				Click(491,669)
+				Wait 1
+				Click (Text:"DISABLE",CaseSensitive:"yes")
+				if ImageFound((text:"Successfully disabled service: udp-downstream")) then
+					LogSuccess "UDP service is disabled"
+				else
+					LogWarning "Failed to disable UDP service"
+				end if
+			else
+				Logwarning "UDP Service is already disabled"
+				
+			end if
+		else
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream is not found"
+end if
+
+TearDown

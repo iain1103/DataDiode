@@ -1,0 +1,32 @@
+﻿2016-12-09 15:11:11.011 +0000	START		Running ADPreferences.script
+2016-12-09 15:11:12.012 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:16.016 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:19.019 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:20.020 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:20.020 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	8	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:21.021 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(244,505), ImageRectangle:(211,501,278,510), Language:"English", Text:"ADVANCED", TextPlatform:"Generic OCR")	at (244, 505)	9	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:23.023 +0000	click	Proceed	at (228, 675)	11	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:25.025 +0000	waitfor	UserName	found at (79, 430)	14	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:25.025 +0000	typetext		[tab]	18	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:26.026 +0000	typetext		spedarasi614	19	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:27.027 +0000	typetext		[tab]	21	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:28.028 +0000	typetext		!Praveensowji1	22	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:29.029 +0000	click	Login	at (360, 518)	23	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:44.044 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	24	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:51.051 +0000	imagefound	Home	found at (33, 183)	24	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:51.051 +0000	click	HostsAndClusters	at (30, 235)	25	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:53.053 +0000	click	Manchester	at (59, 223)	26	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:56.056 +0000	click	RelatedObjects	at (597, 155)	30	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:58.058 +0000	doubleclick	Diode_Datastore	at (327, 498)	35	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:59.059 +0000	imagefound	RelatedObjects	found at (597, 155)	36	on_webbasepage	WebBasePage.script
+2016-12-09 15:11:59.059 +0000	click	RelatedObjects	at (597, 155)	37	on_webbasepage	WebBasePage.script
+2016-12-09 15:12:02.002 +0000	imagefound	ApplianceDownstream	found at (346, 277)	2	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:03.003 +0000	click	Computer	at (333, 235)	3	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:05.005 +0000	imagefound	ADLogin	found at (322, 218)	4	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:05.005 +0000	typetext		[tab]	5	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:06.006 +0000	typetext		admin	6	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:07.007 +0000	typetext		[tab]	7	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:08.008 +0000	typetext		admin	8	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:09.009 +0000	click	ADLoginButton	at (669, 398)	9	on_adpreferences	ADPreferences.script
+2016-12-09 15:12:09.009 +0000	EndTestCase		(Duration:"57.327", Errors:"0", Exceptions:"0", StartTime:"2016-12-09 15:11:11 +0000", Successes:"1", TestCase:"ADPreferences.script", Warnings:"0")
+2016-12-09 15:12:10.010 +0000	SUCCESS		Execution Time 0:00:58 ADPreferences.script

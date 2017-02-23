@@ -1,0 +1,30 @@
+﻿2017-02-22 16:43:31.031 +0000	START		Running ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:33.033 +0000	imagefound	ApplianceDownstream	found at (346, 277)	5	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:33.033 +0000	click	Console	at (333, 235)	6	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:38.038 +0000	click	ADUsernameET	at (481, 312)	8	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:39.039 +0000	typetext		admin	9	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:40.040 +0000	click	ADPasswordET	at (484, 352)	10	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:40.040 +0000	typetext		admin	11	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:41.041 +0000	typetext		[return]	12	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:42.042 +0000	imagefound	ADLoggedIn	found at (728, 171)	13	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:42.042 +0000	LogSuccess		Logged in into appliance downstream	14	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:42.042 +0000	moveto	Configuration	at (617, 320)	15	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:42.042 +0000	set		SHOULDREPOSITIONMOUSE = False	16	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:43.043 +0000	click	Configuration	at (617, 320)	17	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:43.043 +0000	set		SHOULDREPOSITIONMOUSE = True	18	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:44.044 +0000	imagefound	ConfigurationPage_Title	found at (121, 233)	19	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:44.044 +0000	LogSuccess		Configuration page opened	20	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:49.049 +0000	moveto	CryptographicSettings	at (852, 315)	25	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:49.049 +0000	set		SHOULDREPOSITIONMOUSE = False	26	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:50.050 +0000	click	CryptographicSettings	at (852, 315)	27	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:50.050 +0000	set		SHOULDREPOSITIONMOUSE = True	28	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:51.051 +0000	imagefound	CryptographicSettingsPage_Title	found at (122, 234)	29	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:51.051 +0000	LogSuccess		Cryptographic Settings page opened	30	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:56.056 +0000	moveto	BackToConfiguration	at (880, 232)	35	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:56.056 +0000	set		SHOULDREPOSITIONMOUSE = False	36	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:58.058 +0000	click	BackToConfiguration	at (880, 232)	38	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:43:58.058 +0000	set		SHOULDREPOSITIONMOUSE = True	39	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:44:00.000 +0000	imagefound	ConfigurationPage_Title	found at (121, 233)	40	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:44:00.000 +0000	LogSuccess		Configuration page opened	41	on_adconfigurationcryptographicsettings	ADConfigurationCryptographicSettings.script
+2017-02-22 16:44:00.000 +0000	EndTestCase		(Duration:"29.219", Errors:"0", Exceptions:"0", StartTime:"2017-02-22 16:43:31 +0000", Successes:"4", TestCase:"ADConfigurationCryptographicSettings.script", Warnings:"0")
+2017-02-22 16:44:03.003 +0000	SUCCESS		Execution Time 0:00:29 ADConfigurationCryptographicSettings.script

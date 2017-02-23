@@ -1,0 +1,9 @@
+﻿2017-01-12 15:16:36.036 +0000	START		Running WebBasePage.script
+2017-01-12 15:16:37.037 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-01-12 15:16:41.041 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2017-01-12 15:16:43.043 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2017-01-12 15:16:44.044 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2017-01-12 15:16:45.045 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (257, 241)	8	on_webbasepage	WebBasePage.script
+2017-01-12 15:16:45.045 +0000	click	ADVANCED	at (265, 533)	10	on_webbasepage	WebBasePage.script
+2017-01-12 15:17:09.009 +0000	EndTestCase		(Duration:"32.22", Errors:"1", Exceptions:"0", StartTime:"2017-01-12 15:16:36 +0000", Successes:"0", TestCase:"WebBasePage.script", Warnings:"0")
+2017-01-12 15:17:09.009 +0000	ABORTED		Execution Time 0:00:33 WebBasePage.script

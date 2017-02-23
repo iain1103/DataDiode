@@ -1,0 +1,59 @@
+﻿//Access Configuration Import Export Configurartion Export Configuration
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			Wait 5
+			MoveTo "ImportExportConfiguration"
+			set the shouldRepositionMouse to false
+			Click "ImportExportConfiguration"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"ImportExportConfigurationPage_Title") then
+				LogSuccess "ImportExport Configuration page opened"
+				Wait 5
+				Drag ("1014", "387")
+				Drop ("1014", "686")
+				Wait 5
+				MoveTo "Export"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "Export"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ConfigExport") then
+					LogSuccess "Configuration Exported"
+				else
+					LogWarning "Failed to export configuration"
+				end if
+			else
+				LogWarning "Failed to open Import Export Configuration page"
+			end if
+			
+			else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

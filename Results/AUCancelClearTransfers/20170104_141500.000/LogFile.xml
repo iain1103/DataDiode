@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUCancelClearTransfers.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-04 14:15:00.000 +0000"
+ tests="1" successes="0" errors="1" time="72.400000">
+  <properties>
+   <property name="RunDate" value="2017-01-04 14:15:00.000 +0000"/>
+   <property name="Status" value="Failure"/>
+  </properties>
+  <testcase name="AUCancelClearTransfers.script" assertions="1" successes="0" errors="1" time="72.4">
+  </testcase>
+ </testsuite>
+</testsuites>

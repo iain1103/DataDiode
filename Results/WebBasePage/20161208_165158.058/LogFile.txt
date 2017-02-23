@@ -1,0 +1,7 @@
+﻿2016-12-08 16:51:58.058 +0000	START		Running WebBasePage.script
+2016-12-08 16:51:58.058 +0000	doubleclickany	FireFox/FireFoxSelected	at (39, 236)	1	on_webbasepage	WebBasePage.script
+2016-12-08 16:52:02.002 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-08 16:52:04.004 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-08 16:52:05.005 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-08 16:52:05.005 +0000	EndTestCase		(Duration:"7.087", Errors:"0", Exceptions:"0", StartTime:"2016-12-08 16:51:58 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-08 16:52:05.005 +0000	SUCCESS		Execution Time 0:00:07 WebBasePage.script

@@ -1,0 +1,33 @@
+﻿//Access Alerts pop-up page
+//Date Created 17/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Alerts"
+		set the shouldRepositionMouse to false
+		Click "Alerts"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"AlertPresent") then
+			LogSuccess "Alerts pop-up page opened"
+		else
+			LogWarning "Failed to open Alerts pop-up page"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

@@ -1,0 +1,126 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 16/02/2017  
+ ***************************************)
+  //Admin can cancel Enabling appliance user
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"
+			MoveTo (Text:"CREATE USER")			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "testuser"
+			Click "Fullname"
+			TypeText "testuser"
+			Click "Password_1"
+			TypeText "testuser"
+			Click "ConfirmPassword"
+			TypeText "testuser"
+			Click "Role"
+			set the searchRectangle to ("Roletxt","CREATE_1")
+			
+			Click "User"
+			
+			set the searchRectangle to fullscreen			
+			Wait 2
+			Click "CREATE"
+			Wait 3
+			
+			if ImageFound(1, (text:"testuser")) then
+				Wait 1
+				LogSuccess "Appliance user created"
+				repeat until imageFound("testuser" ) 
+					MoveTo "ENABLED"
+					//Wait 3
+					ScrollWheelDown 4.0
+				end repeat
+				set the searchRectangle to  ("TLtestuser","BRtestuser")	
+				Wait 2
+				Click "DisableUserIcon"			
+				set the searchRectangle to fullscreen
+				Wait 1
+				MoveTo "DISABLE"
+				set the shouldRepositionMouse to false
+				Click "DISABLE"				
+				set the shouldRepositionMouse to true
+				Wait 1
+				set the searchRectangle to  ("TLtestuser","BRtestuser")	
+				if ImageFound (3,Text:"DISABLED") then
+					LogSuccess "Disabled"					
+					
+					set the searchRectangle to ("TLtestuser","BRtestuser")	
+					Wait 2
+					Click "DisableUserIcon"			
+					set the searchRectangle to fullscreen
+					Wait 2
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					
+					set the shouldRepositionMouse to true
+					Wait 1
+					set the searchRectangle to fullscreen
+					if ImageFound(3, Text :"DISABLED") then
+						LogSuccess "Cancelled to enable"
+					else
+						LogWarning "Failed to cancel"
+					end if
+					
+					Wait 2
+					//Deleting user as a part of teardown
+					set the searchRectangle to  ("TLdeltestuser","BRdeltestuser")	
+					
+					Click "Deleteicon"	
+					set the searchRectangle to fullscreen
+					Wait 2
+					MoveTo"Deletebtn"
+					set the shouldRepositionMouse to false
+					Click"Deletebtn"
+					set the shouldRepositionMouse to true
+					Wait 1
+					if not ImageFound(1, "testuser") then
+						LogSuccess "Appliance user deleted"
+					else
+						LogWarning "Failed to delete appliance user"
+					end if 				
+					
+				else
+					
+					LogWarning "Failed to disable"
+				end if					
+				
+			else
+				LogWarning "Failed to create appliance user"
+			end if
+			
+		else
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		LogWarning "Fail to login into appliance upstream"
+	end if
+	
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

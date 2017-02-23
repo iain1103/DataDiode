@@ -1,0 +1,62 @@
+﻿(** Created By: Sowjanya Pedarasi **)
+//UDP service configure
+WebBasePage
+if ImageFound (3, "ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true	
+		if ImageFound(2, "ADServicesPage") then
+			LogSuccess "Appliance downstream services page opened"
+			MoveTo "ADServicesPage"
+			
+			ScrollWheelDown 2
+			
+			put EveryImageLocation((Text:"CONFIGURE", CaseSensitive:"Yes") ) into ConfigurationList
+			MoveTo item 5 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 5 of ConfiguratonList
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "ADD"
+			Click "Identifier"
+			TypeText ""
+			Click "Name"
+			TypeText ""
+			Click "Listenon"
+			TypeText ""
+			Click "Port"
+			TypeText ""
+			Click "TransparentProxyradio"
+			Click "Readaheadbuffer"
+			TypeText ""
+			Click "Ratelimit"
+			TypeText ""
+			Click (Text:"APPLY",caseSensitive:"yes")
+			//insert check to check if configuration been added
+			Click (Text:"SAVE",caseSensitive:"yes")	
+			LogSuccess "UDP service configured"
+			
+			
+			else
+			LogWarning "Failed to open Appliance downstream services page"
+		end if
+		
+		else
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	LogWarning "ApplianceDownstream not found"
+end if
+TearDown

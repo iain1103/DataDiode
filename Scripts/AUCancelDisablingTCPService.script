@@ -1,0 +1,47 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Cancel disabling TCP service 
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText return
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"		
+		MoveTo "ADServices"
+		set the shouldRepositionMouse to false
+		Click "ADServices"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ADServicesPage") then
+			LogSuccess "Service page is opened"
+			MoveTo "ADServicesPage"
+			ScrollWheelDown 2
+			put ReadText(189,622) into resultValue
+			if resultValue is "X DISABLE" then
+				Click (189,622)
+				Wait 1
+				Click (Text:"CANCEL",CaseSensitive:"yes")
+				Wait 1
+				put ReadText(189,622) into resultValue2
+				if resultValue2 is "X DISABLE" then
+					LogSuccess "Cancelled disabling TCP service"	
+				else
+					LogWarning "Failed to cancel disabling TCP service"
+				end if
+			else
+				LogWarning "TCP Service is already disabled"
+			end if
+		else
+			LogWarning "Failed to open Service page"
+		end if
+	else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

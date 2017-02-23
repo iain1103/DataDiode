@@ -1,0 +1,67 @@
+﻿//Access Configuration Network Configuration Edit Settings
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "NetworkConfiguration"
+			set the shouldRepositionMouse to false
+			Click "NetworkConfiguration"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"NetworkConfigurationPage_Title") then
+				LogSuccess "Network Configuration page opened"
+				MoveTo "EditSettings"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "EditSettings"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"EditSettingsPage_Title") then
+					LogSuccess "Edit Settings page opened"
+					Wait 5
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Hostname_Upstream") then
+						LogSuccess "Change Settings cancelled"
+					else
+						LogWarning "Failed to cancel Settings change"
+					end if
+				else
+					LogWarning "Failed to open Edit Settings page"
+				end if
+				
+			else
+				
+				LogWarning "Failed to open Network Configuration page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

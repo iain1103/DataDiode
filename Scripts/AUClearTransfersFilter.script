@@ -1,0 +1,59 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 22/02/2017  
+ ***************************************)
+ //Clearing transfers filters
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "AUTransfers"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true	
+		
+		Wait 2
+		MoveTo "EDITFILTERS"
+		set the shouldRepositionMouse to false
+		Click "EDITFILTERS"
+		set the shouldRepositionMouse to true
+		wait 2
+		Click "Sequencestart"
+		TypeText "1"
+		Click "Sequenceend"
+		TypeText "5"
+		TypeText Return	
+		if ImageFound(5,"CLEARFILTERS") then				
+			MoveTo "CLEARFILTERS"
+			set shouldRepositionMouse to false
+			Click "CLEARFILTERS"
+			set shouldRepositionMouse to true	
+			if ImageFound(5, Text:"Successfully updated filters.") then
+				LogSuccess "Filters cleared"
+			else
+				LogWarning "Failed to clear filters"
+			end if
+			
+		else
+			LogWarning "Clear filters button not found"
+		end if	
+		
+	else
+		
+		
+		LogWarning "Failed to login into appliance downstream"
+	end if
+	
+else	
+	LogWarning "Failed to open appliance downstream"
+end if
+TearDown

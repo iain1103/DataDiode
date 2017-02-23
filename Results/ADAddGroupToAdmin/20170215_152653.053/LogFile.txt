@@ -1,0 +1,5 @@
+﻿2017-02-15 15:26:53.053 +0000	START		Running ADAddGroupToAdmin.script
+2017-02-15 15:26:57.057 +0000	imagefound	ApplianceDownstream	found at (346, 277)	6	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:27:03.003 +0000	Exception	Console	No Image Found On Screen: "Console"	7	on_adaddgrouptoadmin	ADAddGroupToAdmin.script
+2017-02-15 15:27:03.003 +0000	EndTestCase		(Duration:"10.003", Errors:"1", Exceptions:"1", StartTime:"2017-02-15 15:26:53 +0000", Successes:"0", TestCase:"ADAddGroupToAdmin.script", Warnings:"0")
+2017-02-15 15:27:03.003 +0000	ABORTED		Execution Time 0:00:10 ADAddGroupToAdmin.script

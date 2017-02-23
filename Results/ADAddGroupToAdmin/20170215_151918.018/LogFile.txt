@@ -1,0 +1,4 @@
+﻿2017-02-15 15:19:18.018 +0000	START		Running ADAddGroupToAdmin.script
+2017-02-15 15:19:26.026 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2017-02-15 15:19:28.028 +0000	EndTestCase		(Duration:"9.661", Errors:"1", Exceptions:"1", StartTime:"2017-02-15 15:19:18 +0000", Successes:"0", TestCase:"ADAddGroupToAdmin.script", Warnings:"0")
+2017-02-15 15:19:28.028 +0000	ABORTED		Execution Time 0:00:10 ADAddGroupToAdmin.script

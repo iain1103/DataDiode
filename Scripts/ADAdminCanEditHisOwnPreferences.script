@@ -1,0 +1,71 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 13/02/2017  
+ ***************************************)
+//Admin editing his own preferences
+
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "UserPageTitle") then
+			LogSuccess "Users page opened"			
+			set the searchRectangle to ("TLCurrentUser","BRCurrentUser")
+			Click "AdminPencilIcon"
+			set the searchRectangle to fullscreen
+			
+			
+			Wait 3
+			Click (467,321)
+			typeText controlKey, "a" // select all 
+			
+			typeText deleteKey // delete the text
+			TypeText "TestAdministrator"
+			Click "ChangePasswordRadio"
+			WaitFor 4, "Confirmpassword_1"
+			
+			TypeText tabKey
+			TypeText "admin"
+			TypeText tabKey
+			TypeText "admin"
+			Click "ConfigManagerDropDown"
+			set the searchRectangle to ("Roletxt","BRSAVE")
+			Click "ConfigurationManager"
+			set the searchRectangle to fullscreen
+			Wait 2
+			Click "SAVE"
+			Wait 2
+			set the searchRectangle to ("TLCurrentUser","BRCurrentUser")
+			if ImageFound("TestAdministrator",Text:"Configuration man") then
+				LogSuccess "Admin details updated"
+				
+			else
+				
+				LogWarning "Failed to update admin details"
+			end if
+			
+			
+		else		
+			
+			LogWarning "Failed to open users page"
+		end if
+		
+	else
+		
+		LogWarning "Fail to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

@@ -1,0 +1,31 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Applying filters on logs
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		//Click "ADLogs"
+		set the shouldRepositionMouse to false
+		Click "ADLogs"
+		set the shouldRepositionMouse to true
+		Wait 2
+		Click "EDITFILTERS"
+		LogSuccess "Log filters edited"
+		
+	else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+	
+else	
+	
+	LogWarning "Failed to open appliance Upstream"
+end if
+TearDown

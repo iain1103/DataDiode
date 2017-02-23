@@ -1,0 +1,37 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Accessing services page from top menu bar
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into Appliance downstream"
+		Click "RightArrow"
+		Repeat until ImageFound("Services_NavigationBar")	
+			Click "RightArrowSelected"			
+		End Repeat	
+		MoveTo "Services_NavigationBar"
+		set the shouldRepositionMouse to false
+		Click "Services_NavigationBar"
+		set the shouldRepositionMouse to true
+		if ImageFound("Services_1") then
+			LogSuccess "Services page opened"
+		else
+			LogWarning "Failed to open Services page"
+		end if		
+		
+	else
+		
+		LogWarning "Failed to Login"
+		
+	end if
+	LogWarning "Failed to open appliance downstream"
+	
+end if
+TearDown

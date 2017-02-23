@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUCreateUser.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-25 17:20:30.030 +0000"
+ tests="1" successes="(null)" errors="(null)" time="0.000000">
+  <properties>
+   <property name="RunDate" value="2017-01-25 17:20:30.030 +0000"/>
+   <property name="Status" value="Running"/>
+  </properties>
+  <testcase name="AUCreateUser.script" assertions="1" successes="0" errors="1" time="59.443">
+  </testcase>
+ </testsuite>
+</testsuites>

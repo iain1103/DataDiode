@@ -1,0 +1,62 @@
+﻿2017-02-08 11:42:26.026 +0000	START		Running AUEditUserfromUsersPage.script
+2017-02-08 11:42:27.027 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:29.029 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:30.030 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:32.032 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:33.033 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:34.034 +0000	imagefound	ConnectionError/ChromeConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:34.034 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:36.036 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:37.037 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:38.038 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:38.038 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:39.039 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:40.040 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:41.041 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:42.042 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-02-08 11:42:57.057 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:03.003 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:03.003 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:05.005 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:07.007 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:09.009 +0000	imagefound	Diode_Datastore	found at (327, 410)	45	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:10.010 +0000	doubleclick	Diode_Datastore	at (327, 410)	46	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:11.011 +0000	imagefound	RelatedObjects	found at (597, 155)	58	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:11.011 +0000	click	RelatedObjects	at (597, 155)	59	on_webbasepage	WebBasePage.script
+2017-02-08 11:43:13.013 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:13.013 +0000	click	ApplianceUpstream	at (366, 320)	3	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:14.014 +0000	click	Console	at (333, 235)	4	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:21.021 +0000	click	ADUsernameET	at (481, 312)	6	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:22.022 +0000	typetext		admin	7	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:22.022 +0000	click	ADPasswordET	at (484, 352)	8	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:23.023 +0000	typetext		admin	9	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:24.024 +0000	typetext		[return]	10	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:25.025 +0000	imagefound	ADLoggedIn	found at (728, 171)	11	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:25.025 +0000	LogSuccess		Logged in into appliance upstream	12	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:25.025 +0000	moveto	Users_Dashboard	at (560, 329)	13	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:25.025 +0000	set		SHOULDREPOSITIONMOUSE = False	14	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:26.026 +0000	click	Users_Dashboard	at (560, 329)	15	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:26.026 +0000	set		SHOULDREPOSITIONMOUSE = True	16	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:27.027 +0000	imagefound	UserPageTitle	found at (92, 233)	17	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:27.027 +0000	LogSuccess		Users page opened	18	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:29.029 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	19	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:29.029 +0000	set		SHOULDREPOSITIONMOUSE = False	20	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:32.032 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	21	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:32.032 +0000	set		SHOULDREPOSITIONMOUSE = True	22	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:33.033 +0000	click	Username_1	at (497, 279)	24	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:34.034 +0000	typetext		testuser	25	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:35.035 +0000	click	Fullname	at (497, 320)	26	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:36.036 +0000	typetext		testuser	27	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:37.037 +0000	click	Password_1	at (495, 363)	28	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:37.037 +0000	typetext		testuser	29	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:38.038 +0000	click	ConfirmPassword	at (498, 406)	30	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:39.039 +0000	typetext		testuser	31	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:40.040 +0000	click	Role	at (583, 452)	32	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:41.041 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	33	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:41.041 +0000	click	User	at (485, 476)	34	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:41.041 +0000	set		SEARCHRECTANGLE = fullscreen	35	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:42.042 +0000	click	CREATE	at (663, 490)	37	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:48.048 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(67,655), ImageRectangle:(46,651,88,659), Language:"English", text:"testuser", TextPlatform:"Generic OCR")	found at (67, 655)	41	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:48.048 +0000	LogSuccess		User created	42	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:43:50.050 +0000	imagefound	testuser	Unable to Find Image testuser	43	on_auedituserfromuserspage	AUEditUserfromUsersPage.script
+2017-02-08 11:44:01.001 +0000	Exception	ENABLED	No Image Found On Screen: "ENABLED"	44	on_auedituserfromuserspage	AUEditUserfromUsersPage.script

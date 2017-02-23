@@ -1,0 +1,38 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Logout option in dashboard
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Logout_Dashboard"
+		
+		set the shouldRepositionMouse to false
+		Click "Logout_Dashboard"	
+		set the shouldRepositionMouse to true
+		if ImageFound(3, (text:"Logged out successfully"))			
+			LogSuccess "Logged out from appliance upstream"
+		else
+			LogWarning "Failed to log out"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance downstream"	
+		
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+LogoutVSphere
+TypeText  controlkey, shiftKey, deleteKey
+TypeText altKey, F4
+Click "Clearbrowsingdata"

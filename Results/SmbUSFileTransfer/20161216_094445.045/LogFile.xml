@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="SmbUSFileTransfer.script" package="FoxITDataDiodeAppliance.suite" timestamp="2016-12-16 09:44:45.045 +0000"
+ tests="1" successes="1" errors="0" time="186.015000">
+  <properties>
+   <property name="RunDate" value="2016-12-16 09:44:45.045 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="SmbUSFileTransfer.script" assertions="1" successes="1" errors="0" time="185.984">
+  </testcase>
+ </testsuite>
+</testsuites>

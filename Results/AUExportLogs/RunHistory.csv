@@ -1,0 +1,7 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2017-01-04 10:58:19.019 +0000,"Success",0:01:09,0,1,0,"20170104_105819.019/LogFile.txt","","",1
+2017-01-04 11:01:28.028 +0000,"Running",0:00:00,0,0,0,"20170104_110128.028/LogFile.txt","","",0
+2017-01-04 11:04:03.003 +0000,"Success",0:01:10,0,1,0,"20170104_110403.003/LogFile.txt","","",1
+2017-01-04 11:16:37.037 +0000,"Running",0:00:00,0,0,0,"20170104_111637.037/LogFile.txt","","",0
+2017-01-04 11:22:59.059 +0000,"Running",0:00:00,0,0,0,"20170104_112259.059/LogFile.txt","","",0
+2017-01-04 11:25:26.026 +0000,"Failure",0:01:15,1,0,1,"20170104_112526.026/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""AULogsSelected""",0

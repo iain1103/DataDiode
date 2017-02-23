@@ -1,0 +1,32 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Access preferences page from dashboard
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "ADPreferences"
+		set the shouldRepositionMouse to false
+		Click "ADPreferences"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"PreferencesPageTitle") then
+			LogSuccess "Preferences page opened"
+		else
+			LogWarning "Failed to open preferences"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance uostream not found"
+end if
+TearDown

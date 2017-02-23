@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="ADConfigurationCryptographicSettings.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-02-22 16:43:31.031 +0000"
+ tests="1" successes="4" errors="0" time="29.235000">
+  <properties>
+   <property name="RunDate" value="2017-02-22 16:43:31.031 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="ADConfigurationCryptographicSettings.script" assertions="4" successes="4" errors="0" time="29.219">
+  </testcase>
+ </testsuite>
+</testsuites>

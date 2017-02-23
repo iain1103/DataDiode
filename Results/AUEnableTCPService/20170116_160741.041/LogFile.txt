@@ -1,0 +1,4 @@
+﻿2017-01-16 16:07:41.041 +0000	START		Running AUEnableTCPService.script
+2017-01-16 16:07:54.054 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2017-01-16 16:07:56.056 +0000	EndTestCase		(Duration:"14.545", Errors:"1", Exceptions:"1", StartTime:"2017-01-16 16:07:41 +0000", Successes:"0", TestCase:"AUEnableTCPService.script", Warnings:"0")
+2017-01-16 16:07:56.056 +0000	ABORTED		Execution Time 0:00:15 AUEnableTCPService.script

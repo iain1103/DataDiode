@@ -1,0 +1,46 @@
+﻿2017-02-13 14:15:01.001 +0000	START		Running AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:15:03.003 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:05.005 +0000	typetext		[windowsAltKey] x	4	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:06.006 +0000	typetext		[controlKey]l	5	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:07.007 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	6	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:08.008 +0000	typetext		[return]	7	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:09.009 +0000	imagefound	ConnectionError	found at (239, 214)	10	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:09.009 +0000	click	ADVANCED	at (247, 506)	12	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:11.011 +0000	scrollwheeldown		moved 2	14	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:12.012 +0000	click	Proceed	at (228, 667)	15	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:13.013 +0000	waitfor	UserName	found at (79, 430)	18	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:13.013 +0000	typetext		[tab]	20	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:14.014 +0000	typetext		spedarasi614	21	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:15.015 +0000	typetext		[tab]	23	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:15.015 +0000	typetext		!Praveensowji1	24	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:16.016 +0000	click	VMSphereLogin	at (362, 519)	25	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:31.031 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	26	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:41.041 +0000	imagefound	Home	found at (33, 183)	26	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:41.041 +0000	click	HostsAndClusters	at (30, 235)	27	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:43.043 +0000	clickany	Manchester	at (59, 223)	28	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:46.046 +0000	click	RelatedObjects	at (597, 155)	31	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:49.049 +0000	set		SEARCHRECTANGLE = (TLName,BRName)	35	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:49.049 +0000	imagefound	Diode_Datastore	found at (327, 410)	38	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:49.049 +0000	doubleclick	Diode_Datastore	at (327, 410)	39	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:49.049 +0000	set		SEARCHRECTANGLE = fullscreen	49	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:50.050 +0000	imagefound	RelatedObjects	found at (597, 155)	51	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:50.050 +0000	click	RelatedObjects	at (597, 155)	52	on_webbasepage	WebBasePage.script
+2017-02-13 14:15:53.053 +0000	imagefound	ApplianceUpstream	found at (366, 320)	7	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:15:53.053 +0000	click	ApplianceUpstream	at (366, 320)	8	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:15:54.054 +0000	click	Console	at (333, 235)	9	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:15:59.059 +0000	click	ADUsernameET	at (481, 312)	11	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:15:59.059 +0000	typetext		admin	12	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:00.000 +0000	click	ADPasswordET	at (484, 352)	13	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:01.001 +0000	typetext		admin	14	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:02.002 +0000	typetext		[return]	15	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:02.002 +0000	imagefound	ADLoggedIn	found at (728, 171)	16	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:02.002 +0000	LogSuccess		Logged in into appliance downstream	17	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:02.002 +0000	moveto	Users_Dashboard	at (560, 329)	18	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:02.002 +0000	set		SHOULDREPOSITIONMOUSE = False	19	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:03.003 +0000	click	Users_Dashboard	at (560, 329)	20	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:03.003 +0000	set		SHOULDREPOSITIONMOUSE = True	21	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:04.004 +0000	imagefound	UserPageTitle	found at (92, 233)	23	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:04.004 +0000	LogSuccess		Users page opened	24	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:04.004 +0000	set		SEARCHRECTANGLE = (TLadmin,BRadmin)	25	on_auadmincanedithisownpublickey	AUAdminCanEditHisOwnPublicKey.script
+2017-02-13 14:16:32.032 +0000	EndTestCase		(Duration:"91.04", Errors:"1", Exceptions:"0", StartTime:"2017-02-13 14:15:01 +0000", Successes:"2", TestCase:"AUAdminCanEditHisOwnPublicKey.script", Warnings:"0")
+2017-02-13 14:16:32.032 +0000	ABORTED		Execution Time 0:01:31 AUAdminCanEditHisOwnPublicKey.script

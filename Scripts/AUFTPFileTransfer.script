@@ -1,0 +1,20 @@
+﻿WebBasePage
+MoveTo "ApplianceDownstream"
+
+ScrollWheelDown 3
+
+Repeat until ImageFound("U1W10") 
+	ScrollWheelDown 2
+End Repeat
+Click "U1W10"
+Click "Console"
+
+Wait 4
+ClickAny "TestFileSelected"
+TypeText ControlKey,"c"
+Wait 1
+
+Click "FileExplorer"
+Click "FtpShare"
+TypeText ControlKey,"v"
+TearDown

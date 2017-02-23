@@ -1,0 +1,36 @@
+﻿2017-02-07 15:17:27.027 +0000	START		Running AUCreateGroup.script
+2017-02-07 15:17:29.029 +0000	imagefound	ApplianceUpstream	found at (366, 320)	3	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:29.029 +0000	click	ApplianceUpstream	at (366, 320)	4	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:30.030 +0000	click	Console	at (333, 235)	5	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:35.035 +0000	click	ADUsernameET	at (481, 312)	7	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:36.036 +0000	typetext		admin	8	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:36.036 +0000	click	ADPasswordET	at (484, 352)	9	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:37.037 +0000	typetext		admin	10	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:38.038 +0000	typetext		[return]	11	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:39.039 +0000	imagefound	ADLoggedIn	found at (728, 171)	12	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:39.039 +0000	LogSuccess		Logged in into appliance upstream	13	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:39.039 +0000	moveto	Users_Dashboard	at (560, 329)	14	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:39.039 +0000	set		SHOULDREPOSITIONMOUSE = False	15	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:40.040 +0000	click	Users_Dashboard	at (560, 329)	16	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:40.040 +0000	set		SHOULDREPOSITIONMOUSE = True	17	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	imagefound	UserPageTitle	found at (92, 233)	18	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	LogSuccess		Users page opened	19	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	moveto	MANAGEGROUPS	at (808, 234)	21	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	set		SHOULDREPOSITIONMOUSE = False	22	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	click	MANAGEGROUPS	at (808, 234)	23	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:41.041 +0000	set		SHOULDREPOSITIONMOUSE = True	24	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:43.043 +0000	moveto	CREATEGROUP	at (640, 226)	26	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:43.043 +0000	set		SHOULDREPOSITIONMOUSE = False	27	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:44.044 +0000	click	CREATEGROUP	at (640, 226)	28	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:44.044 +0000	set		SHOULDREPOSITIONMOUSE = True	29	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:46.046 +0000	click	Name_1	at (486, 280)	30	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:47.047 +0000	typetext		TestGroup	31	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:50.050 +0000	moveto	CREATE	at (663, 319)	32	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:50.050 +0000	set		SHOULDREPOSITIONMOUSE = False	33	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:50.050 +0000	click	CREATE	at (663, 319)	34	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:50.050 +0000	set		SHOULDREPOSITIONMOUSE = True	35	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:55.055 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(931,215), ImageRectangle:(904,210,958,221), Language:"English", Text:"TestGroup", TextPlatform:"Generic OCR")	found at (931, 215)	37	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:55.055 +0000	LogSuccess		Group created	38	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:58.058 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(663,421), ImageRectangle:(647,418,679,425), Language:"English", Text:"CLOSE", TextPlatform:"Generic OCR")	at (663, 421)	39	on_aucreategroup	AUCreateGroup.script
+2017-02-07 15:17:58.058 +0000	EndTestCase		(Duration:"31.7", Errors:"0", Exceptions:"0", StartTime:"2017-02-07 15:17:27 +0000", Successes:"3", TestCase:"AUCreateGroup.script", Warnings:"0")
+2017-02-07 15:17:59.059 +0000	SUCCESS		Execution Time 0:00:31 AUCreateGroup.script

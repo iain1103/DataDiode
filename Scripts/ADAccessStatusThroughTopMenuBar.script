@@ -1,0 +1,34 @@
+﻿(* Created By: Sowjanya Pedarasi *)
+//Accessing status page from top menu bar
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText return
+	Wait 2
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into Appliance downstream"		
+		MoveTo "Status_NavigationBar"
+		set the shouldRepositionMouse to false
+		Click "Status_NavigationBar"
+		set the shouldRepositionMouse to true
+		if ImageFound("StatusPageTitle") then
+			LogSuccess "Services page opened"
+		else			
+			LogWarning "Failed to open Services page"
+		end if		
+		
+	else
+		
+		LogWarning "Failed to Logininto appliance downstream"
+		
+	end if
+	LogWarning "Failed to open appliance downstream"
+	
+end if
+
+TearDown

@@ -1,0 +1,34 @@
+﻿(* created By : Sowjanya Pedarasi *)
+//Access status page from top menu bar
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText return
+	Wait 1
+	if ImageFound(3,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"		
+		set the shouldRepositionMouse to false
+		Click "Status_NavigationBar"
+		set the shouldRepositionMouse to true
+		if ImageFound("StatusPageTitle") then
+			LogSuccess "Status page opened"
+		else
+			LogWarning "Failed to open Status page"
+		end if
+		
+	else		
+		LogWarning "Failed to Login"
+		
+	end if	
+else
+	
+	LogWarning "Appliance Upstream not found"
+end if
+
+TearDown

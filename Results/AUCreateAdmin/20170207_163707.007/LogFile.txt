@@ -1,0 +1,5 @@
+﻿2017-02-07 16:37:07.007 +0000	START		Running AUCreateAdmin.script
+2017-02-07 16:37:12.012 +0000	imagefound	ApplianceUpstream	Unable to Find Image ApplianceUpstream within 3.00 seconds	2	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:37:12.012 +0000	LogWarning		Appliance upstream not found	77	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:37:12.012 +0000	EndTestCase		(Duration:"4.967", Errors:"0", Exceptions:"0", StartTime:"2017-02-07 16:37:07 +0000", Successes:"1", TestCase:"AUCreateAdmin.script", Warnings:"1")
+2017-02-07 16:37:13.013 +0000	SUCCESS		Execution Time 0:00:05 AUCreateAdmin.script

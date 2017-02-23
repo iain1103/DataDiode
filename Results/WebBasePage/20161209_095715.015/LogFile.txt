@@ -1,0 +1,16 @@
+﻿2016-12-09 09:57:15.015 +0000	START		Running WebBasePage.script
+2016-12-09 09:57:16.016 +0000	doubleclickany	Chrome/ChromeSelected	at (38, 135)	1	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:20.020 +0000	typetext		[controlKey]l	3	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:23.023 +0000	typetext		https://man1srvvc01p.nccgroup.local./vsphere-client/?csp	4	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:24.024 +0000	typetext		[return]	5	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:27.027 +0000	imagefound	ConnectionError/ChromeConnectionError	Unable to Find Image ConnectionError/ChromeConnectionError,ConnectionError/FireFoxConnectionError within 3.00 seconds	8	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:27.027 +0000	typetext		[tab]	16	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:28.028 +0000	typetext		spedarasi614	17	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:28.028 +0000	typetext		[tab]	19	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:30.030 +0000	typetext		!Praveensowji1	20	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:30.030 +0000	click	Login	at (360, 518)	21	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:45.045 +0000	imagefound	Home	Unable to Find Image Home within 15.00 seconds	22	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:52.052 +0000	imagefound	Home	found at (33, 183)	22	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:52.052 +0000	click	HostsAndClusters	at (30, 235)	23	on_webbasepage	WebBasePage.script
+2016-12-09 09:57:52.052 +0000	EndTestCase		(Duration:"36.601", Errors:"0", Exceptions:"0", StartTime:"2016-12-09 09:57:15 +0000", Successes:"1", TestCase:"WebBasePage.script", Warnings:"0")
+2016-12-09 09:57:53.053 +0000	SUCCESS		Execution Time 0:00:37 WebBasePage.script

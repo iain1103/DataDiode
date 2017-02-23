@@ -1,0 +1,38 @@
+﻿2017-02-07 16:20:14.014 +0000	START		Running AUCreateAdmin.script
+2017-02-07 16:20:17.017 +0000	imagefound	ApplianceUpstream	found at (366, 320)	2	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:17.017 +0000	click	ApplianceUpstream	at (366, 320)	3	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:18.018 +0000	click	Console	at (333, 235)	4	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:23.023 +0000	click	ADUsernameET	at (481, 312)	6	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:24.024 +0000	typetext		admin	7	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:25.025 +0000	click	ADPasswordET	at (484, 352)	8	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:26.026 +0000	typetext		admin	9	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:27.027 +0000	typetext		[return]	10	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:27.027 +0000	imagefound	ADLoggedIn	found at (728, 171)	11	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:27.027 +0000	LogSuccess		Logged in into appliance upstream	12	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:27.027 +0000	moveto	Users_Dashboard	at (560, 329)	13	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:27.027 +0000	set		SHOULDREPOSITIONMOUSE = False	14	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:28.028 +0000	click	Users_Dashboard	at (560, 329)	15	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:28.028 +0000	set		SHOULDREPOSITIONMOUSE = True	16	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:29.029 +0000	imagefound	UserPageTitle	found at (92, 233)	17	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:29.029 +0000	LogSuccess		Users page opened	18	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:35.035 +0000	moveto	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	19	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:35.035 +0000	set		SHOULDREPOSITIONMOUSE = False	20	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:37.037 +0000	click	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(914,232), ImageRectangle:(881,229,947,236), Language:"English", Text:"CREATE USER", TextPlatform:"Generic OCR")	at (914, 232)	21	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:37.037 +0000	set		SHOULDREPOSITIONMOUSE = True	22	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:38.038 +0000	click	Username_1	at (497, 279)	24	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:39.039 +0000	typetext		TestAdmin	25	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:40.040 +0000	click	Fullname	at (497, 320)	26	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:41.041 +0000	typetext		TestAdmin	27	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:42.042 +0000	click	Password_1	at (495, 363)	28	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:43.043 +0000	typetext		TestAdmin	29	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:45.045 +0000	click	ConfirmPassword	at (498, 406)	30	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:46.046 +0000	typetext		TestAdmin	31	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:47.047 +0000	click	Role	at (583, 452)	32	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:48.048 +0000	set		SEARCHRECTANGLE = (Roletxt,CREATE_1)	34	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:48.048 +0000	click	Administrator	at (502, 499)	35	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:48.048 +0000	set		SEARCHRECTANGLE = fullscreen	36	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:49.049 +0000	click	CREATE	at (663, 490)	38	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:54.054 +0000	imagefound	(CaseSensitive:"No", Contrast:"Off", IgnoreSpaces:"No", ImageLocation:(931,214), ImageRectangle:(905,210,958,219), Language:"English", text:"TestAdmin", TextPlatform:"Generic OCR")	found at (931, 214)	41	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:54.054 +0000	LogSuccess		Admin created	42	on_aucreateadmin	AUCreateAdmin.script
+2017-02-07 16:20:54.054 +0000	EndTestCase		(Duration:"39.7", Errors:"0", Exceptions:"0", StartTime:"2017-02-07 16:20:14 +0000", Successes:"3", TestCase:"AUCreateAdmin.script", Warnings:"0")
+2017-02-07 16:20:55.055 +0000	SUCCESS		Execution Time 0:00:40 AUCreateAdmin.script

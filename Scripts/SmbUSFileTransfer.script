@@ -1,0 +1,130 @@
+﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Created By: Sowjanya Pedarasi
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+// SMB file transfer
+WebBasePage
+MoveTo "ApplianceDownstream"
+Repeat until ImageFound("U1W10") 
+	ScrollWheelDown 2
+End Repeat
+//ScrollWheelDown 3
+
+if ImageFound (3, "U1W10") then	
+	Click "U1W10"
+	(**Wait 2
+	RightClick "U1W10Selected"
+	Wait 1
+	Click "OpenConsole" **)
+	Click "Console"
+	Wait 4
+	ClickAny "TestFileSelected"
+	TypeText ControlKey,"c"
+	Wait 1
+	
+	Click "FileExplorer"
+	Click "mbShare"
+	TypeText ControlKey,"v"
+	//put basic time into shareTime
+	//put myScript.myTime into formattedTime
+	put the basic date & " " &  formattedTime("%1I:%M:%S %p",the long time) into shareTime
+	put shareTime
+	put the long time into toleranceSeconds
+	put toleranceSeconds
+	Wait 2
+	Click "SmbSharefolderClosebtn"
+	Click (Image:"0vSphereWebClient", WaitFor:3) 
+	
+	DoubleClick "IE"
+	
+	if ImageFound (3, "ApplianceUpstream") then
+		Click "ApplianceUpstream"
+		Click "Console"
+		Wait 4
+		Click "DSUsername"
+		TypeText "admin"
+		Click "DSPassword"
+		TypeText "admin"	
+		TypeText Return
+		
+		
+		//Click "DSLogin"
+		//Click (Text:"Transfers", caseSensitive:"True")
+		
+		//Click "AUTransfers"	
+		//	Click "AUTransfersSelected"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true
+		
+		Wait 2
+		
+		//check for tolerance
+		if  ImageFound(2, (text: shareTime, ValidCharacters: "0123456789:")) then
+			LogSuccess "File transferred"
+		else
+			
+			put  toleranceSeconds + 1 second into newTolerance 
+			put newTolerance
+			
+			put  the  basic  date  &" " & formattedTime("%1I:%M:%S %p",newTolerance) into newShareTime
+			put newShareTime
+			if ImageFound(3, (text: newShareTime,ValidCharacters: "0123456789:") ) then
+				LogSuccess "File transferred"
+			else
+				put  toleranceSeconds + 2 second into newTolerance2
+				put newTolerance2				
+				put  the  basic  date  & " " & formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime2
+				if ImageFound(3, (text:newShareTime2,ValidCharacters: "0123456789:")) then
+					LogSuccess "File transferred"
+				else
+					put  toleranceSeconds + 3 second into newTolerance3
+					put newTolerance3					
+					put  the  basic  date  & " " & formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime3
+					
+					if ImageFound(3, (text:newShareTime3,ValidCharacters: "0123456789:")) then
+						LogSuccess "File transferred"
+					else
+						put  toleranceSeconds  - 1 second into newTolerance4
+						put newTolerance4							
+						put  the  basic  date  & " " & formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime4
+						if ImageFound(3, (text:newShareTime4,ValidCharacters: "0123456789:")) then
+							LogSuccess "File transferred"
+							
+							
+						else
+							
+							put  toleranceSeconds  - 2 second into newTolerance5
+							put newTolerance5						
+							put  the  basic  date  & " " & formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime5
+							if ImageFound(3, (text: newShareTime5,ValidCharacters: "0123456789:")) then
+								LogSuccess "File transferred"
+							else
+								
+								put  toleranceSeconds  - 3 second into newTolerance6
+								put newTolerance6						
+								put  the  basic  date  & " " & formattedTime("%1I:%M:%S %p",newTolerance6) into newShareTime6
+								if ImageFound(3, (text: newShareTime6,ValidCharacters: "0123456789:")) then
+									LogSuccess "File transferred"
+								else
+									LogWarning "File not transferred"									
+									
+								end if								
+							end if							
+						end if						
+					end if					
+				end if				
+			end if	
+		end if		
+		
+	else
+		LogWarning "ApplianceUpstream not found"
+	end if 
+	
+else
+	LogWarning "U1W10 not found"
+end if 
+
+
+TearDown
+
+

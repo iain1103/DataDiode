@@ -1,0 +1,29 @@
+﻿(* Created By : Sowjanya Pedarasi *)
+//Clear transfers
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "DSUsername"
+	TypeText "admin"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound (3, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"		
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true
+		Wait 2
+		Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
+		LogSuccess "Transfers cleared"
+		else
+		
+		LogWarning "Failed to login"
+	end if	
+	
+	else	
+	LogWarning "Failed to open appliance Upstream"
+end if
+TearDown

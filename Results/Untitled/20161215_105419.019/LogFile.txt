@@ -1,0 +1,4 @@
+﻿2016-12-15 10:54:19.019 +0000	START		Running Untitled.script
+2016-12-15 10:54:26.026 +0000	Exception	Chrome/ChromeSelected	No Image Found On Screen: "Chrome/ChromeSelected,Chrome/ChromeUnSelected"	1	on_webbasepage	WebBasePage.script
+2016-12-15 10:54:27.027 +0000	EndTestCase		(Duration:"7.987", Errors:"1", Exceptions:"1", StartTime:"2016-12-15 10:54:19 +0000", Successes:"0", TestCase:"Untitled.script", Warnings:"0")
+2016-12-15 10:54:27.027 +0000	ABORTED		Execution Time 0:00:08 Untitled.script

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="AUAccessingTransfersThroughMenu.script" package="FoxITDataDiodeAppliance.suite" timestamp="2017-01-05 13:54:51.051 +0000"
+ tests="1" successes="1" errors="0" time="64.834000">
+  <properties>
+   <property name="RunDate" value="2017-01-05 13:54:51.051 +0000"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="AUAccessingTransfersThroughMenu.script" assertions="1" successes="1" errors="0" time="64.818">
+  </testcase>
+ </testsuite>
+</testsuites>

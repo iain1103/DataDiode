@@ -1,0 +1,58 @@
+﻿//Access Configuration Cryptographic Settings
+//Date Created 21/02/2017
+//Created By Iain Storrie
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			Wait 5
+			MoveTo "CryptographicSettings"
+			set the shouldRepositionMouse to false
+			Click "CryptographicSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"CryptographicSettingsPage_Title") then
+				LogSuccess "Cryptographic Settings page opened"
+				Wait 5
+				MoveTo "BackToConfiguration"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "BackToConfiguration"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ConfigurationPage_Title") then
+					LogSuccess "Configuration page opened"
+				else
+					LogWarning "Failed to open Configuration page"
+				end if
+			else
+				LogWarning "Failed to open Cryptographic Settings page"
+			end if
+			
+		else
+			
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
