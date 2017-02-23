@@ -20,7 +20,7 @@ end if
 WaitFor 3, "UserName"
 
 TypeText tabKey
-TypeText "test"
+TypeText ""
 
 TypeText tabKey
 Typetext ""
