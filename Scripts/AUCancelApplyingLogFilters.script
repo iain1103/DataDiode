@@ -1,0 +1,64 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 27/02/2017  
+ ***************************************)
+//Cancel Applying filters on logs
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo  "ADLogs"
+		set the shouldRepositionMouse to false
+		Click "ADLogs"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"LogsTitle") then
+			LogSuccess "Logs page opened"	
+			
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			LogSuccess "Log filters edited"
+			Click "LogTypeDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			Click "MinSeverityDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			MoveTo "Cancel"
+			set the shouldRepositionMouse to false
+			Click "Cancel"
+			set the shouldRepositionMouse to true
+			if ImageFound(5, (text:"Information")) then
+				LogSuccess "Cancelled applying filters"
+				
+			else
+				LogWarning "Failed to cancel"
+			end if		
+			
+			
+		else
+			
+			LogWarning "Failed to open logs page"
+		end if
+		
+	else
+		LogWarning "Failed to login into appliance upstream"
+	end if
+	
+else	
+	
+	LogWarning "Failed to open appliance Upstream"
+end if
+TearDown
