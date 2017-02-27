@@ -1,41 +1,125 @@
-﻿(** Created By: Sowjanya Pedarasi **)
-// FTP Service configure
+﻿(* Created By: Sowjanya Pedarasi *)
+// FTP service Configure
 WebBasePage
-if ImageFound (3, "ApplianceDownstream") then
+if ImageFound(3, "ApplianceDownstream") then	
 	Click "Console"
-	Wait 5
-	Click "ADUsernameET"
+	Wait 4
+	Click "DSUsername"
 	TypeText "admin"
-	Click "ADPasswordET"
-	TypeText "admin"
-	
-	Click "ADLoginBtn"
+	Click "DSPassword"
+	TypeText "admin"	
+	TypeText Return
 	Wait 2
 	if ImageFound(3,"ADLoggedIn") then
-		LogSuccess "Logged in into appliance downstream"
+		LogSuccess "Logged in into appliance downstream"		
+		//Click "ADServices"
 		MoveTo "ADServices"
 		set the shouldRepositionMouse to false
 		Click "ADServices"
-		set the shouldRepositionMouse to true		
+		set the shouldRepositionMouse to true
 		if ImageFound(2, "ADServicesPage") then
 			LogSuccess "Appliance downstream services page opened"
-			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList
+			put EveryImageLocation((Text:"CONFIGURE",caseSensitive:"yes")) into ConfigurationList	
 			MoveTo item 1 of ConfigurationList
-			set the shouldRepositionMouse to false			
-			Click item 1 of ConfigurationList
+			set the shouldRepositionMouse to false
+			Click item 1 of ConfigurationList		
 			set the shouldRepositionMouse to true
-			LogSuccess "FTP configured"
-		else
-			
-			LogWarning "Failed to open Appliance downstream page"
-		end if
-		
+			if ImageFound(3,"FTPConfigurePopTitle") then
+				LogSuccess "FTP configure popup appeared"
+				MoveTo "FTPDropDown"
+				set the shouldRepositionMouse to false
+				Click "FTPDropDown"
+				set the shouldRepositionMouse to true
+				
+				MoveTo "FTPES_DropDown"
+				set the shouldRepositionMouse to false
+				Click "FTPES_DropDown"
+				set the shouldRepositionMouse to true
+				
+				MoveTo "FTPS_DropDown"
+				set the shouldRepositionMouse to false
+				Click "FTPS_DropDown"
+				set the shouldRepositionMouse to true
+				
+				MoveTo "SFTP_DropDown"
+				set the shouldRepositionMouse to false
+				Click "SFTP_DropDown"
+				set the shouldRepositionMouse to true
+				
+				Click "Allowedhosts"
+				TypeText "0.0.0.0/0"
+				
+				MoveTo "ADD"
+				
+				set the shouldRepositionMouse to false
+				Click "ADD"
+				set the shouldRepositionMouse to true
+				
+				Wait 2
+				Click "Name"
+				TypeText "FTPTestShare"
+				TypeText tabKey
+				TypeText "FTP share"				
+				
+				MoveTo "Selectbtn"
+				set the shouldRepositionMouse to false
+				Click "Selectbtn"
+				set the shouldRepositionMouse to true
+				Wait 2
+				
+				if ImageFound(3,Text:"Select local groups") then
+					LogSuccess "Select local groups popup appeared"
+					MoveTo (418,373)
+					set the shouldRepositionMouse to false					
+					Click (418,373)
+					set the shouldRepositionMouse to true
+					Wait 1
+					
+					Click (Text:"CLOSE")
+					
+					
+					Wait 1
+					
+					MoveTo "APPLY"
+					set the shouldRepositionMouse to false
+					Click "APPLY"
+					set the shouldRepositionMouse to true
+					
+					Wait 1
+					Drag(983,437)
+					Drop(983,665)
+					Wait 1
+					if ImageFound(3,Text:"FTPTestShare") then
+						LogSuccess "FTP share added"
+						MoveTo "SAVE"
+						set the shouldRepositionMouse to false
+						Click "SAVE"
+						set the shouldRepositionMouse to true
+						
+					else
+						LogWarning "Failed to add ftp share"
+					end if
+					
+					
+					
+				else
+					LogWarning "Failed to open select group popup"
+				end if
+				
+				
+			else
+				LogWarning "Failed to open FTP configure popup"
+	end if
+	
 	else
-		LogWarning "Failed to Login"
-		
-	end if	
-else
-	LogWarning "ApplianceDownstream not found"
-end if
+	LogWarning "Failed to open Appliance downstream service page"
+end if	
 
-TearDown
+else
+LogWarning "Failed to Login"		
+end if	
+else	
+LogWarning "Appliance downstream  not found"	
+
+end if
+//TearDown
