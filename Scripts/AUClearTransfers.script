@@ -16,14 +16,21 @@ if ImageFound (3, "ApplianceUpstream") then
 		Click "AUTransfers"
 		set the shouldRepositionMouse to true
 		Wait 2
-		Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
-		LogSuccess "Transfers cleared"
+		if ImageFound(3, "TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
+			LogSuccess "Transfers cleared"
 		else
+			LogWarning "Failed to open transfers page"
+		end if	
+		
+	else
+		
 		
 		LogWarning "Failed to login"
 	end if	
 	
-	else	
+else	
 	LogWarning "Failed to open appliance Upstream"
 end if
 TearDown

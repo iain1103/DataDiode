@@ -1,10 +1,11 @@
 ﻿(****************************************
   Created By          : Sowjanya Pedarasi
-  Created On          : 22/02/2017  
+  Created On          : 23/02/2017  
  ***************************************)
-//Clearing filters
+//Cancel applying filters on transfers
 WebBasePage
-if ImageFound (3, "ApplianceDownstream") then	
+if ImageFound (3, "ApplianceUpstream") then	
+	Click "ApplianceUpstream"
 	Click "Console"
 	Wait 4
 	Click "ADUsernameET"
@@ -14,15 +15,14 @@ if ImageFound (3, "ApplianceDownstream") then
 	
 	TypeText Return
 	if ImageFound(5,"ADLoggedIn") then
-		LogSuccess "Logged in into appliance downstream"
+		LogSuccess "Logged in into appliance upstream"
 		MoveTo "AUTransfers"
 		set the shouldRepositionMouse to false
 		Click "AUTransfers"
 		set the shouldRepositionMouse to true	
-		
-		Wait 2
 		if ImageFound(3, "TransfersTitle") then
 			LogSuccess "Transfers page opened"
+			Wait 2
 			MoveTo "EDITFILTERS"
 			set the shouldRepositionMouse to false
 			Click "EDITFILTERS"
@@ -32,34 +32,32 @@ if ImageFound (3, "ApplianceDownstream") then
 			TypeText "1"
 			Click "Sequenceend"
 			TypeText "5"
-			TypeText Return	
-			Wait 3
-			if ImageFound(5,"CLEARFILTERS") then				
-				MoveTo "CLEARFILTERS"
-				set shouldRepositionMouse to false
-				Click "CLEARFILTERS"
-				set shouldRepositionMouse to true	
-				if ImageFound(2, Text:"Successfully updated filters.") then
-					LogSuccess "Filters cleared"
-				else
-					LogWarning "Failed to clear filters"
-				end if
+			Drag(984,414)
+			Drop(984,680)
+			Wait 1
+			MoveTo "Cancel"
+			set the shouldRepositionMouse to false
+			Click "Cancel"
+			set the shouldRepositionMouse to true
+			if ImageFound(5,Text:"CLEAR FILTERS") then				
+				LogSuccess "Cancelled"
 				
 			else
-				LogWarning "Clear filters button not found"
+				LogWarning "Failed to cancel applying filters"
 			end if	
 			
 		else
 			LogWarning "Failed to open transfers page"
-		end if	
-		
-	else
+		end if
 		
 		
-		LogWarning "Failed to login into appliance downstream"
+		else		
+		
+		
+		LogWarning "Failed to login into appliance upstream"
 	end if
 	
-else	
-	LogWarning "Failed to open appliance downstream"
+	else	
+	LogWarning "Failed to open appliance upstream"
 end if
 TearDown
