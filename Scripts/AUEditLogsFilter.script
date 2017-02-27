@@ -5,9 +5,9 @@ if ImageFound (3, "ApplianceUpstream") then
 	Click "ApplianceUpstream"
 	Click "Console"
 	Wait 4
-	Click "DSUsername"
+	Click "ADUsernameET"
 	TypeText "admin"
-	Click "DSPassword"
+	Click "ADPasswordET"
 	TypeText "admin"	
 	TypeText Return
 	if ImageFound(5,"ADLoggedIn") then
@@ -16,9 +16,57 @@ if ImageFound (3, "ApplianceUpstream") then
 		set the shouldRepositionMouse to false
 		Click "ADLogs"
 		set the shouldRepositionMouse to true
-		Wait 2
-		Click "EDITFILTERS"
-		LogSuccess "Log filters edited"
+		if ImageFound(3,"LogsTitle") then
+			LogSuccess "Logs page opened"	
+			
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			LogSuccess "Log filters edited"
+			Click "LogTypeDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			Click "MinSeverityDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			MoveTo "APPLY"
+			set the shouldRepositionMouse to false
+			Click "APPLY"
+			set the shouldRepositionMouse to true
+			if ImageFound(3, (text:"Warning")) then
+				LogSuccess "Filters applied"
+				
+			else
+				LogWarning "Failed to apply filters"
+			end if
+			
+			//Clear filters
+			Wait 2
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			Click "LogTypeDropDown"
+			TypeText upArrow
+			TypeText upArrow
+			TypeText Return
+			Click "MinSeverityDropDown"
+			TypeText upArrow
+			TypeText upArrow
+			TypeText upArrow
+			TypeText Return
+			MoveTo "APPLY"
+			set the shouldRepositionMouse to false
+			Click "APPLY"
+			set the shouldRepositionMouse to true
+			
+		else
+			LogWarning "Failed to open logs page"
+		end if
 		
 	else
 		LogWarning "Failed to login into appliance upstream"
