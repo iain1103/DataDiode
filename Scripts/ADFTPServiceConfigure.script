@@ -26,28 +26,7 @@ if ImageFound(3, "ApplianceDownstream") then
 			set the shouldRepositionMouse to true
 			if ImageFound(3,"FTPConfigurePopTitle") then
 				LogSuccess "FTP configure popup appeared"
-				MoveTo "FTPDropDown"
-				set the shouldRepositionMouse to false
-				Click "FTPDropDown"
-				set the shouldRepositionMouse to true
 				
-				MoveTo "FTPES_DropDown"
-				set the shouldRepositionMouse to false
-				Click "FTPES_DropDown"
-				set the shouldRepositionMouse to true
-				
-				MoveTo "FTPS_DropDown"
-				set the shouldRepositionMouse to false
-				Click "FTPS_DropDown"
-				set the shouldRepositionMouse to true
-				
-				MoveTo "SFTP_DropDown"
-				set the shouldRepositionMouse to false
-				Click "SFTP_DropDown"
-				set the shouldRepositionMouse to true
-				
-				Click "Allowedhosts"
-				TypeText "0.0.0.0/0"
 				
 				MoveTo "ADD"
 				
@@ -58,68 +37,42 @@ if ImageFound(3, "ApplianceDownstream") then
 				Wait 2
 				Click "Name"
 				TypeText "FTPTestShare"
-				TypeText tabKey
-				TypeText "FTP share"				
-				
-				MoveTo "Selectbtn"
+				Click "FTPHost"
+				TypeText ""
+				Click "Username_1"
+				TypeText ""
+				MoveTo "APPLY"
 				set the shouldRepositionMouse to false
-				Click "Selectbtn"
+				Click "APPLY"
 				set the shouldRepositionMouse to true
 				Wait 2
-				
-				if ImageFound(3,Text:"Select local groups") then
-					LogSuccess "Select local groups popup appeared"
-					MoveTo (418,373)
-					set the shouldRepositionMouse to false					
-					Click (418,373)
-					set the shouldRepositionMouse to true
-					Wait 1
-					
-					Click (Text:"CLOSE")
-					
-					
-					Wait 1
-					
-					MoveTo "APPLY"
+				if ImageFound(3,Text:"FTPTestShare") then 
+					LogSuccess "FTP share added"
+					Drag(985,489)
+					Drop(983,667)
+					MoveTo "SAVE"
 					set the shouldRepositionMouse to false
-					Click "APPLY"
+					Click "SAVE"
 					set the shouldRepositionMouse to true
-					
-					Wait 1
-					Drag(983,437)
-					Drop(983,665)
-					Wait 1
-					if ImageFound(3,Text:"FTPTestShare") then
-						LogSuccess "FTP share added"
-						MoveTo "SAVE"
-						set the shouldRepositionMouse to false
-						Click "SAVE"
-						set the shouldRepositionMouse to true
-						
-					else
-						LogWarning "Failed to add ftp share"
-					end if
-					
-					
 					
 				else
-					LogWarning "Failed to open select group popup"
+					Logwarning "Failed to add frp share"
 				end if
 				
 				
 			else
 				LogWarning "Failed to open FTP configure popup"
-	end if
-	
+			end if
+			
+		else
+			LogWarning "Failed to open Appliance downstream service page"
+		end if	
+		
 	else
-	LogWarning "Failed to open Appliance downstream service page"
-end if	
-
-else
-LogWarning "Failed to Login"		
-end if	
+		LogWarning "Failed to Login"		
+	end if	
 else	
-LogWarning "Appliance downstream  not found"	
-
+	LogWarning "Appliance downstream  not found"	
+	
 end if
 //TearDown
