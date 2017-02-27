@@ -1,6 +1,8 @@
 ﻿//Edit Filters Button on All Transfers page
 //Date Created 17/02/2017
 //Created By Iain Storrie
+(*Modified on :27/02/2017
+Code refactor*)
 WebBasePage
 if ImageFound(3,"ApplianceUpstream") then
 	Click "ApplianceUpstream"
@@ -19,54 +21,58 @@ if ImageFound(3,"ApplianceUpstream") then
 		set the shouldRepositionMouse to true
 		if ImageFound(3,"StoredTransferTitlePage") then
 			LogSuccess "Stored transfers page opened"
+			MoveTo "AllTransfers"
+			set the shouldRepositionMouse to false
+			Click "AllTransfers"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"TransfersTitle") then
+				LogSuccess "Transfers page opened"
+				if ImageFound(3,"EditFiltersPopUp") then
+					LogSuccess "Edit Filters Pop Up opened"
+					MoveTo "TransferOrigin"
+					Click ("487", "399" )
+					TypeText downArrow
+					TypeText downArrow
+					Click "Samba"
+					//ScrollWheelDown 2
+					Drag (983,312)
+					Drop (983, 646)
+					MoveTo "Apply"
+					set the shouldRepositionMouse to false
+					Click "Apply"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Samba") then
+						LogSuccess "Samba origin displayed only"
+						Wait 5
+						MoveTo "ClearFilters"
+						set the shouldRepositionMouse to false
+						Click "ClearFilters"
+						set the shouldRepositionMouse to true
+						if ImageFound(3,"FTP") then
+							LogSuccess "Filters cleared successfully"
+						else
+							LogWarning "Filters not cleared"
+						end if
+					else
+						LogWarning "Samba origin not displayed"
+					end if
+					
+				else
+					LogWarning "Failed to open Edit Filters PopUp"
+				end if
+				
+			else
+				LogWarning "Failed to open Transfers page"
+			end if	
+			MoveTo "EditFilters"
+			set the shouldRepositionMouse to false
+			Click "EditFilters"
+			set the shouldRepositionMouse to true
+			
 		else
 			LogWarning "Failed to open stored transfers page"
 		end if
-		MoveTo "AllTransfers"
-		set the shouldRepositionMouse to false
-		Click "AllTransfers"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"TransfersTitle") then
-			LogSuccess "Transfers page opened"
-		else
-			LogWarning "Failed to open Transfers page"
-		end if	
-		MoveTo "EditFilters"
-		set the shouldRepositionMouse to false
-		Click "EditFilters"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"EditFiltersPopUp") then
-			LogSuccess "Edit Filters Pop Up opened"
-		else
-			LogWarning "Failed to open Edit Filters PopUp"
-		end if
-		MoveTo "TransferOrigin"
-		Click ("487", "399" )
-		TypeText downArrow
-		TypeText downArrow
-		Click "Samba"
-		//ScrollWheelDown 2
-		Drag (983,312)
-		Drop (983, 646)
-		MoveTo "Apply"
-		set the shouldRepositionMouse to false
-		Click "Apply"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"Samba") then
-			LogSuccess "Samba origin displayed only"
-			else
-			LogWarning "Samba origin not displayed"
-		end if
-		Wait 5
-		MoveTo "ClearFilters"
-		set the shouldRepositionMouse to false
-		Click "ClearFilters"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"FTP") then
-			LogSuccess "Filters cleared successfully"
-		else
-			LogWarning "Filters not cleared"
-		end if
+		
 	else
 		
 		LogWarning "Failed to login into appliance upstream"	
