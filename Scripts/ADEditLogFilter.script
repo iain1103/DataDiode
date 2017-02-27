@@ -12,6 +12,7 @@ if ImageFound (3, "ApplianceDownstream") then
 	if ImageFound(5,"ADLoggedIn") then
 		LogSuccess "Logged in into appliance downstream"
 		//Click "ADLogs"
+		MoveTo "ADLogs"
 		set the shouldRepositionMouse to false
 		Click "ADLogs"
 		set the shouldRepositionMouse to true
@@ -63,15 +64,15 @@ if ImageFound (3, "ApplianceDownstream") then
 			Click "APPLY"
 			set the shouldRepositionMouse to true
 			
-			else
+		else
 			LogWarning "Failed to open logs page"
 		end if
 		
-		else
+	else
 		LogWarning "Failed to login into appliance downstream"
 	end if
 	
-	else	
+else	
 	
 	LogWarning "Failed to open appliance downstream"
 end if
