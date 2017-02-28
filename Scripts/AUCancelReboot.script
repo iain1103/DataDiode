@@ -1,0 +1,62 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 28/02/2017  
+ ***************************************)
+//Login into appliance upstream, open status page and cancel rebooting the appliance
+
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then	
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Status_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Status_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StatusPageTitle") then
+			LogSuccess "Status page opened"
+			Wait 4
+			Drag(996,372)
+			Drop(974,663)			
+			Wait 1
+			MoveTo "REBOOT"
+			set the shouldrepositionMouse to false
+			Click "REBOOT"
+			set the shouldRepositionMouse to true
+			Wait 1
+			MoveTo "Cancel"
+			set the shouldRepositionMouse to false
+			Click "Cancel"
+			set the shouldrepositionMouse to true			
+			Wait 2
+			Drag(996,576)
+			Drop(996,203)
+			Wait 1
+			if ImageFound(3,"StatusPageTitle") then
+				LogSuccess "Cancelled rebooting the appliance"
+			else
+				LogWarning "Failed to cancel"
+			end if
+			
+			
+		else
+			LogWarning "Failed to open status"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
