@@ -36,6 +36,7 @@ if ImageFound (3, "ApplianceUpstream") then
 				set the shouldRepositionMouse to true
 				Click "Workgroup"
 				TypeText "FOXIT_DataDiode"
+				MoveTo "ADD"
 				set the shouldRepositionMouse to false
 				Click "ADD"
 				set the shouldRepositionMouse to true
@@ -87,7 +88,7 @@ if ImageFound (3, "ApplianceUpstream") then
 					
 					
 					
-					else
+				else
 					LogWarning "Failed to open select group popup"
 				end if
 				
@@ -96,15 +97,15 @@ if ImageFound (3, "ApplianceUpstream") then
 			end if
 			
 			
-			else
+		else
 			LogWarning "Failed to open Appliance upstream service page"
 		end if
 		
-		else
+	else
 		LogWarning "Failed to Login"
 		
 	end if	
-	else
+else
 	LogWarning "Applianceupstream not found"
 end if
 
