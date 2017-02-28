@@ -2,7 +2,7 @@
   Created By          : Sowjanya Pedarasi
   Created On          : 28/02/2017  
  ***************************************)
-//Login into appliance downstream, open status page and restart internal process
+//Login into appliance upstream, open status page and restart internal process
 
 WebBasePage
 if ImageFound(3,"ApplianceUpstream") then	
