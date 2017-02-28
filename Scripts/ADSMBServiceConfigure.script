@@ -24,17 +24,54 @@ if ImageFound (3, "ApplianceDownstream") then
 			set the shouldRepositionMouse to false
 			Click item 2 of ConfigurationList
 			set the shouldRepositionMouse to true
-			logSuccess "SMB service configured"
+			if ImageFound(3,"SMBConfigurePopupTitle") then
+				LogSuccess "SMB configure popup appeared"
+				MoveTo "ADD"
+				set the shouldRepositionMouse to false
+				Click "ADD"
+				set the shouldRepositionMouse to true
+				
+				Wait 2
+				Click "Name"
+				TypeText "SMBTestShare"
+				Click "FTPHost"
+				TypeText ""
+				TypeText tabKey
+				TypeText ""
+				Click "Username_1"
+				TypeText ""
+				MoveTo "APPLY"
+				set the shouldRepositionMouse to false
+				Click "APPLY"
+				set the shouldRepositionMouse to true
+				
+				Wait 1
+				if ImageFound(3,Text:"SMBTestShare") then
+					LogSuccess "SMB share added"
+					MoveTo "SAVE"
+					set the shouldRepositionMouse to false
+					Click "SAVE"
+					set the shouldRepositionMouse to true
+					
+				else
+					LogWarning "Failed to add SMB share"
+				end if
+				
+				else
+				LogWarning "SMB configure popup doesn't appear"
+			end if
+			
+			
 			else
 			LogWarning "Failed to open Appliance downstream services page"
-		end if
-		
+			end if
+			
 		else
-		LogWarning "Failed to Login"
-		
-	end if	
-else
-	LogWarning "ApplianceDownstream not found"
+			LogWarning "Failed to Login"
+			
+		end if	
+	else
+		LogWarning "Appliance Downstream not found"
 end if
 
 TearDown
