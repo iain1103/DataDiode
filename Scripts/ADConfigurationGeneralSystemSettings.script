@@ -1,0 +1,44 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 28/02/2017  
+ ***************************************)
+//Login into appliance downstream, open configuration page and access general system settings page
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "GeneralSystemSettings"
+			set the shouldRepositionMouse to false
+			Click "GeneralSystemSettings"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"GeneralSystemSettingsPage_Title") then
+				LogSuccess "General SystemsSettings page opened"
+			else
+				LogWarning "Failed to open General systems  settings page"
+			end if
+		else
+			LogWarning "Failed to open configuration page"
+		end if
+		
+	else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown
