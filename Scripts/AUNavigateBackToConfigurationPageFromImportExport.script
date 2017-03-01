@@ -1,0 +1,63 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 01/03/2017  
+ ***************************************)
+
+//Navigate back to configuration page from Import/Export configuration page
+WebBasePage
+
+if ImageFound(3,"ApplianceUpstream") then
+	
+	Click "ApplianceUpstream"
+	Click "Console"	
+	Wait 5	
+	Click "ADUsernameET"	
+	TypeText "admin"
+	Click "ADPasswordET"	
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then	
+		LogSuccess "Logged in into appliance upstream"			
+		MoveTo "Configuration"			
+		set the shouldRepositionMouse to false	
+		Click "Configuration"
+		set the shouldRepositionMouse to true	
+		if ImageFound(3,"ConfigurationPage_Title") then	
+			LogSuccess "Configuration page opened"	
+			Wait 5				
+			MoveTo "ImportExportConfiguration"		
+			set the shouldRepositionMouse to false		
+			Click "ImportExportConfiguration"			
+			set the shouldRepositionMouse to true		
+			if ImageFound(3,"ImportExportConfigurationPage_Title") then		
+				LogSuccess "Import/Export Configuration page opened"
+				MoveTo "BackToConfiguration"
+				set the shouldRepositionMouse to false
+				Click "BackToConfiguration"				
+				set the shouldRepositionMouse to true				
+				if ImageFound(3,"ConfigurationPage_Title") then					
+					LogSuccess "Returned to Configuration Page successfully "				
+				else					
+					LogWarning "Failed to return to Configuration page"
+				end if				
+			else				
+				LogWarning "Failed to open Import/Export Configuration page"				
+			end if			
+		else			
+			LogWarning "Failed to open configuration page"			
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"
+		
+	end if
+	
+else
+	
+	LogWarning "Appliance upstream not found"
+	
+end if
+
+TearDown
+
