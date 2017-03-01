@@ -1,0 +1,114 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 01/03/2017  
+ ***************************************)
+//Login into appliance upstream, open configuration page , access certificate management page and cancel creating certificate
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "CertificateManagement"
+			set the shouldRepositionMouse to false
+			Click "CertificateManagement"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"CertificateManagementPage_Title") then
+				LogSuccess "Certificate Management page opened"
+				Wait 5
+				Drag ("997", "414")
+				Drop ("997", "706")
+				MoveTo "CreateCertificate"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "CreateCertificate"
+				set the shouldRepositionMouse to true
+				Wait 1
+				if ImageFound(3,"CreateCertificatePage_Title") then
+					LogSuccess "Create Certificate page opened"
+					Click "Email"
+					TypeText ""
+					TypeText tabKey
+					TypeText "" //organization name
+					TypeText tabKey
+					TypeText "" //organization unit
+					TypeText tabKey
+					TypeText "" //locality name
+					TypeText tabKey
+					TypeText "" //state 
+					TypeText tabKey
+					TypeText "" //country code
+					Drag ("984", "409")
+					Drop ("984", "677")
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "cancel"
+					global CertificateCreationTime
+					put abbreviated C time into CertificateCreationTime
+					set the shouldRepositionMouse to true
+					
+					Wait 5
+					
+					MoveTo "TLValidfrom"
+					KeyDown controlkey
+					ScrollWheelUp 2.0
+					KeyUp controlKey					
+					
+					put ReadText ("Validfrom", "GMT") into validFromtxt				
+					
+					
+					if CertificateCreationTime = validFromtxt then
+						
+						LogSuccess "New certificate created,Failed to cancel certificate creation"
+					else
+						LogWarning "Cancelled certificate creation"
+					end if		
+					
+					
+					
+					KeyDown controlkey
+					ScrollWheelDown 2.0
+					KeyUp controlKey
+					
+					Wait 2
+					Drag ("997", "677")
+					Drop ("997", "305")
+					
+					Wait 2
+					
+					
+				else
+					LogWarning "Failed to open Create Certificate page"
+				end if
+				
+			else
+				LogWarning "Failed to open Certificate Management page"
+			end if
+			
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
