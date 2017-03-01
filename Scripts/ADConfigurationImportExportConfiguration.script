@@ -31,8 +31,10 @@ if ImageFound(3,"ApplianceDownstream") then
 				LogWarning "Failed to open Import/Export Configuration page"
 			end if
 		else
-			LogWarning "Failed to oepn configuration page"
+			LogWarning "Failed to open configuration page"
 		end if
+	else
+		
 		LogWarning "Failed to login into appliance downstream"
 	end if
 else

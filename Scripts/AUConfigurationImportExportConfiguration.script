@@ -33,8 +33,9 @@ if ImageFound(3,"ApplianceUpstream") then
 				
 			end if
 		else
-			LogWarning "Failed to oepn configuration page"
+			LogWarning "Failed to open configuration page"
 		end if
+	else
 		LogWarning "Failed to login into appliance upstream"
 	end if
 else
