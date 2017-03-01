@@ -1,7 +1,7 @@
 ﻿//Access Configuration Factory Reset Export Configuration
 //Date Created 22/02/2017
 //Created By Iain Storrie
-//WebBasePage
+WebBasePage
 if ImageFound(3,"ApplianceDownstream") then
 	Click "Console"
 	Wait 5
@@ -72,4 +72,4 @@ if ImageFound(3,"ApplianceDownstream") then
 else
 	LogWarning "Appliance downstream not found"
 end if
-//TearDown
+TearDown
