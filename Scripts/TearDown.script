@@ -3,7 +3,7 @@
 Wait 4		
 Click (950,155)
 Wait 5
-if ImageFound(5, "ADUsernameET") then
+if ImageFound(10, "ADUsernameET") then
 	LogSuccess "Logged out successfully"
 else
 	LogWarning "Failed to logout"
