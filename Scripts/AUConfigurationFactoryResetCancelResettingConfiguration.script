@@ -76,13 +76,18 @@ if ImageFound(3,"ApplianceUpstream") then
 					
 					set the shouldRepositionMouse to true
 					
-					MoveTo "FACTORYRESET_1"
+					MoveTo "Cancel"
 					
 					set the shouldRepositionMouse to false
 					
-					Click "FACTORYRESET_1"
+					Click "Cancel"
 					
 					set the shouldRepositionMouse to true
+					if ImageFound(3,"FactoryResetPage_Title") then
+						LogSuccess "Cancelled resetting configuration"
+					else
+						LogWarning "Failed to cancel resetting configuration"
+					end if	
 					
 				else
 					LogWarning "Failed to open factory reset options page"

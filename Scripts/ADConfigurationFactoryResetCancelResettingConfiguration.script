@@ -82,8 +82,13 @@ if ImageFound(3,"ApplianceDownstream") then
 					Click "Cancel"
 					
 					set the shouldRepositionMouse to true
-					
+					if ImageFound(3,"FactoryResetPage_Title") then
+						LogSuccess "Cancelled resetting configuration"
 					else
+						LogWarning "Failed to cancel resetting configuration"
+					end if	
+					
+				else
 					LogWarning "Failed to open factory reset options page"
 				end if
 				
