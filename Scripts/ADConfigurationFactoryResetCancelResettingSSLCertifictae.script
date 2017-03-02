@@ -1,0 +1,112 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 02/03/2017  
+ ***************************************)
+//Login into appliance downstream, open configuration page , access factory reset page and cancel resetting SSL certificate
+
+
+WebBasePage
+
+if ImageFound(3,"ApplianceDownstream") then
+	
+	Click "Console"
+	
+	Wait 5
+	
+	Click "ADUsernameET"
+	
+	TypeText "admin"
+	
+	Click "ADPasswordET"
+	
+	TypeText "admin"
+	
+	TypeText Return
+	
+	if ImageFound(5, "ADLoggedIn") then
+		
+		LogSuccess "Logged in into appliance downstream"
+		
+		MoveTo "Configuration"
+		
+		set the shouldRepositionMouse to false
+		
+		Click "Configuration"
+		
+		set the shouldRepositionMouse to true
+		
+		if ImageFound(3,"ConfigurationPage_Title") then
+			
+			LogSuccess "Configuration page opened"
+			
+			Wait 5
+			
+			MoveTo "FactoryReset"
+			
+			set the shouldRepositionMouse to false
+			
+			Click "FactoryReset"
+			
+			set the shouldRepositionMouse to true
+			
+			if ImageFound(3,"FactoryResetPage_Title") then
+				
+				LogSuccess "Factory Reset page opened"
+				
+				MoveTo "FactoryResetBtn"
+				
+				set  the shouldRepositionMouse to false
+				
+				Click "FactoryResetBtn"
+				
+				set the shouldRepositionMouse to true
+				
+				Wait 1
+				
+				if ImageFound(3,Text:"Factory reset options") then
+					
+					LogSuccess "Factory reset options page opened"
+					
+					MoveTo "ResetSSLRadioBtn"
+					
+					set the shouldRepositionMouse to false
+					
+					Click "ResetSSLRadioBtn"
+					
+					set the shouldRepositionMouse to true
+					
+					MoveTo "Cancel"
+					
+					set the shouldRepositionMouse to false
+					
+					Click "Cancel"
+					
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"FactoryResetPage_Title") then
+						LogSuccess "Cancelled resetting SSL Certificate "
+					else
+						LogWarning "Failed to cancel"
+					end if
+					
+					
+				else
+					LogWarning "Failed to open factory reset options page"
+				end if
+				
+				
+			else
+				LogWarning "Failed to open Factory reset page"
+				
+			end if
+		else
+			LogWarning "Failed to open Configuration page"
+		end if
+	else
+		LogWarning " Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown
+
