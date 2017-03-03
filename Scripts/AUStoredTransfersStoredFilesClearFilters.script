@@ -2,7 +2,7 @@
   Created By          : Sowjanya Pedarasi
   Created On          : 03/03/2017  
  ***************************************)
-//Login into appliance upstream,  access stored transfers page and forward filters in stored files page
+//Login into appliance upstream,  access stored transfers page and clear filters in stored files page
 
 WebBasePage
 
