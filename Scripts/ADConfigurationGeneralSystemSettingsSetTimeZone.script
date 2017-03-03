@@ -67,7 +67,7 @@ if ImageFound(3,"ApplianceDownstream") then
 						if ImageFound(3,"EuropeLondon") then
 							LogSuccess "Time zone reverted"
 						else
-							LogSucces "Failed to revert time zone"
+							LogWarning "Failed to revert time zone"
 						end if
 						
 						

@@ -67,10 +67,9 @@ if ImageFound(3,"ApplianceUpstream") then
 						Wait 1
 						if ImageFound(3,"EuropeLondon") then
 							LogSuccess "Time zone reverted"
-else
-							LogSucces "Failed to revert time zone"
-						end if
-						
+						else
+							LogWarning "Failed to revert time zone"
+						end if						
 						
 						
 					else
@@ -87,7 +86,7 @@ else
 				LogWarning "Failed to open General System Settings page"
 			end if
 			
-		else
+			else
 			
 			LogWarning "Failed to open configuration"
 		end if
