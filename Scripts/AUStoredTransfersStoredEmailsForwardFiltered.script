@@ -1,0 +1,79 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 03/03/2017  
+ ***************************************)
+//Login into appliance upstream,  access stored transfers page and cancel editing filters in stored emails page
+
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "StoredTransfers_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "StoredTransfers_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StoredTransferTitlePage") then
+			LogSuccess "Stored transfers page opened"
+			MoveTo "StoredEmails"
+			set the shouldRepositionMouse to false
+			Click "StoredEmails"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"StoredEmailsTitlePage") then
+				LogSuccess "Stored emails page opened"
+				MoveTo "EditFilters"
+				set the shouldRepositionMouse to false
+				Click "EditFilters"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"EditFiltersPopUp") then
+					LogSuccess "Edit Filters Pop Up opened"
+					Click "Sequencestart"
+					TypeText "1"
+					TypeText tabKey
+					TypeText "2"
+					Drag(983,464)
+					Drop(983,680)
+					Wait 1
+					MoveTo "APPLY"
+					set the shouldRepositionMouse to false
+					Click "APPLY"
+					set the shouldRepositionMouse to true
+					Wait 1
+					MoveTo "FORWARDFILTERED"
+					set the shouldRepositionMouse to false
+					Click "FORWARDFILTERED"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"Forwardfiltered_tiltle") then
+						LogSuccess "Forward filtered page opened"
+						
+						
+					else
+						LogWarning "Failed to open forward filtered page"
+					end if
+				else
+					LogWarning "Failed to open Edit Filters PopUp"
+				end if
+			else
+				LogWarning "Failed to open stored emails page"
+			end if	
+			
+		else
+			LogWarning "Failed to open stored transfers page"
+		end if
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown
