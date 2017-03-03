@@ -33,6 +33,18 @@ if ImageFound(3,"ApplianceUpstream") then
 				set the shouldRepositionMouse to true
 				if ImageFound(3,"EditFiltersPopUp") then
 					LogSuccess "Edit Filters Pop Up opened"
+					Click "Sequencestart"
+					TypeText "1"
+					TypeText tabKey
+					TypeText "2"
+					Drag(983,464)
+					Drop(983,680)
+					Wait 1
+					MoveTo "APPLY"
+					set the shouldRepositionMouse to false
+					Click "APPLY"
+					set the shouldRepositionMouse to true
+					
 				else
 					LogWarning "Failed to open Edit Filters PopUp"
 				end if
@@ -40,7 +52,7 @@ if ImageFound(3,"ApplianceUpstream") then
 				LogWarning "Failed to open stored files page"
 			end if
 			
-			else
+		else
 			LogWarning "Failed to open stored transfers page"
 		end if
 		
