@@ -86,3 +86,6 @@
 2017-02-13 08:40:07.007 +0000,"Success",0:00:59,0,0,0,"20170213_084007.007/LogFile.txt","","",1
 2017-02-13 09:53:34.034 +0000,"Success",0:00:50,0,0,0,"20170213_095334.034/LogFile.txt","","",1
 2017-02-13 12:20:33.033 +0000,"Success",0:00:46,0,0,0,"20170213_122033.033/LogFile.txt","","",1
+2017-02-27 09:13:39.039 +0000,"Running",0:00:00,0,0,0,"20170227_091339.039/LogFile.txt","","",0
+2017-02-27 09:14:51.051 +0000,"Failure",0:00:52,1,0,1,"20170227_091451.051/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""RelatedObjects""",0
+2017-02-27 09:16:19.019 +0000,"Failure",0:01:38,1,0,1,"20170227_091619.019/LogFile.txt","","Image Not Found -- click Error - No Image Found On Screen: ""RelatedObjects""",0

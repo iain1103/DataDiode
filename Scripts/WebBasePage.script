@@ -20,10 +20,10 @@ end if
 WaitFor 3, "UserName"
 
 TypeText tabKey
-TypeText ""
+TypeText "istorrie876"
 
 TypeText tabKey
-Typetext ""
+Typetext "R$ngerschamps%%"
 Click "VMSphereLogin"
 Wait until ImageFound(15, "Home")
 Click "HostsAndClusters"

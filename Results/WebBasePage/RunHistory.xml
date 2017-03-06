@@ -1045,4 +1045,40 @@ Syntax Error at line 52: Syntax Error - can&#x27;t understand [end of script] at
   <ReturnValue></ReturnValue>
   <ErrorMessage></ErrorMessage>
  </run>
+ <run>
+  <RunDate>2017-02-27 09:13:39.039 +0000</RunDate>
+  <Status>Running</Status>
+  <Duration>0.000000</Duration>
+  <Errors>0</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>0</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170227_091339.039/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage></ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-02-27 09:14:51.051 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>52.000000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>1</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170227_091451.051/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Image Not Found -- click Error - No Image Found On Screen: &quot;RelatedObjects&quot;</ErrorMessage>
+ </run>
+ <run>
+  <RunDate>2017-02-27 09:16:19.019 +0000</RunDate>
+  <Status>Failure</Status>
+  <Duration>98.000000</Duration>
+  <Errors>1</Errors>
+  <Warnings>0</Warnings>
+  <Exceptions>1</Exceptions>
+  <Successes>0</Successes>
+  <LogFile>20170227_091619.019/LogFile.txt</LogFile>
+  <ReturnValue></ReturnValue>
+  <ErrorMessage>Image Not Found -- click Error - No Image Found On Screen: &quot;RelatedObjects&quot;</ErrorMessage>
+ </run>
 </runHistory>
