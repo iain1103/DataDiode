@@ -26,13 +26,82 @@ if ImageFound (3, "ApplianceUpstream") then
 			set the shouldRepositionMouse to false
 			Click item 2 of ConfigurationList
 			set the shouldRepositionMouse to true
-			LogSuccess "SMB service configured"
-			
+			if ImageFound(3,"SMBConfigurePopupTitle") then
+				LogSuccess "SMB configure popup appeared"
+				Click "Allowedhosts"
+				TypeText "0.0.0.0/0"
+				MoveTo "EnableNetBIOS_DropDown"
+				set the shouldRepositionMouse to false
+				Click "EnableNetBIOS_DropDown"
+				set the shouldRepositionMouse to true
+				Click "Workgroup"
+				TypeText "FOXIT_DataDiode"
+				MoveTo "ADD"
+				set the shouldRepositionMouse to false
+				Click "ADD"
+				set the shouldRepositionMouse to true
+				
+				Wait 2
+				Click "Name"
+				TypeText "SMBTestShare"
+				TypeText tabKey
+				TypeText "SMB share"				
+				
+				MoveTo "Selectbtn"
+				set the shouldRepositionMouse to false
+				Click "Selectbtn"
+				set the shouldRepositionMouse to true
+				Wait 2
+				
+				if ImageFound(3,Text:"Select local groups") then
+					LogSuccess "Select local groups popup appeared"
+					MoveTo (418,373)
+					set the shouldRepositionMouse to false					
+					Click (418,373)
+					set the shouldRepositionMouse to true
+					Wait 1
+					
+					Click (Text:"CLOSE")
+					
+					
+					Wait 1
+					
+					MoveTo "APPLY"
+					set the shouldRepositionMouse to false
+					Click "APPLY"
+					set the shouldRepositionMouse to true
+					
+					Wait 1
+					Drag(983,437)
+					Drop(983,665)
+					Wait 1
+					if ImageFound(3,Text:"SMBTestShare") then
+						LogSuccess "SMB share added"
+						MoveTo "SAVE"
+						set the shouldRepositionMouse to false
+						Click "SAVE"
+						set the shouldRepositionMouse to true
+						
+					else
+						LogWarning "Failed to add SMB share"
+					end if
+					
+					
+					
+				else
+					LogWarning "Failed to open select group popup"
+				end if
+				
 			else
+				LogWarning "SMB configure popup doesn't appear"
+			end if
+			
+			
+		else
 			LogWarning "Failed to open Appliance upstream service page"
 		end if
 		
-		else
+	else
 		LogWarning "Failed to Login"
 		
 	end if	

@@ -2,6 +2,7 @@
   Created By          : Sowjanya Pedarasi
   Created On          : 22/02/2017  
  ***************************************)
+//Clearing filters
 WebBasePage
 if ImageFound (3, "ApplianceDownstream") then	
 	Click "Console"
@@ -20,30 +21,36 @@ if ImageFound (3, "ApplianceDownstream") then
 		set the shouldRepositionMouse to true	
 		
 		Wait 2
-		MoveTo "EDITFILTERS"
-		set the shouldRepositionMouse to false
-		Click "EDITFILTERS"
-		set the shouldRepositionMouse to true
-		wait 2
-		Click "Sequencestart"
-		TypeText "1"
-		Click "Sequenceend"
-		TypeText "5"
-		TypeText Return	
-		Wait 3
-		if ImageFound(5,"CLEARFILTERS") then				
-			MoveTo "CLEARFILTERS"
-			set shouldRepositionMouse to false
-			Click "CLEARFILTERS"
-			set shouldRepositionMouse to true	
-			if ImageFound(2, Text:"Successfully updated filters.") then
-				LogSuccess "Filters cleared"
+		if ImageFound(3, "TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			wait 2
+			Click "Sequencestart"
+			TypeText "1"
+			Click "Sequenceend"
+			TypeText "5"
+			TypeText Return	
+			Wait 3
+			if ImageFound(5,"CLEARFILTERS") then				
+				MoveTo "CLEARFILTERS"
+				set shouldRepositionMouse to false
+				Click "CLEARFILTERS"
+				set shouldRepositionMouse to true	
+				if ImageFound(2, Text:"Successfully updated filters.") then
+					LogSuccess "Filters cleared"
+				else
+					LogWarning "Failed to clear filters"
+				end if
+				
 			else
-				LogWarning "Failed to clear filters"
-			end if
+				LogWarning "Clear filters button not found"
+			end if	
 			
 		else
-			LogWarning "Clear filters button not found"
+			LogWarning "Failed to open transfers page"
 		end if	
 		
 	else

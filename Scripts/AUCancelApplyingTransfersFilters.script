@@ -1,0 +1,63 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 23/02/2017  
+ ***************************************)
+//Cancel applying filters on transfers
+WebBasePage
+if ImageFound (3, "ApplianceUpstream") then	
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 4
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"	
+	
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "AUTransfers"
+		set the shouldRepositionMouse to false
+		Click "AUTransfers"
+		set the shouldRepositionMouse to true	
+		if ImageFound(3, "TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			Wait 2
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			wait 2
+			Click "Sequencestart"
+			TypeText "1"
+			Click "Sequenceend"
+			TypeText "5"
+			Drag(984,414)
+			Drop(984,680)
+			Wait 1
+			MoveTo "Cancel"
+			set the shouldRepositionMouse to false
+			Click "Cancel"
+			set the shouldRepositionMouse to true
+			if ImageFound(5,Text:"CLEAR FILTERS") then				
+				LogSuccess "Cancelled"
+				
+			else
+				LogWarning "Failed to cancel applying filters"
+			end if	
+			
+		else
+			LogWarning "Failed to open transfers page"
+		end if
+		
+		
+		else		
+		
+		
+		LogWarning "Failed to login into appliance upstream"
+	end if
+	
+	else	
+	LogWarning "Failed to open appliance upstream"
+end if
+TearDown

@@ -1,0 +1,57 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 28/02/2017  
+ ***************************************)
+//Login into appliance upstream, open status page and cancel restarting internal process
+
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then	
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Status_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Status_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"StatusPageTitle") then
+			LogSuccess "Status page opened"	
+			Wait 2			
+			Click "Core"			
+			Wait 2
+			MoveTo "RESTARTSELECTED"
+			set the shouldrepositionMouse to false
+			Click "RESTARTSELECTED"
+			set the shouldRepositionMouse to true
+			Wait 1
+			MoveTo "Cancel"
+			set the shouldRepositionMouse to false
+			Click "Cancel"
+			set the shouldrepositionMouse to true
+			if ImageFound(3,"StatusPageTitle") then
+				LogSuccess "Cancelled restarting the internal process"
+			else
+				LogWarning "Failed to cancel"
+			end if
+			
+			
+		else
+			LogWarning "Failed to open status"
+		end if
+		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+	else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

@@ -1,0 +1,51 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 01/03/2017  
+ ***************************************)
+//Navigate back to configuration page from  update page
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "Update"
+			set the shouldRepositionMouse to false
+			Click "Update"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"UpdatePage_Title") then
+				LogSuccess "Update page opened"
+				MoveTo "BackToConfiguration"				
+				set the shouldRepositionMouse to false				
+				Click "BackToConfiguration"				
+				set the shouldRepositionMouse to true				
+				if ImageFound(3,"ConfigurationPage_Title") then					
+					LogSuccess "Returned to Configuration Page successfully "				
+				else					
+					LogWarning "Failed to return to Configuration page"
+				end if
+			else
+				LogWarning "Failed to open Update page"
+			end if
+		else
+			LogWarning "Failed to open configuration page"
+		end if
+	else
+		
+		LogWarning "Failed to login into appliance downstream"
+	end if
+else
+	LogWarning "Appliance downstream not found"
+end if
+TearDown

@@ -1,0 +1,82 @@
+(****************************************
+
+  Created By          : Sowjanya Pedarasi
+
+  Created On          : 01/03/2017  
+
+ ***************************************)
+
+//Login into appliance upstream, open configuration page and access network configuration page and edit host name and domain settings
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then	
+	Click "ApplianceUpstream"	
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "Configuration"
+		set the shouldRepositionMouse to false
+		Wait 5
+		Click "Configuration"
+		set the shouldRepositionMouse to true
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			MoveTo "NetworkConfiguration"
+			set the shouldRepositionMouse to false
+			Click "NetworkConfiguration"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"NetworkConfigurationPage_Title") then
+				LogSuccess "Network Configuration page opened"
+				MoveTo "EditSettings"
+				set the shouldRepositionMouse to false
+				Wait 2
+				Click "EditSettings"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"EditSettingsPage_Title") then
+					LogSuccess "Edit Settings page opened"					
+					Click "Edit_upstream"
+					typeText controlKey, "a" // select all 
+
+					typeText deleteKey // delete the text
+					TypeText ""
+					TypeText tabKey
+					typeText controlKey, "a" // select all 
+
+					typeText deleteKey // delete thetext
+					TypeText ""
+					MoveTo "SAVE"
+					set the shouldRepositionMouse to false
+					Click "SAVE"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,Text:"") then
+						LogSuccess "Saved host and domain settings"
+					else
+						LogWarning "Failed to save settings"
+					end if
+					
+				else
+					LogWarning "Failed to open Edit Settings page"
+				end if
+				
+			else
+			LogWarning "Failed to open Network Configuration page"
+			end if
+			
+		else
+			LogWarning "Failed to open configuration"
+		end if		
+		
+	else
+		
+		LogWarning "Failed to login into appliance upstream"	
+		
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

@@ -16,14 +16,37 @@ if ImageFound (3, "ApplianceUpstream") then
 		Click "AUTransfers"
 		set the shouldRepositionMouse to true
 		Wait 2
-		Click (Text:"CLEAR TRANSFERS",caseSensitive:"Yes")
-		LogSuccess "Transfers cleared"
+		if ImageFound(3, "TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			MoveTo "ClearTransfers"
+				set the shouldRepositionMouse to false
+				Click "ClearTransfers"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"ClearTransfersWarning") then
+					LogSuccess "Clear Transfers Warning Message Displayed"
+					MoveTo "Cancel"
+					set the shouldRepositionMouse to false
+					Click "Cancel"
+					set the shouldRepositionMouse to true
+					if ImageFound(3,"TransfersTitle") then
+						LogSuccess "Cancel Transfers Warning Message Closed"
+					else
+						LogWarning "Failed to close Cleared Transfers Warning Message"
+					end if
+				else
+					LogWarning "Failed to display Clear Transfers Warning Message"
+				end if
 		else
+			LogWarning "Failed to open transfers page"
+		end if	
+		
+	else
+		
 		
 		LogWarning "Failed to login"
 	end if	
 	
-	else	
+else	
 	LogWarning "Failed to open appliance Upstream"
 end if
 TearDown

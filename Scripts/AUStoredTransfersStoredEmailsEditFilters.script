@@ -1,6 +1,8 @@
 ﻿//Access stored emails Edit Filters pop up from Stored Transfers page
 //Date Created 16/02/2017
 //Created By Iain Storrie
+(*Modified on :27/02/2017
+Code refactor*)
 WebBasePage
 if ImageFound(3,"ApplianceUpstream") then
 	Click "ApplianceUpstream"
@@ -19,27 +21,40 @@ if ImageFound(3,"ApplianceUpstream") then
 		set the shouldRepositionMouse to true
 		if ImageFound(3,"StoredTransferTitlePage") then
 			LogSuccess "Stored transfers page opened"
+			MoveTo "StoredEmails"
+			set the shouldRepositionMouse to false
+			Click "StoredEmails"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"StoredEmailsTitlePage") then
+				LogSuccess "Stored emails page opened"
+				MoveTo "EditFilters"
+				set the shouldRepositionMouse to false
+				Click "EditFilters"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"EditFiltersPopUp") then
+					LogSuccess "Edit Filters Pop Up opened"
+					Click "Sequencestart"
+					TypeText "1"
+					TypeText tabKey
+					TypeText "2"
+					Drag(983,464)
+					Drop(983,680)
+					Wait 1
+					MoveTo "APPLY"
+					set the shouldRepositionMouse to false
+					Click "APPLY"
+					set the shouldRepositionMouse to true
+				else
+					LogWarning "Failed to open Edit Filters PopUp"
+				end if
+			else
+				LogWarning "Failed to open stored emails page"
+			end if	
+			
 		else
 			LogWarning "Failed to open stored transfers page"
 		end if
-		MoveTo "StoredEmails"
-		set the shouldRepositionMouse to false
-		Click "StoredEmails"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"StoredEmailsTitlePage") then
-			LogSuccess "Stored emails page opened"
-		else
-			LogWarning "Failed to open stored emails page"
-		end if	
-		MoveTo "EditFilters"
-		set the shouldRepositionMouse to false
-		Click "EditFilters"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"EditFiltersPopUp") then
-			LogSuccess "Edit Filters Pop Up opened"
-		else
-			LogWarning "Failed to open Edit Filters PopUp"
-		end if
+		
 	else
 		
 		LogWarning "Failed to login into appliance upstream"	

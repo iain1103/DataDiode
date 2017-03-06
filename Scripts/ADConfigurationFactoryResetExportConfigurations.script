@@ -33,6 +33,25 @@ if ImageFound(3,"ApplianceDownstream") then
 				set the shouldRepositionMouse to true
 				if ImageFound(3,"ImportExportConfigurationPage_Title") then
 					LogSuccess "Import Export Configuration page opened"
+					MoveTo "Export"
+					set the shouldRepositionMouse to false
+					Click "Export"
+					set the shouldRepositionMouse to true
+					Wait 5
+					Drag(1014,475)
+					Drop(1014,609)
+					wait 1
+					if ImageFound(3,"Applianceconf_File") then
+						LogSuccess "Configuration exported to a json file"
+						Wait 2
+						Click "CloseDownloads"
+					else
+						LogWarning "Failed to export configuration into a json file"
+					end if
+					Wait 3
+					Drag(1014,609)
+					Drop(1014,475)
+					
 				else
 					LogWarning "Failed to open Import Export Configuration page"
 				end if
@@ -40,7 +59,7 @@ if ImageFound(3,"ApplianceDownstream") then
 				LogWarning "Failed to open Factory Reset page"
 			end if
 			
-			else
+		else
 			LogWarning "Failed to open configuration"
 		end if
 		

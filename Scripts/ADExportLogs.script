@@ -1,7 +1,7 @@
 ﻿(* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-Created By : Sowjanya Pedarasi
- Exporting Appliance downstream logs to zip file
+ Exporting Appliance upstream logs to a zip file
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *)
+(* Created By: Sowjanya Pedarasi *)
 WebBasePage
 if ImageFound (3, "ApplianceDownstream") then
 	Click "Console"
@@ -10,30 +10,76 @@ if ImageFound (3, "ApplianceDownstream") then
 	TypeText "admin"
 	Click "ADPasswordET"
 	TypeText "admin"
-	Click "ADLoginBtn"
-	Wait 2
+	TypeText return	
 	
 	if ImageFound(3,"ADLoggedIn") then	
 		LogSuccess "Logged in into appliance downstream"
 		MoveTo "ADLogs"
 		set the shouldRepositionMouse to false
 		Click "ADLogs"
-		set the shouldRepositionMouse to true		
-		Wait 2
-		Click "EXPORTLOGS"
-		Wait 2
-		Click "ADIncludetransactionsCheckBox"
-		Click "APPLY"
-		Wait 1
-		Click "ADDownloadLogs"
-		Wait 5
-		Click "ADLogClose"
-	else
+		set the shouldRepositionMouse to true	
+		
+		if ImageFound(3,"LogsTitle") then
+			LogSuccess "Logs page opened"			
+			MoveTo "EXPORTLOGS"
+			set the shouldRepositionMouse to false
+			Click "EXPORTLOGS"
+			set the shouldRepositionMouse to true
+			Wait 2
+			MoveTo "ADIncludetransactionsCheckBox"
+			set the shouldRepositionMouse to false
+			Click "ADIncludetransactionsCheckBox"
+			set the shouldRepositionMouse to true
+			Wait 1
+			MoveTo "APPLY"
+			set the shouldRepositionMouse to false
+			Click "APPLY"
+			set the shouldRepositionMouse to true
+			
+			MoveTo "ADDownloadLogs"
+			set the shouldRepositionMouse to false
+			Click "ADDownloadLogs"
+			set the shouldRepositionMouse to true
+			Wait 5
+			Drag (1012,331)
+			Drop(1014,382)
+			Wait 1
+			if ImageFound(3, "DataDiodeApp_Zip") then
+				LogSuccess "Logs are exported to a zip file"
+				//Deleting as part of tear down
+				MoveTo "Logs_Delete"
+				set the shouldRepositionMouse to false
+				
+				Click "Logs_Delete"
+				set the shouldRepositionMouse to true
+				Wait 2
+				DoubleClick  "Downloads_closebtn"
+				
+				Wait 2
+				
+				
+				MoveTo "Cancel"
+				set the shouldRepositionMouse to false
+				Click "Cancel"
+				set the shouldRepositionMouse to true
+			else
+				LogWarning "Failed to export"
+			end if
+			
+			Drag(1014,382)
+			Drop(1012,331)
+			
+			else
+			LogWarning "Failed to open Logs page"
+		end if
+		
+		else
 		LogWarning "Unable to login"
 	end if	
 	
-else
-	LogWarning "ApplianceDownstream not found"
+	else
+	LogWarning "Appliance downstream not found"
 end if
 
 TearDown
+

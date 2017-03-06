@@ -1,9 +1,9 @@
-﻿ (* Created By: Sowjanya Pedarasi *)
+﻿(* Created By: Sowjanya Pedarasi *)
 //Logging out from appliance, clearing browser history and closing the browser
 Wait 4		
 Click (950,155)
-
-if ImageFound(5, "ADUsernameET") then
+Wait 5
+if ImageFound(10, "ADUsernameET") then
 	LogSuccess "Logged out successfully"
 else
 	LogWarning "Failed to logout"

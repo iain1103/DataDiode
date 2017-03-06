@@ -10,7 +10,6 @@ TypeText Return
 
 //Ceritificate error handling, Proceeding to unsafe mode
 if ImageFound(3, "ConnectionError") then
-	//Click (Text:"ADVANCED")
 	Click "ADVANCED"
 	Wait 2
 	ScrollWheelDown 2
@@ -44,7 +43,7 @@ else
 	Repeat until ImageFound("Diode_Datastore") 
 		ScrollWheelDown 2
 	End Repeat
-	//ScrollWheelDown 7
+
 	Wait 1
 	DoubleClick "Diode_Datastore"
 end if

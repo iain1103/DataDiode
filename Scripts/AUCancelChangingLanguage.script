@@ -1,0 +1,54 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 28/02/2017  
+ ***************************************)
+//Cancel Changing default language to Netherlands 
+WebBasePage
+if ImageFound(3,"ApplianceUpstream") then	
+	Click "ApplianceUpstream"
+	Click "Console"
+	Wait 5
+	Click "ADUsernameET"
+	TypeText "admin"
+	Click "ADPasswordET"
+	TypeText "admin"
+	TypeText Return
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "ADPreferences"
+		set the shouldRepositionMouse to false
+		Click "ADPreferences"
+		set the shouldRepositionMouse to true
+		if ImageFound(4, "ADPreferenceImage") then
+			LogSuccess "Preference page opened"
+			MoveTo "CHANGELANGUAGE"
+			set the shouldRepositionMouse to false
+			Click "CHANGELANGUAGE"
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "LanguageDropDown"
+			TypeText downArrow
+			TypeText Return
+			MoveTo "CANCEL"
+			set the shouldRepositionMouse to false
+			Click "CANCEL"
+			if ImageFound(3,"CHANGELANGUAGE") then
+				LogSuccess "Cancelled changing the Language "		
+				
+				
+			else
+				LogWarning "Failed to cancel"
+			end if
+			
+			
+		else
+			LogWarning "Failed to open preference page"
+		end if
+		
+	else
+		LogWarning "Fail to login into appliance upstream"
+	end if
+else
+	LogWarning "Appliance upstream not found"
+end if
+TearDown

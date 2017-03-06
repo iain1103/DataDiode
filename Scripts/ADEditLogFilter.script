@@ -1,29 +1,79 @@
-﻿(** Created By: Sowjanya Pedarasi **)
-//Edit log filters
+﻿(* Created By: Sowjanya Pedarasi *)
+//Applying filters on logs
 WebBasePage
 if ImageFound (3, "ApplianceDownstream") then	
 	Click "Console"
 	Wait 4
-	Click "DSUsername"
+	Click "ADUsernameET"
 	TypeText "admin"
-	Click "DSPassword"
+	Click "ADPasswordET"
 	TypeText "admin"	
 	TypeText Return
 	if ImageFound(5,"ADLoggedIn") then
 		LogSuccess "Logged in into appliance downstream"
-		MovesTo "ADLogs"
+		//Click "ADLogs"
+		MoveTo "ADLogs"
 		set the shouldRepositionMouse to false
 		Click "ADLogs"
 		set the shouldRepositionMouse to true
-		//Click "ADLogs"		
-		Wait 2
-		Click "EDITFILTERS"
+		if ImageFound(3,"LogsTitle") then
+			LogSuccess "Logs page opened"	
+			
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			LogSuccess "Log filters edited"
+			Click "LogTypeDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			Click "MinSeverityDropDown"
+			TypeText downArrow
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			MoveTo "APPLY"
+			set the shouldRepositionMouse to false
+			Click "APPLY"
+			set the shouldRepositionMouse to true
+			if ImageFound(3, (text:"Warning")) then
+				LogSuccess "Filters applied"
+				
+			else
+				LogWarning "Failed to apply filters"
+			end if
+			
+			//Clear filters
+			Wait 2
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			Click "LogTypeDropDown"
+			TypeText upArrow
+			TypeText upArrow
+			TypeText Return
+			Click "MinSeverityDropDown"
+			TypeText upArrow
+			TypeText upArrow
+			TypeText upArrow
+			TypeText Return
+			MoveTo "APPLY"
+			set the shouldRepositionMouse to false
+			Click "APPLY"
+			set the shouldRepositionMouse to true
+			
+		else
+			LogWarning "Failed to open logs page"
+		end if
 		
 	else
 		LogWarning "Failed to login into appliance downstream"
 	end if
 	
 else	
+	
 	LogWarning "Failed to open appliance downstream"
 end if
 TearDown

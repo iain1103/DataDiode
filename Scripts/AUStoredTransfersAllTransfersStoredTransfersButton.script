@@ -19,27 +19,29 @@ if ImageFound(3,"ApplianceUpstream") then
 		set the shouldRepositionMouse to true
 		if ImageFound(3,"StoredTransferTitlePage") then
 			LogSuccess "Stored transfers page opened"
-		else
+			MoveTo "AllTransfers"
+			set the shouldRepositionMouse to false
+			Click "AllTransfers"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"TransfersTitle") then
+				LogSuccess "Transfers page opened"
+				MoveTo "StoredTransfers_AllTransfers"
+				set the shouldRepositionMouse to false
+				Click "StoredTransfers_AllTransfers"
+				set the shouldRepositionMouse to true
+				if ImageFound(3,"StoredTransferTitlePage") then
+					LogSuccess "Stored transfers page opened"
+				else
+					LogWarning "Failed to open stored transfers page"
+				end if	
+			else
+				LogWarning "Failed to open Transfers page"
+			end if	
+			
+			else
 			LogWarning "Failed to open stored transfers page"
 		end if
-		MoveTo "AllTransfers"
-		set the shouldRepositionMouse to false
-		Click "AllTransfers"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"TransfersTitle") then
-			LogSuccess "Transfers page opened"
-		else
-			LogWarning "Failed to open Transfers page"
-		end if	
-		MoveTo "StoredTransfers_AllTransfers"
-		set the shouldRepositionMouse to false
-		Click "StoredTransfers_AllTransfers"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"StoredTransferTitlePage") then
-			LogSuccess "Stored transfers page opened"
-		else
-			LogWarning "Failed to open stored transfers page"
-		end if	
+		
 	else
 		
 		LogWarning "Failed to login into appliance upstream"	

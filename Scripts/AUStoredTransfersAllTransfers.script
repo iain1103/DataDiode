@@ -1,6 +1,8 @@
 ﻿//Access All Transfers page from Stored Transfers page
 //Date Created 16/02/2017
 //Created By Iain Storrie
+(*Modified on :27/02/2017
+Code refactor*)
 WebBasePage
 if ImageFound(3,"ApplianceUpstream") then
 	Click "ApplianceUpstream"
@@ -19,18 +21,19 @@ if ImageFound(3,"ApplianceUpstream") then
 		set the shouldRepositionMouse to true
 		if ImageFound(3,"StoredTransferTitlePage") then
 			LogSuccess "Stored transfers page opened"
+			MoveTo "AllTransfers"
+			set the shouldRepositionMouse to false
+			Click "AllTransfers"
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"TransfersTitle") then
+				LogSuccess "Transfers page opened"
+			else
+				LogWarning "Failed to open Transfers page"
+			end if
 		else
 			LogWarning "Failed to open stored transfers page"
 		end if
-		MoveTo "AllTransfers"
-		set the shouldRepositionMouse to false
-		Click "AllTransfers"
-		set the shouldRepositionMouse to true
-		if ImageFound(3,"TransfersTitle") then
-			LogSuccess "Transfers page opened"
-		else
-			LogWarning "Failed to open Transfers page"
-		end if		
+		
 	else
 		
 		LogWarning "Failed to login into appliance upstream"	

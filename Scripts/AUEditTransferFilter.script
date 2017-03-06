@@ -1,30 +1,103 @@
-﻿(* Created By: Sowjanya Pedarasi *)
+﻿(****************************************
+  Created BY          : Sowjanya Pedarasi
+  Created On          : 23/02/2017  
+
+ ***************************************)
 //Applying filters on transfers
 WebBasePage
 if ImageFound (3, "ApplianceUpstream") then
 	Click "ApplianceUpstream"
 	Click "Console"
-	Wait 4
-	Click "DSUsername"
+	Wait 5
+	Click "ADUsernameET"
 	TypeText "admin"
-	Click "DSPassword"
-	TypeText "admin"	
+	Click "ADPasswordET"
+	TypeText "admin"
 	TypeText Return
-	if ImageFound (3,"ADLoggedIn") then
-		LogSuccess "Logged in to appliance upstream"
+	if ImageFound(5,"ADLoggedIn") then
+		LogSuccess "Logged in into appliance upstream"
+		MoveTo "AUTransfers"
 		set the shouldRepositionMouse to false
 		Click "AUTransfers"
-		set the shouldRepositionMouse to true
-		//Click "AUTransfers"	
-		//	Click "AUTransfersSelected"	
+		set the shouldRepositionMouse to true		
 		Wait 2
-		Click "EDITFILTERS"
-		LogSuccess "Transfers filters edited"
-	else
-		LogWarning "Fail to login into appliance upstream"
-	end if	
+		if ImageFound(3, "TransfersTitle") then
+			LogSuccess "Transfers page opened"
+			MoveTo "EDITFILTERS"
+			set the shouldRepositionMouse to false
+			Click "EDITFILTERS"
+			set the shouldRepositionMouse to true
+			wait 2
+			Click "Sequencestart"
+			TypeText "1"
+			Click "Sequenceend"
+			TypeText "5"
+			Click "Startdate"
+			TypeText "08/26/2016"
+			Drag(984,414)
+			Drop(984,680)
+			Click "Enddate"
+			TypeText "08/26/2016"
+			Click "APPLY"
+			TypeText Return
+			
+			Wait 2
+			if ImageFound(3,Text: "There are currently no known transfers") then
+				LogSuccess "There are currently no known transfers"
+				
+			else
+				
+				MoveTo "TransfersTitle"
+				KeyDown controlkey
+				ScrollWheelUp 2.0
+				KeyUp controlKey
+				Wait 1
+				
+				put  ReadText("TLSequence","BRPrevious")  into sequenceNumber
+				put each line of sequenceNumber into sequenceNumberList
+				
+				if sequenceNumberList <= (5,4,3,2,1) then				
+					put  ReadText("Date","Date_1")  into dateText
+					put each line of dateText into dateList
+					repeat with each item of dateList
+						put it into listValue
+						global filterFlag
+						put true into filterFlag
+						if listValue does not contain "Aug 26.2016" then
+							LogWarning "Filter failed"
+							put false into filterFlag
+							exit repeat						
+						end if
+					end repeat
+					if filterFlag = true then
+						LogSuccess "Filters applied"
+					else
+						LogWarning "Failed to apply filters"
+					end if
+					
+				else
+					
+					LogWarning "Failed to apply filters on transfers"
+				end if
+				
+				
+				
+				Wait 2
+				KeyDown controlkey
+				ScrollWheelDown 2.0
+				KeyUp controlKey
+				
+			end if
+			
+		else
+			LogWarning "Failed to open transfers page"
+		end if	
+	else	
+		
+		LogWarning "Failed to login into appliance upstream"
+	end if
 	
 else	
-	LogWarning "Failed to open appliance downstream"
+	LogWarning "Failed to open appliance upstream"
 end if
 TearDown

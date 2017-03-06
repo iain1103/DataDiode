@@ -1,6 +1,7 @@
 ﻿//Access Configuration General System Settings Set Time Zone
 //Date Created 20/02/2017
 //Created By Iain Storrie
+//Modified on 03/03/2017
 WebBasePage
 if ImageFound(3,"ApplianceUpstream") then
 	Click "ApplianceUpstream"
@@ -39,17 +40,43 @@ if ImageFound(3,"ApplianceUpstream") then
 					MoveTo "TimeZone"
 					Click ("643", "310" )
 					TypeText upArrow
-					Click "EuropeLjubljana"
+					TypeText Return
 					Wait 1
-					MoveTo "Cancel"
+					MoveTo "SAVE"
 					set the shouldRepositionMouse to false
-					Click "Cancel"
+					Click "SAVE"
 					set the shouldRepositionMouse to true
-					if ImageFound(3,"EuropeLondon") then
-						LogSuccess "Change Set Time Zone cancelled"
+					Wait 1
+					if ImageFound(3,"EuropeLjubljana") then
+						LogSuccess "Timezone changed"
+						//Tear down for language change
+						MoveTo "SetTimeZone"
+						set the shouldRepositionMouse to false
+						Wait 2
+						Click "SetTimeZone"
+						set the shouldRepositionMouse to true
+						Click ("643", "310" )
+						TypeText downArrow
+						
+						TypeText Return
+						Wait 1
+						MoveTo "SAVE"
+						set the shouldRepositionMouse to false
+						Click "SAVE"
+						set the shouldRepositionMouse to true
+						Wait 1
+						if ImageFound(3,"EuropeLondon") then
+							LogSuccess "Time zone reverted"
+						else
+							LogWarning "Failed to revert time zone"
+						end if						
+						
+						
 					else
-						LogWarning "Failed to cancel Set Time Zone change"
+						LogWarning "Failed to change Time  zone"
 					end if
+					
+					
 				else
 					LogWarning "Failed to open Change Set Time Zone page"
 				end if
@@ -59,18 +86,18 @@ if ImageFound(3,"ApplianceUpstream") then
 				LogWarning "Failed to open General System Settings page"
 			end if
 			
-		else
+			else
 			
 			LogWarning "Failed to open configuration"
 		end if
 		
 		
-	else
+		else
 		
 		LogWarning "Failed to login into appliance upstream"	
 		
 	end if
-else
+	else
 	LogWarning "Appliance upstream not found"
 end if
 TearDown

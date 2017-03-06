@@ -1,0 +1,190 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 02/03/2017  
+ ***************************************)
+//Login into appliance downstream, open configuration page , access factory reset page and reset configuration
+
+
+WebBasePage
+if ImageFound(3,"ApplianceDownstream") then
+	Click "Console"	
+	Wait 5	
+	Click "ADUsernameET"	
+	TypeText "admin"	
+	Click "ADPasswordET"	
+	TypeText "admin"	
+	TypeText Return
+	if ImageFound(5, "ADLoggedIn") then
+		LogSuccess "Logged in into appliance downstream"
+		MoveTo "Users_Dashboard"
+		set the shouldRepositionMouse to false
+		Click "Users_Dashboard"
+		set the shouldRepositionMouse to true
+		if ImageFound(4,"UserPageTitle") then
+			LogSuccess  "Users page opened"
+			//User creation
+			MoveTo (Text:"CREATE USER")	
+			
+			set the shouldRepositionMouse to false
+			Click (Text:"CREATE USER")
+			set the shouldRepositionMouse to true
+			Wait 1
+			Click "Username_1"
+			TypeText "ConfigManagerTest"
+			Click "Fullname"
+			TypeText "ConfigManagerTest"
+			Click "Password_1"
+			TypeText "ConfigManagerTest"
+			Click "ConfirmPassword"
+			TypeText "ConfigManagerTest"
+			Click "Role"
+			Wait 1
+			TypeText downArrow
+			TypeText downArrow
+			TypeText Return
+			Wait 1
+			MoveTo "CREATE"
+			set the shouldRepositionMouse to false
+			Click "CREATE"
+			set the shouldRepositionMouse to true
+			Wait 3
+			if ImageFound(1, (text:"ConfigManagerTest")) then
+				LogSuccess "User created"
+				repeat until imageFound(Text:"ConfigManagerTest" ) 
+					MoveTo "ENABLED"
+					//Wait 3
+					ScrollWheelDown 4.0
+				end repeat
+			else
+				LogWarning "Failed to create user"
+			end if
+			
+			//Group creation
+			MoveTo "MANAGEGROUPS"
+			set the shouldRepositionMouse to false
+			Click "MANAGEGROUPS"
+			set the shouldRepositionMouse to true
+			Wait 2
+			MoveTo "CREATEGROUP"
+			set the shouldRepositionMouse to false
+			Click "CREATEGROUP"
+			set the shouldRepositionMouse to true
+			Wait 2
+			Click "Name_1"
+			TypeText "ApplianceGroup"
+			MoveTo "CREATE"
+			set the shouldRepositionMouse to false
+			Click "CREATE"
+			set the shouldRepositionMouse to true
+			Wait 2
+			if ImageFound(10,(Text:"ApplianceGroup")) then
+				LogSuccess "Group created"				
+			else
+				LogWarning "Failed to create group"
+			end if
+			MoveTo (Text:"CLOSE")
+			set theshouldRepositionMouse to false
+			Click (Text:"CLOSE")				
+			set the shouldRepositionMouse to true
+			//open configuration page from top menu
+			MoveTo (Text:"Configuration")
+			set the shouldRepositionMouse to false
+			Click (Text:"Configuration")
+			set the shouldRepositionMouse to true	
+		else
+			LogWarning "Failed to open users page"
+			//open configuration page
+			MoveTo "Configuration"			
+			set the shouldRepositionMouse to false			
+			Click "Configuration"			
+			set the shouldRepositionMouse to true			
+			
+		end if
+		
+		if ImageFound(3,"ConfigurationPage_Title") then
+			LogSuccess "Configuration page opened"
+			Wait 5			
+			MoveTo "FactoryReset"			
+			set the shouldRepositionMouse to false			
+			Click "FactoryReset"			
+			set the shouldRepositionMouse to true
+			if ImageFound(3,"FactoryResetPage_Title") then
+				LogSuccess "FactoryReset page opened"
+				MoveTo "FactoryResetBtn"				
+				set  the shouldRepositionMouse to false				
+				Click "FactoryResetBtn"				
+				set the shouldRepositionMouse to true
+				if ImageFound(5,Text:"Reset users and groups") then
+					LogSuccess "Factoryreset options page opened"
+					MoveTo "ResetUsersradioBtn"					
+					set the shouldRepositionMouse to false					
+					Click "ResetUsersradioBtn"					
+					set the shouldRepositionMouse to true					
+					MoveTo "FACTORYRESET_1"					
+					set the shouldRepositionMouse to false					
+					Click "FACTORYRESET_1"					
+					set the shouldRepositionMouse to true
+					if ImageFound(180,Text:"Please log in") then						
+						LogSuccess "System reset complete"
+						Wait 5
+						TypeText tabkey
+						TypeText tabkey
+						TypeText "admin"							
+						TypeText tabkey						
+						TypeText "admin"							
+						TypeText Return
+						if ImageFound(5, "ADLoggedIn") then
+							LogSuccess "Logged in"
+							Wait 3
+							//Verification for users and group reset
+							MoveTo "Users_Dashboard"
+							set the shouldRepositionMouse to false
+							Click "Users_Dashboard"
+							set the shouldRepositionMouse to true
+							if ImageFound(4,"UserPageTitle") then
+								LogSuccess "Users page opened"
+								if not ImageFound(3,Text:"ConfigManagerTest") then
+									LogSuccess "Users reset success"
+								else
+									LogWarning "Failed to reset users"
+								end if
+								
+								MoveTo "MANAGEGROUPS"
+								set the shouldRepositionMouse to false
+								Click "MANAGEGROUPS"
+								set the shouldRepositionMouse to true
+								if not ImageFound(3,Text : "ApplianceGroup") then
+									LogSuccess "Group reset success"
+								else
+									LogWarning "Failed to reset group"
+								end if
+								MoveTo (Text:"CLOSE")
+								set theshouldRepositionMouse to false
+								
+								Click (Text:"CLOSE")
+							else
+								LogWarning "Failed to open users page"
+							end if
+						else
+							LogWarning "Failed to login"
+						end if
+					else
+						LogWarning "Failed to reset system settings"
+					end if
+				else
+					LogWarning "Failed to open factory reset options page"
+				end if
+			else
+				LogWarning "Failed to open factory reset page"
+			end if
+			else
+			LogWarning "Failed to open configuration page"
+		end if	
+		else
+		LogWarning "Failed to login into appliance downstream"
+	end if
+	else
+	LogWarning "Appliance downstream not found"
+end if
+
+TearDown
