@@ -19,10 +19,10 @@ end if
 WaitFor 3, "UserName"
 
 TypeText tabKey
-TypeText "istorrie876"
+TypeText ""
 
 TypeText tabKey
-Typetext "R$ngerschamps%%"
+Typetext ""
 Click "VMSphereLogin"
 Wait until ImageFound(15, "Home")
 Click "HostsAndClusters"
@@ -43,7 +43,7 @@ else
 	Repeat until ImageFound("Diode_Datastore") 
 		ScrollWheelDown 2
 	End Repeat
-
+	
 	Wait 1
 	DoubleClick "Diode_Datastore"
 end if
