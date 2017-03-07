@@ -30,8 +30,9 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 		Wait 1
 		TypeText ControlKey,"v"
 		put the year into currentYear
-		put the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",the long time) into shareTime		
+		put the abbreviated simple date & ","& currentYear &  formattedTime("%1I:%M:%S %p",the long time) into shareTime		
 		put shareTime
+		put TrimAll(shareTime, " ") into newShareTime
 		put the long time into toleranceSeconds
 		put toleranceSeconds
 		Wait 2
@@ -72,60 +73,89 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 			
 			Wait 1
 			//check for tolerance
-			set the searchRectangle to ("Date","Date_1")		
-			if  ImageFound(3, (text: shareTime)) then
-				
+			put ReadText ("Date","Date_2") into transfersTime
+			put trimAll(transfersTime," ") into transfersDate			
+			
+			if newshareTime = transfersDate  then
 				LogSuccess "File transferred"
+				put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+				put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+				put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 			else
 				
 				put  toleranceSeconds + 1 second into newTolerance 
 				put newTolerance
 				
-				put  the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance) into newShareTime
-				put newShareTime
+				put  the abbreviated simple date & ","& currentYear & " "&  formattedTime("%1I:%M:%S %p",newTolerance) into newShareTime2
 				
-				
-				if ImageFound(3, (text: newShareTime) ) then
+				put trimAll(newShareTime2," ") into newtransfersTime
+				put newtransfersTime
+				if transfersDate = newtransfersTime  then
 					LogSuccess "File transferred"
+					put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+					put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+					put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 				else
-					put  toleranceSeconds + 2 second into newTolerance2
-					put newTolerance2				
-					put  the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime2
-					if ImageFound(3, (text:newShareTime2)) then
+					put  toleranceSeconds + 2 second into newTolerance2							
+					put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime3
+					put trimAll(newShareTime3," ") into newtransfersTime2
+					
+					put newtransfersTime2
+					if transfersDate = newtransfersTime2  then
 						LogSuccess "File transferred"
+						put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+						put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+						put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 					else
 						put  toleranceSeconds + 3 second into newTolerance3
-						put newTolerance3					
-						put  the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime3
 						
-						if ImageFound(3, (text:newShareTime3)) then
+						put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime4
+						put trimAll(newShareTime4," ") into newtransfersTime3
+						put newtransfersTime3
+						if transfersDate = newtransfersTime3 then
 							LogSuccess "File transferred"
-		else
+							put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+							put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+							put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
+						else
 							put  toleranceSeconds  - 1 second into newTolerance4
-							put newTolerance4							
-							put the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime4
-							if ImageFound(3, (text:newShareTime4)) then
-								LogSuccess "File transferred"
+							
+							put the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime5
+							put trimAll(newShareTime5," ") into newtransfersTime4
+							put newtransfersTime4
+							if transfersDate = newtransfersTime4 then
 								
+								LogSuccess "File transferred"
+								put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+								put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+								put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 								
 							else
 								
 								put  toleranceSeconds  - 2 second into newTolerance5
-								put newTolerance5						
-								put  the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime5
-								if ImageFound(3, (text: newShareTime5)) then
+								
+								put  the abbreviated simple date & ","& currentYear & " "&formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime6
+								put trimAll(newShareTime6," ") into newtransfersTime5
+								put newtransfersTime5
+								if transfersDate = newtransfersTime5 then
 									LogSuccess "File transferred"
+									put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+									put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+									put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 								else
 									
 									put  toleranceSeconds  - 3 second into newTolerance6
-									put newTolerance6						
-									put  the abbreviated simple date & ","& currentYear & " " & formattedTime("%1I:%M:%S %p",newTolerance6) into newShareTime6
 									
-									if ImageFound(3, (text: newShareTime6)) then
-										LogSuccess "Transfer Time matched"
-										
+									put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance6) into newShareTime7
+									put trimAll(newShareTime7," ") into newtransfersTime6
+									put newtransfersTime6
+									if transfersDate = newtransfersTime6 then
+										LogSuccess "File transferred"
+										put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
+										put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
+										put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
 									else
-										LogWarning "Transfer time  doesn't match"									
+										LogWarning "File transferred"									
 										
 									end if								
 								end if							
@@ -134,31 +164,9 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 					end if				
 				end if	
 			end if
-			set the searchRectangle to fullscreen
 			
-			//Check for origin
-			put ReadText("TLORIGIN","BRORIGIN") into originTxt
-			if originTxt = "Samba" then
-				LogSuccess "origin matched"
-			else
-				LogWarning "Fail to match"
-			end if
-			//check for file name
-			put ReadText ("TLDESTINATION","BRDESTINATION") into fileName
-			put fileName
-			if fileName contains "Testflle MAN1W7DI01T"  then
-				LogSuccess "File name matched"
-			else
-				LogWarning "File name doesn't match"
-				
-			end if
-			//Check for status
-			put ReadText("TLSTATUS","BRSTATUS") into statusTxt
-			if statusTxt = "Sent" then
-				LogSuccess "File sent"
-			else
-				put statusTxt
-			end if			
+			
+			
 			Wait 2
 			
 			KeyDown controlkey
@@ -190,3 +198,39 @@ end if
 Click "ApplianceUpstreamTab"
 
 TearDown
+
+
+
+
+function verifyStatus
+	//Check for status
+	put ReadText("TLSTATUS","BRSTATUS") into statusTxt
+	if statusTxt = "Sent" then
+		LogSuccess "File sent"
+	else
+		put statusTxt
+	end if
+end verifyStatus
+
+function verifyOrigin
+	//Check for origin
+	put ReadText("TLORIGIN","BRORIGIN") into originTxt
+	if originTxt = "Samba" then
+		LogSuccess "origin matched"
+	else
+		LogWarning "Fail to match"
+	end if
+end verifyOrigin
+
+
+function verifyFilename
+	//check for file name
+	put ReadText ("TLDESTINATION","BRDESTINATION") into fileName
+	put fileName
+	if fileName contains "Testflle MAN1W7DI01T"  then
+		LogSuccess "File name matched"
+	else
+		LogWarning "File name doesn't match"
+		
+	end if
+end verifyFilename
