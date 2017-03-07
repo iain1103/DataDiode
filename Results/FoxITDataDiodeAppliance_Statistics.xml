@@ -113,11 +113,11 @@
   <TotalTimeOnSuccess>135.527000</TotalTimeOnSuccess>
  </script>
  <script name="WebBasePage">
-  <LastStatus>Success</LastStatus>
-  <NumberOfRuns>54</NumberOfRuns>
-  <NumberOfFails>10</NumberOfFails>
+  <LastStatus>Failure</LastStatus>
+  <NumberOfRuns>56</NumberOfRuns>
+  <NumberOfFails>12</NumberOfFails>
   <FirstRun>2016-12-08 16:44:25 +0000</FirstRun>
-  <LastRun>2017-02-13 12:20:33 +0000</LastRun>
+  <LastRun>2017-02-27 09:16:19 +0000</LastRun>
   <TotalTimeOnSuccess>1794.616000</TotalTimeOnSuccess>
  </script>
  <script name="ADAdminCanCancelEnablingAnotherAdmin">
