@@ -4,7 +4,7 @@
  ***************************************)
 //Login into "MAN1W8.1DI01TUS" virtual machine and initiate an upstream SMB file transfer
 
-//WebBasePage
+WebBasePage
 
 set the searchRectangle to ("TLName","BRName")
 MoveTo "ApplianceDownstream"
@@ -18,68 +18,71 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 	Click "Console"
 	Wait 4
 	TypeText tabkey
+	Wait 5
+	TypeText tabkey
 	TypeText tabkey
 	Wait 1
-	
-	Click "Password_2"
-	TypeText "Fox1234"
-	TypeText Return
-	Wait 1
-	if ImageFound(3,Text:"Desktop") then
-		Click (Text:"Desktop")
-		Wait 1
-	end if
-	Wait 1
-	Click "TestFileSelected"
-	TypeText ControlKey,"c"
-	Wait 1
-	DoubleClick "SMBShareFolder"
-	Wait 1
-	TypeText ControlKey,"v"
-	put the year into currentYear
-	put the abbreviated simple date & ","& currentYear &  formattedTime("%1I:%M:%S %p",the long time) into shareTime		
-	put shareTime
-	put TrimAll(shareTime, " ") into newShareTime
-	put the long time into toleranceSeconds
-	put toleranceSeconds
-	Wait 2
-	Click "SmbSharefolderClosebtn"
-	Click (Image:"0vSphereWebClient", WaitFor:3) 		
-	Drag(748,434)
-	Drop(748,309)
-	set the searchRectangle to ("TLName","BRName")
-	if ImageFound (3, "ApplianceUpstream") then
-		Click "ApplianceUpstream"
-		set the searchRectangle to fullscreen
-		Click "Console"
-		Wait 4
-		Click "ADUsernameET"
-		TypeText "admin"
-		Click "ADPasswordET"
-		TypeText "admin"	
+	if ImageFound(3,"PassWord_2") then
+		LogSuccess "Password field found"
+		Click "Password_2"
+		TypeText "Fox1234"
 		TypeText Return
-		
-		MoveTo "AUTransfers"
-		
-		set the shouldRepositionMouse to false
-		
-		Click "AUTransfers"
-		
-		set the shouldRepositionMouse to true		
-		
-		Wait 2			
-		
-		
-		MoveTo "TransfersTitle"
-		
-		KeyDown controlkey
-		
-		ScrollWheelUp 2.0
-		
-		KeyUp controlKey
-		
 		Wait 1
-		//check for tolerance
+		if ImageFound(3,Text:"Desktop") then
+			Click (Text:"Desktop")
+			Wait 1
+		end if
+		Wait 1
+		Click "TestFileSelected"
+		TypeText ControlKey,"c"
+		Wait 1
+		DoubleClick "SMBShareFolder"
+		Wait 1
+		TypeText ControlKey,"v"
+		put the year into currentYear
+		put the abbreviated simple date & ","& currentYear &  formattedTime("%1I:%M:%S %p",the long time) into shareTime		
+		put shareTime
+		put TrimAll(shareTime, " ") into newShareTime
+		put the long time into toleranceSeconds
+		put toleranceSeconds
+		Wait 2
+		Click "SmbSharefolderClosebtn"
+		Click (Image:"0vSphereWebClient", WaitFor:3) 		
+		Drag(748,434)
+		Drop(748,309)
+		set the searchRectangle to ("TLName","BRName")
+		if ImageFound (3, "ApplianceUpstream") then
+			Click "ApplianceUpstream"
+			set the searchRectangle to fullscreen
+			Click "Console"
+			Wait 4
+			Click "ADUsernameET"
+			TypeText "admin"
+			Click "ADPasswordET"
+			TypeText "admin"	
+			TypeText Return
+			
+			MoveTo "AUTransfers"
+			
+			set the shouldRepositionMouse to false
+			
+			Click "AUTransfers"
+			
+			set the shouldRepositionMouse to true		
+			
+			Wait 2			
+			
+			
+			MoveTo "TransfersTitle"
+			
+			KeyDown controlkey
+			
+			ScrollWheelUp 2.0
+			
+			KeyUp controlKey
+			
+			Wait 1
+			//check for tolerance
 		put ReadText ("Date","Date_2") into transfersTime
 		put trimAll(transfersTime," ") into transfersDate			
 		
@@ -88,7 +91,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
 			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
-			else
+		else
 			
 			put  toleranceSeconds + 1 second into newTolerance 
 			put newTolerance
@@ -102,7 +105,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
 				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
-				else
+			else
 				put  toleranceSeconds + 2 second into newTolerance2							
 				put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime3
 				put trimAll(newShareTime3," ") into newtransfersTime2
@@ -113,7 +116,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
 					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
-					else
+				else
 					put  toleranceSeconds + 3 second into newTolerance3
 					
 					put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime4
@@ -124,7 +127,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
 						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
-						else
+					else
 						put  toleranceSeconds  - 1 second into newTolerance4
 						
 						put the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime5
@@ -137,7 +140,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 							put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 							put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
 							
-							else
+						else
 							
 							put  toleranceSeconds  - 2 second into newTolerance5
 							
@@ -161,7 +164,7 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
 									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
 									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
-									else
+								else
 									LogWarning "File transferred"									
 									
 								end if								
@@ -183,16 +186,24 @@ if ImageFound(3,"MAN1W81DI01TUS") then
 		else
 		LogWarning "ApplianceUpstream not found"
 	end if
-	(*//Lock the virtual machine	
-	Click (Image:"MAN1W7DI01TUS_1", WaitFor:3) 	
-	Click "StartButton"
+	//Lock the virtual machine	
+	Click (Image:"MAN1W81DI01TUS_TAB", WaitFor:3) 	
 	Wait 1
-	Click "ShutDownDropDown"
+	Drag(1012,508)
+	Drop(1012,662)
+	Wait 2
+	Click "StartButton"
+	Wait 2
+	Click (Text:"Fox")
+	
 	wait 1
 	MoveTo "LockButton"
 	set the shouldrepositionMouse to false
 	Click "LockButton"
-	set the shouldRepositionMouse to true*)
+	set the shouldRepositionMouse to true
+	Drag(1012,662)
+	Drop(1012,228)
+	Wait 1
 	else
 	LogWarning "Password field not found"
 end if
@@ -202,9 +213,9 @@ else
 LogWarning "Unable to find MAN1W81DI01TUS virtual machine"
 end if
 
-//Click "ApplianceUpstreamTab"
+Click "ApplianceUpstreamTab"
 
-//TearDown
+TearDown
 
 
 
@@ -232,13 +243,13 @@ end verifyOrigin
 
 function verifyFilename
 	//check for file name
-	put ReadText ("TLDESTINATION","BRDESTINATION") into fileName
-	put fileName
-	if fileName contains "Testflle MAN1W7DI01T"  then
+	set searchRectangle to  ("TLDESTINATION","BRDESTINATION")
+	
+	if ImageFound(3,"TestfileMAN1W81DI01") then
 		LogSuccess "File name matched"
 	else
 		LogWarning "File name doesn't match"
 		
 	end if
+	set the searchRectangle to fullscreen
 end verifyFilename
-f
