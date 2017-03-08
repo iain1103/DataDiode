@@ -2,7 +2,7 @@
   Created By          : Sowjanya Pedarasi
   Created On          : 07/03/2017  
  ***************************************)
-//Login into "MANW7DI01TUS" virtual machine and initiate an upstream FTP file transfer
+//Login into "MAN1W7DI01TUS" virtual machine and initiate an upstream FTP file transfer
 WebBasePage
 
 set the searchRectangle to ("TLName","BRName")
@@ -105,7 +105,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 				else
 					put  toleranceSeconds + 2 second into newTolerance2							
 					put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime3
-				put trimAll(newShareTime3," ") into newtransfersTime2
+					put trimAll(newShareTime3," ") into newtransfersTime2
 					
 					put newtransfersTime2
 					if transfersDate = newtransfersTime2  then
@@ -117,7 +117,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 						put  toleranceSeconds + 3 second into newTolerance3
 						
 						put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime4
-					put trimAll(newShareTime4," ") into newtransfersTime3
+						put trimAll(newShareTime4," ") into newtransfersTime3
 						put newtransfersTime3
 						if transfersDate = newtransfersTime3 then
 							LogSuccess "File transferred"
@@ -128,7 +128,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 							put  toleranceSeconds  - 1 second into newTolerance4
 							
 							put the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime5
-						put trimAll(newShareTime5," ") into newtransfersTime4
+							put trimAll(newShareTime5," ") into newtransfersTime4
 							put newtransfersTime4
 							if transfersDate = newtransfersTime4 then
 								
@@ -141,7 +141,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 								
 								put  toleranceSeconds  - 2 second into newTolerance5
 								
-							put  the abbreviated simple date & ","& currentYear & " "&formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime6
+								put  the abbreviated simple date & ","& currentYear & " "&formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime6
 								put trimAll(newShareTime6," ") into newtransfersTime5
 								put newtransfersTime5
 								if transfersDate = newtransfersTime5 then
@@ -149,7 +149,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 									put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
 									put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
 									put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
-									else
+								else
 									
 									put  toleranceSeconds  - 3 second into newTolerance6
 									
@@ -161,7 +161,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 										put FTPUSMAN1W7DI01TUSFileTransfer.verifyStatus
 										put FTPUSMAN1W7DI01TUSFileTransfer.verifyOrigin
 										put FTPUSMAN1W7DI01TUSFileTransfer.verifyFilename
-										else
+									else
 										LogWarning "File transferred"									
 										
 									end if								
@@ -182,7 +182,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 			ScrollWheelDown 2.0
 			KeyUp controlKey
 			
-			else
+		else
 			LogWarning "ApplianceUpstream not found"
 		end if
 		//Lock the virtual machine	
@@ -195,12 +195,12 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 		set the shouldrepositionMouse to false
 		Click "LockButton"
 		set the shouldRepositionMouse to true
-		else
+	else
 		LogWarning "Password field not found"
 	end if
 	
 	
-	else
+else
 	LogWarning "Unable to find MAN1W7DI01TUS virtual machine"
 end if
 

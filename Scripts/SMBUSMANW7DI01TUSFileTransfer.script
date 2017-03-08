@@ -2,7 +2,7 @@
   Created By          : Sowjanya Pedarasi
   Created On          : 06/03/2017  
  ***************************************)
-//Login into "MANW7DI01TUS" virtual machine and initiate an upstream SMB file transfer
+//Login into "MAN1W7DI01TUS" virtual machine and initiate an upstream SMB file transfer
 WebBasePage
 
 set the searchRectangle to ("TLName","BRName")
@@ -173,7 +173,7 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 			ScrollWheelDown 2.0
 			KeyUp controlKey
 			
-			else
+		else
 			LogWarning "ApplianceUpstream not found"
 		end if
 		//Lock the virtual machine	
@@ -186,12 +186,12 @@ if ImageFound(3,"MAN1W7DI01TUS")  then
 		set the shouldrepositionMouse to false
 		Click "LockButton"
 		set the shouldRepositionMouse to true
-		else
+	else
 		LogWarning "Password field not found"
 	end if
 	
 	
-	else
+else
 	LogWarning "Unable to find MAN1W7DI01TUS virtual machine"
 end if
 
