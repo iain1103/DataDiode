@@ -4,7 +4,7 @@
  ***************************************)
 //Login into "MAN1W8.1DI01TUS" virtual machine and initiate an upstream FTP file transfer
 
-//WebBasePage
+WebBasePage
 
 set the searchRectangle to ("TLName","BRName")
 MoveTo "ApplianceDownstream"
