@@ -1,0 +1,244 @@
+﻿(****************************************
+  Created By          : Sowjanya Pedarasi
+  Created On          : 08/03/2017  
+ ***************************************)
+//Login into "MAN1W8.1DI01TUS" virtual machine and initiate an upstream SMB file transfer
+
+//WebBasePage
+
+set the searchRectangle to ("TLName","BRName")
+MoveTo "ApplianceDownstream"
+Repeat until ImageFound("MAN1W81DI01TUS")
+	ScrollWheelDown 2
+End Repeat
+if ImageFound(3,"MAN1W81DI01TUS") then
+	LogSuccess "MAN1W81DI01TUS Virtual machine found"
+	Click "MAN1W81DI01TUS"
+	set the searchRectangle to fullscreen
+	Click "Console"
+	Wait 4
+	TypeText tabkey
+	TypeText tabkey
+	Wait 1
+	
+	Click "Password_2"
+	TypeText "Fox1234"
+	TypeText Return
+	Wait 1
+	if ImageFound(3,Text:"Desktop") then
+		Click (Text:"Desktop")
+		Wait 1
+	end if
+	Wait 1
+	Click "TestFileSelected"
+	TypeText ControlKey,"c"
+	Wait 1
+	DoubleClick "SMBShareFolder"
+	Wait 1
+	TypeText ControlKey,"v"
+	put the year into currentYear
+	put the abbreviated simple date & ","& currentYear &  formattedTime("%1I:%M:%S %p",the long time) into shareTime		
+	put shareTime
+	put TrimAll(shareTime, " ") into newShareTime
+	put the long time into toleranceSeconds
+	put toleranceSeconds
+	Wait 2
+	Click "SmbSharefolderClosebtn"
+	Click (Image:"0vSphereWebClient", WaitFor:3) 		
+	Drag(748,434)
+	Drop(748,309)
+	set the searchRectangle to ("TLName","BRName")
+	if ImageFound (3, "ApplianceUpstream") then
+		Click "ApplianceUpstream"
+		set the searchRectangle to fullscreen
+		Click "Console"
+		Wait 4
+		Click "ADUsernameET"
+		TypeText "admin"
+		Click "ADPasswordET"
+		TypeText "admin"	
+		TypeText Return
+		
+		MoveTo "AUTransfers"
+		
+		set the shouldRepositionMouse to false
+		
+		Click "AUTransfers"
+		
+		set the shouldRepositionMouse to true		
+		
+		Wait 2			
+		
+		
+		MoveTo "TransfersTitle"
+		
+		KeyDown controlkey
+		
+		ScrollWheelUp 2.0
+		
+		KeyUp controlKey
+		
+		Wait 1
+		//check for tolerance
+		put ReadText ("Date","Date_2") into transfersTime
+		put trimAll(transfersTime," ") into transfersDate			
+		
+		if newshareTime = transfersDate  then
+			LogSuccess "File transferred"
+			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+			put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+			else
+			
+			put  toleranceSeconds + 1 second into newTolerance 
+			put newTolerance
+			
+			put  the abbreviated simple date & ","& currentYear & " "&  formattedTime("%1I:%M:%S %p",newTolerance) into newShareTime2
+			
+			put trimAll(newShareTime2," ") into newtransfersTime
+			put newtransfersTime
+			if transfersDate = newtransfersTime  then
+				LogSuccess "File transferred"
+				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+				put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+				else
+				put  toleranceSeconds + 2 second into newTolerance2							
+				put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance2)  into newShareTime3
+				put trimAll(newShareTime3," ") into newtransfersTime2
+				
+				put newtransfersTime2
+				if transfersDate = newtransfersTime2  then
+					LogSuccess "File transferred"
+					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+					put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+					else
+					put  toleranceSeconds + 3 second into newTolerance3
+					
+					put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance3)  into newShareTime4
+					put trimAll(newShareTime4," ") into newtransfersTime3
+					put newtransfersTime3
+					if transfersDate = newtransfersTime3 then
+						LogSuccess "File transferred"
+						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+						put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+						else
+						put  toleranceSeconds  - 1 second into newTolerance4
+						
+						put the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance4) into newShareTime5
+						put trimAll(newShareTime5," ") into newtransfersTime4
+						put newtransfersTime4
+						if transfersDate = newtransfersTime4 then
+							
+							LogSuccess "File transferred"
+							put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+							put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+							put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+							
+							else
+							
+							put  toleranceSeconds  - 2 second into newTolerance5
+							
+							put  the abbreviated simple date & ","& currentYear & " "&formattedTime("%1I:%M:%S %p",newTolerance5) into newShareTime6
+							put trimAll(newShareTime6," ") into newtransfersTime5
+							put newtransfersTime5
+							if transfersDate = newtransfersTime5 then
+								LogSuccess "File transferred"
+								put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+								put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+								put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+								else
+								
+								put  toleranceSeconds  - 3 second into newTolerance6
+								
+								put  the abbreviated simple date & ","& currentYear &  " "&formattedTime("%1I:%M:%S %p",newTolerance6) into newShareTime7
+								put trimAll(newShareTime7," ") into newtransfersTime6
+								put newtransfersTime6
+								if transfersDate = newtransfersTime6 then
+									LogSuccess "File transferred"
+									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyStatus
+									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyOrigin
+									put SMBUSMAN1W8_1DI01TUSFileTransfer.verifyFilename
+									else
+									LogWarning "File transferred"									
+									
+								end if								
+							end if							
+						end if						
+					end if					
+				end if				
+			end if	
+		end if
+		
+		
+		
+		Wait 2
+		
+		KeyDown controlkey
+		ScrollWheelDown 2.0
+		KeyUp controlKey
+		
+		else
+		LogWarning "ApplianceUpstream not found"
+	end if
+	(*//Lock the virtual machine	
+	Click (Image:"MAN1W7DI01TUS_1", WaitFor:3) 	
+	Click "StartButton"
+	Wait 1
+	Click "ShutDownDropDown"
+	wait 1
+	MoveTo "LockButton"
+	set the shouldrepositionMouse to false
+	Click "LockButton"
+	set the shouldRepositionMouse to true*)
+	else
+	LogWarning "Password field not found"
+end if
+
+
+else
+LogWarning "Unable to find MAN1W81DI01TUS virtual machine"
+end if
+
+//Click "ApplianceUpstreamTab"
+
+//TearDown
+
+
+
+
+function verifyStatus
+	//Check for status
+	put ReadText("TLSTATUS","BRSTATUS") into statusTxt
+	if statusTxt = "Sent" then
+		LogSuccess "File sent"
+	else
+		put statusTxt
+	end if
+end verifyStatus
+
+function verifyOrigin
+	//Check for origin
+	put ReadText("TLORIGIN","BRORIGIN") into originTxt
+	if originTxt = "Samba" then
+		LogSuccess "origin matched"
+	else
+		LogWarning "Fail to match"
+	end if
+end verifyOrigin
+
+
+function verifyFilename
+	//check for file name
+	put ReadText ("TLDESTINATION","BRDESTINATION") into fileName
+	put fileName
+	if fileName contains "Testflle MAN1W7DI01T"  then
+		LogSuccess "File name matched"
+	else
+		LogWarning "File name doesn't match"
+		
+	end if
+end verifyFilename
+f
